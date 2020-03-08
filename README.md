@@ -14,3 +14,7 @@ Ceramic is a permissionless protocol for creating tamper-proof documents. Cerami
 - Follow: [**Twitter**](http://twitter.com/ceramicnetwork)
 - Subscribe: [**Newsletter**](http://ceramic.network)
 - Join: [**Ceramic Ecosystem Alliance (CEA)**](http://ceramic.network/alliance)
+
+## Contributing
+
+## License
