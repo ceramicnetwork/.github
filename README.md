@@ -3,7 +3,7 @@
 [**Ceramic**](http://ceramic.network) is a permissionless protocol for creating tamper-proof documents. Ceramic documents enable novel use cases such as self-sovereign identity, interoperable data, and user-centric infrastructure that result in more open, composable apps.
 
 
-#### Project Repositories
+#### Get Started
 - [**overview**](http://github.com/ceramicnetwork/overview): An introduction to the Ceramic protocol
 - [**specs**](http://github.com/ceramicnetwork/specs): Technical specification of the Ceramic protocol
 - [**js-ceramic**](http://github.com/ceramicnetwork/js-ceramic): Typescript implementation of the Ceramic protocol
