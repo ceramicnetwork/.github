@@ -3,12 +3,15 @@
 [**Ceramic**](http://ceramic.network) is a permissionless protocol for creating tamper-proof documents. Ceramic documents enable novel use cases such as self-sovereign identity, interoperable data, and user-centric infrastructure that result in more open, composable apps.
 
 
+#### Learn More
+- [**Overview**](http://github.com/ceramicnetwork/overview): An introduction to the Ceramic protocol
+  - [**Use Cases**]():
+- [**Specs**](http://github.com/ceramicnetwork/specs): Technical specification of the Ceramic protocol
+
+
 #### Get Started
-- [**overview**](http://github.com/ceramicnetwork/overview): An introduction to the Ceramic protocol
-- [**specs**](http://github.com/ceramicnetwork/specs): Technical specification of the Ceramic protocol
 - [**js-ceramic**](http://github.com/ceramicnetwork/js-ceramic): Typescript implementation of the Ceramic protocol
-- [**CIP**](http://github.com/ceramicnetwork/CIP): Ceramic improvement proposals
-- [**awesome**](http://github.com/ceramicnetwork/awesome): A list of projects and services built on Ceramic
+- [**Awesome**](http://github.com/ceramicnetwork/awesome): A list of projects and services built on Ceramic
 
 
 #### Stay Up to Date
@@ -19,5 +22,7 @@
 
 
 ## Contributing
+Instructions on where to post issues related to festure reuests v. core protocol upgrades.
 
 ## License
+MIT
