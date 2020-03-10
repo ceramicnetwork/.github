@@ -25,7 +25,8 @@
 
 
 ## Contributing
-Instructions on where to post issues related to festure reuests v. core protocol upgrades.
+Use the [Ceramic Specs](http://github.com/ceramicnetwork/specs) repo to propose and discuss improvements to the Ceramic protocol including core protocol improvements, such as adding support for additional doctypes, and other feature requests.
+
 
 ## License
 MIT
