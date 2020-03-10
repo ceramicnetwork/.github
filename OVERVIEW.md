@@ -8,13 +8,13 @@ Ceramic is a permissionless protocol for creating tamper-proof documents. Cerami
 > For a technical overview, see [Ceramic technical specification](http://github.com/ceramicnetwork/specs).
 
 
-### Background
+## Background
 Developers are increasingly building composable applications that rely on user-managed identity, interoperable data, and shared infrastructure. In this model, developers have less certainty over the types of resources that users will bring to their application at any given time. Because of this, a primary concern is ensuring interoperability between a diverse set of technologies including (but not limited to) key pairs, wallets, data stores, and infrastructure services. As the variety of infrastructure grows, so does the challenge of maintaining interoperability. 
 
 The composable web is missing a user-centric interoperability protocol to provide applications with the information they need to to easily discover, route to, and interact with a user's resources regardless of which wallet users bring or where their resources are located. To provide maximal interoperability, this protocol should allow users to: 1) permissionlessly register an interoperable identity (DID), 2) privately control this identity with one or more private keys, 3) publicly associate public keys and accounts to this identity, 4) associate resources to this identity without eroding privacy, 5) set permissions for resources, 6) perform access control to resources, and 7) sign and/or encrypt information. This protocol should also allow: 8) service providers to publish their service definitions and service agreements to the network, and 9) applications to publish their data definitions to the network.
  
 
-### Why Ceramic?
+### A web without silos
 To achieve permissionless interoperability and composabilty across the web, we need a way to defeat all silos that work to undermine these efforts by trapping users, information, and other resources. 
 - Silos exist in many forms
  - web2 examples: In traditiional cliient-server archcitectures
@@ -29,12 +29,33 @@ Efficient coordination requires collective truth. Ceramic is the shared coordina
 needs a user-centric acrhitecture to defeat silos and unbundle appliciations. identity, routing, and access control system. 
 
 
-### How does it work?
+## What is a Document?
+
+
+### 3ID Identity
+
+### Account Link
+
+### Policy
+
+### Additional Doctypes
+
+
+## How does it work?
 Ceramic's decentralized network provides permissionless storage for verifiable, updatable documents that can be modeled to represent self-sovereign identities, service agreements, hosting policies, data definitions, access control permissions, payment requirements, and general routing information. These documents collectively liberate our identities and information from the silos that have traditionally kept them locked up.
 
 Ceramic has developed an initial set of standard document types for the use cases above, but this is just the beginning. We expect the community to propose additional document types that extend what's possible on Ceramic.
 
 The Ceramic network is built using existing peer-to-peer technologies including DIDs for identity, IPLD for document formation, and existing blockchains for consensus.
+
+
+## Use Cases
+
+### Self-Sovereign Identity
+
+### Shared Infrastructure
+
+### Interoperable Data
  
 
 ### How can I participate?
