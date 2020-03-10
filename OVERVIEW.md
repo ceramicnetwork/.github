@@ -7,6 +7,15 @@ Ceramic is a permissionless protocol for creating tamper-proof documents. Cerami
 
 > For a technical overview, see [Ceramic technical specification](http://github.com/ceramicnetwork/specs).
 
+#### Index
+- Background
+- What is a document?
+- Use Cases
+- How to Participate
+- When is Launch?
+- Additional Resources
+
+
 
 ## Background
 Developers are increasingly building composable applications that rely on user-managed identity, interoperable data, and shared infrastructure. In this model, developers have less certainty over the types of resources that users will bring to their application at any given time. Because of this, a primary concern is ensuring interoperability between a diverse set of technologies including (but not limited to) key pairs, wallets, data stores, and infrastructure services. As the variety of infrastructure grows, so does the challenge of maintaining interoperability. 
@@ -30,23 +39,22 @@ needs a user-centric acrhitecture to defeat silos and unbundle appliciations. id
 
 
 ## What is a Document?
-
-
-### 3ID Identity
-
-### Account Link
-
-### Policy
-
-### Additional Doctypes
-
-
-## How does it work?
 Ceramic's decentralized network provides permissionless storage for verifiable, updatable documents that can be modeled to represent self-sovereign identities, service agreements, hosting policies, data definitions, access control permissions, payment requirements, and general routing information. These documents collectively liberate our identities and information from the silos that have traditionally kept them locked up.
 
 Ceramic has developed an initial set of standard document types for the use cases above, but this is just the beginning. We expect the community to propose additional document types that extend what's possible on Ceramic.
 
 The Ceramic network is built using existing peer-to-peer technologies including DIDs for identity, IPLD for document formation, and existing blockchains for consensus.
+
+### Supported Doctypes
+
+#### 3ID Identity
+
+#### Account Link
+
+#### Policy
+
+#### Additional Doctypes
+
 
 
 ## Use Cases
@@ -60,7 +68,7 @@ The Ceramic network is built using existing peer-to-peer technologies including 
 ### Verifiable Claims
  
 
-### How can I participate?
+## How can I participate?
 
 **Wallets & Authentication Systems**
 
@@ -87,10 +95,10 @@ Join Ceramic by building your application or wallet on Ceramic-enabled infrastru
 Ask your wallet provider to support Ceramic DIDs and ask applications to store your data in Ceramic-enabled databases.
  
 
-### When is launch?
+## When is launch?
 
 The Ceramic core team is working hard to ship v1 of the network, but we could use your help. Join us on Github and Discord to participate.
 
-# More Resources
+## More Resources
 
 
