@@ -56,6 +56,8 @@ The Ceramic network is built using existing peer-to-peer technologies including 
 ### Shared Infrastructure
 
 ### Interoperable Data
+
+### Verifiable Claims
  
 
 ### How can I participate?
