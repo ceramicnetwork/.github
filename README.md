@@ -30,9 +30,6 @@ Ceramic documents are signed, append-only objects stored in [IPFS](https://githu
   - [Implementations](https://github.com/ceramicnetwork/specs/)
   - [Other Considerations](https://github.com/ceramicnetwork/specs/)
 
-## Get Started
-- [**js-ceramic**](http://github.com/ceramicnetwork/js-ceramic): Typescript implementation of the Ceramic protocol
-
 
 ## Stay Up to Date
 - Chat: [**Discord**](https://discord.gg/6VRZpGP)
@@ -40,14 +37,24 @@ Ceramic documents are signed, append-only objects stored in [IPFS](https://githu
 - Subscribe: [**Newsletter**](http://ceramic.network)
 
 
+## Implementatons
+| Package | JavaScript | Description |
+| ------- | ---------- | ----------- |
+| Ceramic | [ceramicnetwork/js-ceramic](https://github.com/ceramicnetwork/js-ceramic) | Typescript implementation of the Ceramic protocol
+
+
+#### New Implementations
+Want to work on an implementation in another language? [Open an issue](https://github.com/ceramicnetwork/ceramic/issues) in this repository to discuss it with others, find help, and coordinate efforts.
+
+
 ## Contributing
 The easiest way to get involved in Ceramic is to join our [**Discord**](https://discord.gg/6VRZpGP), where we are very active.
 
-To propose or contribute improvements to the core **Ceramic protocol**, such as adding support for additional doctypes, add an issue or submit a PR to the [**Ceramic Specs**](http://github.com/ceramicnetwork/specs) repository.
+To propose or contribute improvements to the core **Ceramic protocol**, such as adding support for additional doctypes, open an issue in the [ceramicnetwork/specs](http://github.com/ceramicnetwork/specs/issues) repository.
 
-To propose or contribute improvements to the Ceramic **JavaScript client**, add an issue or submit a PR to the [**js-ceramic**](http://github.com/ceramicnetwork/js-ceramic) repository.
+To propose or contribute improvements to the Ceramic **JavaScript client**, open an issue in the [ceramicnetwork/js-ceramic](http://github.com/ceramicnetwork/js-ceramic/issues) repository.
 
-To propose or contribute other improvements or feature requests that don't fit neatly into the above, submit an issue on this repository, [**Ceramic**](http://github.com/ceramicnetwork/ceramic).
+To propose or contribute other feature requests or improvements that don't fit neatly into the above, such as creating an implementation in another language, open an issue in the [ceramicnetwork/ceramic repository](http://github.com/ceramicnetwork/ceramic/issues).
 
 
 ## Ceramic Ecosystem Alliance
