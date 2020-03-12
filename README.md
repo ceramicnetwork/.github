@@ -11,7 +11,7 @@ Ceramic documents are signed, append-only objects stored in [IPFS](https://githu
 
 
 ## Learn More
-- [**Overview**](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md)
+- [Overview](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md)
   - [Introduction](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#introduction)
   - [Background](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#background)
   - [Document Graph](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#a-scalable-decentralized-document-graph)
@@ -19,7 +19,7 @@ Ceramic documents are signed, append-only objects stored in [IPFS](https://githu
   - [Ceramic Ecosystem Alliance (CEA)](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#join-the-ceramic-ecosystem-alliance)
   - [Timeline](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#timeline)
   - [Additional Resources](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#additioinal-resources)
-- [**Technical Specs**](https://github.com/ceramicnetwork/specs)
+- [Technical Specs](https://github.com/ceramicnetwork/specs)
   - [Protocol Overview](https://github.com/ceramicnetwork/specs#protocol-overview)
   - [Document Lifecycle](https://github.com/ceramicnetwork/specs#document-lifecycle)
   - [Document Log](https://github.com/ceramicnetwork/specs#document-log)
@@ -27,6 +27,10 @@ Ceramic documents are signed, append-only objects stored in [IPFS](https://githu
   - [Document Update Propagation](https://github.com/ceramicnetwork/specs#document-update-propagation)
   - [Ceramic Services](https://github.com/ceramicnetwork/specs#ceramic-services)
   - [Implementations](https://github.com/ceramicnetwork/specs#implementations)
+- [Doctypes]
+  - [3id](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md)
+  - [Account-link](https://github.com/ceramicnetwork/specs/blob/master/doctypes/account-link.md)
+  - [Policy](https://github.com/ceramicnetwork/specs/blob/master/doctypes/policy.md)
 
 
 ## Stay Up to Date
