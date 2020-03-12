@@ -110,4 +110,4 @@ The Ceramic Ecosystem Alliance is a collaborative group of organizations, commun
 
 Ceramic's core contributors are working hard to ship v1 of the network. We already have some working code in [js-ceramic](https://github.com/ceramicnetwork/js-ceramic), and ideally will launch into production sometime this summer. Hop in our [**Discord**](https://discord.gg/6VRZpGP) to ask more questions.
 
-# Additioinal **Resources**
+# Additional **Resources**
