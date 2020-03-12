@@ -106,7 +106,7 @@ Build your app using Ceramic's ecosystem of connected, interoperable services. S
 
 # Join the Ceramic Ecosystem Alliance
 
-The Ceramic Ecosystem Alliance is a collaborative group of organizations, communities, and individuals actively contributing to the research and development of the Ceramic protocol, integrating Ceramic standards into their products, or building services on the Ceramic network. Become a member here.
+The Ceramic Ecosystem Alliance is a collaborative group of organizations, communities, and individuals actively contributing to the research and development of the Ceramic protocol, integrating Ceramic standards into their products, or building services on the Ceramic network. Become a member and [**sign up here**](https://danny765911.typeform.com/to/AAFtVN).
 
 # Timeline
 
