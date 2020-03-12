@@ -54,9 +54,11 @@ Ceramic provides a public source of truth for creating and accessing important d
 
 ### **What is a Document?**
 
-Ceramic documents are signed, append-only, tamper-proof objects stored in IPFS, encoded using IPLD, and anchored in one or more blockchains. Documents are the core construct of the Ceramic protocol and can flexibly be modeled to represent many things. Click here to learn more about how Ceramic documents work.
+Ceramic documents are signed, append-only, tamper-proof objects stored in IPFS, encoded using IPLD, and anchored in one or more blockchains. Documents are the core construct of the Ceramic protocol and can flexibly be modeled to represent many things. 
 
-Ceramic currently supports three standard doctypes, but more can be added to the protocol by submitting an issue on the [Ceramic Specs](http://github.com/ceramicnetwork/specs) repository.
+>Learn more about how [Ceramic documents work](https://github.com/ceramicnetwork/specs/blob/master/README.md#protocol-overview).
+
+Ceramic currently supports three standard [doctypes](https://github.com/ceramicnetwork/specs#document-types), but more can be added to the protocol by submitting an issue on the [Ceramic Specs](http://github.com/ceramicnetwork/specs/issues) repository.
 
 ### **3ID Identity**
 3ID is a decentralized identity (DID) method that uses Ceramic to create, update, and resolve DID documents. The DID standard provides a general format for verifiable decentralized digital identities. Given a specific DID string, a DID document which contains public keys, services, authentication authorization, etc. can be resolved.
@@ -73,21 +75,21 @@ Account links publicly associate a 3ID to other public identities, such as publi
 ### **Policy**
 Policies are a flexible way to create single or multi-party statements and can be used to define context for 3IDs (service descriptors, metadata, routing information), statements about 3IDs (application data schema definitions), policies by 3IDs (service policies, privacy policies, access policies, payment policies, permissions), agreements between 3IDs (service agreements), and much more. 
 
+> Learn more about policies [here](https://github.com/ceramicnetwork/specs/blob/master/doctypes/policy.md).
+
 #### Policy Templates
 Here are some example templates to give you an idea of what's possible with policies, but you can always create your own based on your use case. [3Box](http://github.com/3box/3box) uses these templates to enable an interoperable, user-controlled data management system.
-
-> Learn more about policies [here](https://github.com/ceramicnetwork/specs/blob/master/doctypes/policy.md).
 
 | Policy Template | Description | Use Case |
 | --------------- | ----------- | -------- |
 | [Collection Policy]() | Describes a collection of databases with specific schemas | Useful for apps to define their data model, so others can easily consume the data |
 | [Service Policy]() | Describes simple functions that take an input and produce an output, but could also be used for more complex services such as database hosting, etc. | Useful for infrastructure service providers to define their service or API | Useful for  |
-| [Privacy Policy]() | Describes access control rights to databases in a Collection Policy  | Useful for allowing users to set permissions and control their data privacy while sharing data across apps |
+| [Privacy Policy]() | Describes access control rights to databases in a Collection Policy  | Useful for allowing users to set permissions and control their privacy while sharing data across apps |
 
 
 ### **Additional Doctypes**
 
-Have an idea for a new doctype? Propose it [here](http://github.com/ceramicnetwork/specs/issues).
+> Have an idea for a new doctype? Propose it [here](http://github.com/ceramicnetwork/specs/issues).
 
 ## The Ceramic Ecosystem
 
@@ -101,13 +103,13 @@ Give your users a Ceramic 3ID, which is an abstraction from individual key pair 
 
 ### Databases
 
-**Unified, User-Mangaged Access Control for Databases**
+**Integrate a Unified, User-Mangaged Access Control System**
 
 Make your database's access control system compatible with Ceramic 3IDs so users can manage their information stored across all databases with a single identity and allow different applications to access their information. Ceramic will first support IPFS-based peer-to-peer databases OrbitDB and Textile.
 
 ### Infrastructure Services
 
-**Offer Shared, Collaborative Access to Infrastructure Services**
+**Offer Shared, Collaborative Access**
 
 Offer Ceramic-compatible services and list your infrastructure on the Ceramic network to allow various users and applications to gather the information required to interact with your service even if they're not your direct customers. This includes routing information, service agreements, and possibly even payment terms.
 
@@ -126,3 +128,24 @@ The Ceramic Ecosystem Alliance is a collaborative group of organizations, commun
 Ceramic's core contributors are working hard to ship v1 of the network. We already have some working code in [js-ceramic](https://github.com/ceramicnetwork/js-ceramic), and ideally will launch into production sometime this summer. Hop in our [**Discord**](https://discord.gg/6VRZpGP) to ask more questions.
 
 ## Additional **Resources**
+
+### Learn more
+- [**Technical Specs**](http://github.com/ceramicnetwork/specs)
+  - [Protocol Overview](https://github.com/ceramicnetwork/specs/)
+  - [Document Lifecycle](https://github.com/ceramicnetwork/specs/)
+  - [Document Log](https://github.com/ceramicnetwork/specs/)
+  - [Document Types](https://github.com/ceramicnetwork/specs/)
+  - [Document Update Propagation](https://github.com/ceramicnetwork/specs/)
+  - [Ceramic Services](https://github.com/ceramicnetwork/specs/)
+  - [Implementations](https://github.com/ceramicnetwork/specs/)
+  - [Other Considerations](https://github.com/ceramicnetwork/specs/)
+  
+### Implementatons
+| Package | JavaScript | Description |
+| ------- | ---------- | ----------- |
+| Ceramic | [ceramicnetwork/js-ceramic](https://github.com/ceramicnetwork/js-ceramic) | Typescript implementation of the Ceramic protocol
+
+### Stay Up to Date
+- Chat: [Discord](https://discord.gg/6VRZpGP)
+- Follow: [Twitter](http://twitter.com/ceramicnetwork)
+- Subscribe: [Newsletter](http://ceramic.network)
