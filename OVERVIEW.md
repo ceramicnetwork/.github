@@ -81,7 +81,7 @@ The policy doctype can be used to descibe services that are made available thoug
 
 Using Ceramic Service policies almost any type of services can be represented. Some examples of this include Payments, Data hosting, Indexing, etc. Adding a service to ceramic allows it to be used in a user centric way. Services can be enabled per user and apps can route to different services though the users identity.
 
-> Learn more about policies [here](https://github.com/ceramicnetwork/specs/blob/master/doctypes/policy.md).
+> Learn more about policies [here](https://github.com/ceramicnetwork/specs/blob/master/doctypes/policy.md) or see examples [here](https://github.com/ceramicnetwork/specs/blob/master/doctypes/policy.md#examples).
 
 #### Policy Templates
 Here are some example templates to give you an idea of what's possible with policies, but you can always create your own based on your use case.
