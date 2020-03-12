@@ -32,9 +32,9 @@ Ceramic documents are signed, append-only objects stored in [IPFS](https://githu
 
 
 ## Stay Up to Date
-- Chat: [**Discord**](https://discord.gg/6VRZpGP)
-- Follow: [**Twitter**](http://twitter.com/ceramicnetwork)
-- Subscribe: [**Newsletter**](http://ceramic.network)
+- Chat: [Discord](https://discord.gg/6VRZpGP)
+- Follow: [Twitter](http://twitter.com/ceramicnetwork)
+- Subscribe: [Newsletter](http://ceramic.network)
 
 
 ## Implementatons
