@@ -6,9 +6,9 @@
 Ceramic documents are signed, append-only objects stored in [IPFS](https://github.com/ipfs/ipfs), encoded using [IPLD](https://github.com/ipld/ipld), and anchored in one or more blockchains. Ceramic's public document graph provides a single verifiable source of truth for building consensus around important documents, enabling participants to trustlessly share and efficiently coordinate around information in a platform-agnostic way. Ceramic documents support novel use cases such as self-sovereign identity, interoperable data ecosystems, and user-centric infrastructure that allow developers to build more open, composable apps.
 
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+[![](https://img.shields.io/badge/Chat%20on-Discord-orange.svg?style=flat)](https://discord.gg/6VRZpGP)
 [![Twitter](https://img.shields.io/twitter/follow/ceramicnetwork?label=Follow&style=social)](https://twitter.com/ceramicnetwork) 
 [![Github](https://img.shields.io/github/stars/ceramicnetwork/ceramic?style=social)](https://github.com/ceramicnetwork/ceramic)
-[![](https://img.shields.io/badge/Chat%20on-Discord-orange.svg?style=flat)](https://discord.gg/6VRZpGP)
 
 
 ## Learn More
