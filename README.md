@@ -1,11 +1,12 @@
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/) [![Twitter](https://img.shields.io/twitter/follow/ceramicnetwork?label=Follow&style=social)](https://twitter.com/ceramicnetwork) [![Github](https://img.shields.io/github/stars/ceramicnetwork/ceramic?style=social)](https://github.com/ceramicnetwork/ceramic)
 ![ceramic opengraph](https://uploads-ssl.webflow.com/5e4b58d7f08158ece0209bbd/5e62a54c0e45bd7b2ef53d25_OpenGraphCeramic.png)
 
 # Ceramic Protocol
 [**Ceramic**](http://ceramic.network) is a permissionless protocol for creating tamper-proof documents. Ceramic documents are signed, append-only objects stored in IPFS, encoded using IPLD, and anchored in one or more blockchains. Ceramic's public document graph provides a single verifiable source of truth for building consensus around important documents, enabling participants to trustlessly share and efficiently coordinate around information in a platform-agnostic way. Ceramic documents support novel use cases such as self-sovereign identity, interoperable data ecosystems, and user-centric infrastructure that allow developers to build more open, composable apps.
 
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/) [![Twitter](https://img.shields.io/twitter/follow/ceramicnetwork?label=Follow&style=social)](https://twitter.com/ceramicnetwork) [![Github](https://img.shields.io/github/stars/ceramicnetwork/ceramic?style=social)](https://github.com/ceramicnetwork/ceramic)
 
-#### Learn More
+
+## Learn More
 - [**Overview**](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md)
   - [Introduction](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#introduction)
   - [Background](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#background)
@@ -24,11 +25,11 @@
   - [Implementations](https://github.com/ceramicnetwork/specs/)
   - [Other Considerations](https://github.com/ceramicnetwork/specs/)
 
-#### Get Started
+## Get Started
 - [**js-ceramic**](http://github.com/ceramicnetwork/js-ceramic): Typescript implementation of the Ceramic protocol
 
 
-#### Stay Up to Date
+## Stay Up to Date
 - Chat: [**Discord**](https://discord.gg/6VRZpGP)
 - Follow: [**Twitter**](http://twitter.com/ceramicnetwork)
 - Subscribe: [**Newsletter**](http://ceramic.network)
@@ -43,7 +44,7 @@ To propose or contribute other improvements or feature requests that don't fit n
 
 
 ## Ceramic Ecosystem Alliance
-The Ceramic Ecosystem Alliance is a collaborative group of organizations, communities, and individuals actively contributing to the research and development of the Ceramic protocol, integrating Ceramic standards into their products, or building services on the Ceramic network. Become a member [here](https://danny765911.typeform.com/to/AAFtVN).
+The Ceramic Ecosystem Alliance is a collaborative group of organizations, communities, and individuals actively contributing to the research and development of the Ceramic protocol, integrating Ceramic standards into their products, or building services on the Ceramic network. Become a member and [**sign up here**](https://danny765911.typeform.com/to/AAFtVN).
 
 
 ## License
