@@ -46,11 +46,11 @@ Want to work on an implementation in another language? [Open an issue](https://g
 
 
 ## Contributing
-The easiest way to get involved in Ceramic is to join our [**Discord**](https://discord.gg/6VRZpGP), where we are very active.
+The easiest way to get involved in Ceramic is to join our [Discord](https://discord.gg/6VRZpGP), where we are very active.
 
-To propose or contribute improvements to the core **Ceramic protocol**, such as adding support for additional doctypes, open an issue in the [ceramicnetwork/specs](http://github.com/ceramicnetwork/specs/issues) repository.
+To propose or contribute improvements to the core Ceramic protocol, such as adding support for additional doctypes, open an issue in the [ceramicnetwork/specs](http://github.com/ceramicnetwork/specs/issues) repository.
 
-To propose or contribute improvements to the Ceramic **JavaScript client**, open an issue in the [ceramicnetwork/js-ceramic](http://github.com/ceramicnetwork/js-ceramic/issues) repository.
+To propose or contribute improvements to the Ceramic JavaScript client, open an issue in the [ceramicnetwork/js-ceramic](http://github.com/ceramicnetwork/js-ceramic/issues) repository.
 
 To propose or contribute other feature requests or improvements that don't fit neatly into the above, such as creating an implementation in another language, open an issue in the [ceramicnetwork/ceramic](http://github.com/ceramicnetwork/ceramic/issues) repository.
 
