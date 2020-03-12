@@ -1,7 +1,9 @@
 ![ceramic opengraph](https://uploads-ssl.webflow.com/5e4b58d7f08158ece0209bbd/5e62a54c0e45bd7b2ef53d25_OpenGraphCeramic.png)
 
 # Ceramic Protocol
-[**Ceramic**](http://ceramic.network) is a permissionless protocol for creating tamper-proof documents. Ceramic documents are signed, append-only objects stored in IPFS, encoded using IPLD, and anchored in one or more blockchains. Ceramic's public document graph provides a single verifiable source of truth for building consensus around important documents, enabling participants to trustlessly share and efficiently coordinate around information in a platform-agnostic way. Ceramic documents support novel use cases such as self-sovereign identity, interoperable data ecosystems, and user-centric infrastructure that allow developers to build more open, composable apps.
+> [**Ceramic**](http://ceramic.network) is a permissionless protocol for creating tamper-proof documents. 
+
+Ceramic documents are signed, append-only objects stored in IPFS, encoded using IPLD, and anchored in one or more blockchains. Ceramic's public document graph provides a single verifiable source of truth for building consensus around important documents, enabling participants to trustlessly share and efficiently coordinate around information in a platform-agnostic way. Ceramic documents support novel use cases such as self-sovereign identity, interoperable data ecosystems, and user-centric infrastructure that allow developers to build more open, composable apps.
 
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/) [![Twitter](https://img.shields.io/twitter/follow/ceramicnetwork?label=Follow&style=social)](https://twitter.com/ceramicnetwork) [![Github](https://img.shields.io/github/stars/ceramicnetwork/ceramic?style=social)](https://github.com/ceramicnetwork/ceramic)
 
