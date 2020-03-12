@@ -20,9 +20,9 @@ Ceramic's mission is to create a web without silos.
 
 [**Ceramic**](http://ceramic.network) is a permissionless protocol for creating tamper-proof documents. Ceramic documents are signed, append-only objects stored in [IPFS](https://github.com/ipfs/ipfs), encoded using [IPLD](https://github.com/ipld/ipld), and anchored in one or more blockchains. Ceramic's public infrastructure provides a verifiable source of truth for building consensus around important documents, enabling participants to trustlessly share information and efficiently coordinate in a platform-agnostic way. Ceramic documents support many novel use cases, but are ideal for creating self-sovereign identities and enabling ecosystems of interoperable data sources and composable web services that allow users to have more agency and developers to build more open, composable apps.
 
-By migrating information from isolated backend servers into the shared public commons governed by digital signatures and consensus, Ceramic solves a range of concerns native to siloed, centralized information including data authorship, ownership, format, availability, access, integrity, security, privacy, and state. As a result, the Ceramic network provides the trusted infrastructure needed to enable an internet ecosystem that is boundlessly transparent, collaborative, interoperable, and user-centric.
+By migrating information from isolated backend servers into the shared public commons governed by digital signatures and consensus, Ceramic solves a range of concerns native to centralized information silos including data authorship, ownership, format, availability, access, integrity, security, privacy, and state. As a result, the Ceramic network provides the infrastructure needed to enable a trusted internet ecosystem that is boundlessly transparent, collaborative, interoperable, and user-centric.
 
-Ceramic documents are flexible and can be modeled to represent any kind of information, however they seem to be particularly well-suited for storing information which is: 1) relied upon by many different parties; 2) needs elevated trust, auditability, and resilience; 3) requires cross-platform interoperability; and 4) is infrequently updated. In this view, the Ceramic network is ideal for storing platform-agnostic decentralized identifiers and additional data about those identifiers: 
+Ceramic documents are flexible and can be modeled to represent any kind of information, however they seem ideal for storing information which is: 1) relied upon by many different parties; 2) requires elevated trust, auditability, and resilience; 3) requires cross-platform interoperability; and 4) is infrequently updated. In this view, the Ceramic network is well-suited for storing platform-agnostic decentralized identifiers and additional data about those identifiers: 
 
 - Decentralized identifiers (DIDs for users, organizations, apps, services, and devices);
 - Context for identifiers (descriptors, metadata, routing information);
@@ -31,12 +31,12 @@ Ceramic documents are flexible and can be modeled to represent any kind of infor
 - Policies by identifiers (service policies, privacy policies, access policies, payment policies, permissions); and
 - Agreements between identifiers (service agreements).
 
-While Ceramic documents may act as standalone objects, they can also be combined to enable more abstract, novel use cases that demonstrate the potential of user-centric interoperability and the power of the Ceramic network to unbundle user identities, data, and services from applications. By simply combining a few of the documents above, Ceramic can enable: 
+While Ceramic documents may act as standalone objects, they can also be combined to enable more abstract use cases that demonstrate the potential of user-centric interoperability and the power of unbundling user identities, data, and services from applications. By simply combining a few of the documents above, Ceramic can enable: 
 
 - Portable, self-sovereign identity (SSI) systems;
-- A global marketplace of interoperable, shared data sources and web services;
-- User-managed access control to shared data sourced and services; and
-- Pay-as-you-go metered web services.
+- Ecosystems of interoperable, composable data sources and web services;
+- User-managed access control to shared data sources and services; and
+- Permissioinless pay-as-you-go web services.
 
 ## **Background**
 
