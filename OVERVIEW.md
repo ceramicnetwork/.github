@@ -13,7 +13,6 @@
 - [The Ceramic Ecosystem](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#the-ceramic-ecosystem)
 - [Ceramic Ecosystem Alliance (CEA)](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#join-the-ceramic-ecosystem-alliance)
 - [Timeline](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#timeline)
-- [Additional Resources](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#additioinal-resources)
 
 
 ## Introduction
