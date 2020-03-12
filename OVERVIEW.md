@@ -36,7 +36,7 @@ While Ceramic documents may act as standalone objects, they can also be combined
 - Portable, self-sovereign identity (SSI) systems;
 - Ecosystems of interoperable, composable data sources and web services;
 - User-managed access control to shared data sources and services; and
-- Permissioinless pay-as-you-go web services.
+- Permissionless pay-as-you-go web services.
 
 ## **Background**
 
