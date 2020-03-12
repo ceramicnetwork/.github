@@ -4,8 +4,6 @@
 
 This document provides an introduction to the Ceramic protocol. For a technical overview of Ceramic, see technical specification.
 
-**Content**
-
 - [Introduction](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#introduction)
 - [Background](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#background)
 - [Document Graph](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#a-scalable-decentralized-document-graph)
