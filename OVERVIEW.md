@@ -80,13 +80,15 @@ Policies are a flexible way to create single or multi-party statements and can b
 > Learn more about policies [here](https://github.com/ceramicnetwork/specs/blob/master/doctypes/policy.md).
 
 #### Policy Templates
-Here are some example templates to give you an idea of what's possible with policies, but you can always create your own based on your use case. [3Box](http://github.com/3box/3box) uses these templates to enable an interoperable, user-controlled data management system.
+Here are some example templates to give you an idea of what's possible with policies, but you can always create your own based on your use case.
 
 | Policy Template | Description | Use Case |
 | --------------- | ----------- | -------- |
 | [Collection Policy]() | Describes a collection of databases with specific schemas | Useful for apps to define their data model, so others can easily consume the data |
 | [Service Policy]() | Describes simple functions that take an input and produce an output, but could also be used for more complex services such as database hosting, etc. | Useful for infrastructure service providers to define their service or API | Useful for  |
 | [Privacy Policy]() | Describes access control rights to databases in a Collection Policy  | Useful for allowing users to set permissions and control their privacy while sharing data across apps |
+
+> [3Box](http://github.com/3box/3box) uses these templates to enable an interoperable, user-controlled data management system.
 
 
 ### **Additional Doctypes**
