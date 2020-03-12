@@ -36,7 +36,7 @@ Ceramic documents are flexible and can be modeled to represent any kind of infor
 While Ceramic documents may act as standalone objects, they can also be combined to enable more abstract, novel use cases that demonstrate the potential of user-centric interoperability and the power of the Ceramic network to unbundle user identities, data, and services from applications. By simply combining a few of the documents above, Ceramic can enable: 
 
 - Portable, self-sovereign identity (SSI) systems;
-- A global marketplace of shared data sources and interoperable web services;
+- A global marketplace of interoperable, shared data sources and web services;
 - User-managed access control to shared data sourced and services; and
 - Pay-as-you-go metered web services.
 
