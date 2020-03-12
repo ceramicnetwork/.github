@@ -59,20 +59,35 @@ Ceramic documents are signed, append-only, tamper-proof objects stored in IPFS, 
 Ceramic currently supports three standard doctypes, but more can be added to the protocol by submitting an issue on the [Ceramic Specs](http://github.com/ceramicnetwork/specs) repository.
 
 ### **3ID Identity**
+3ID is a decentralized identity (DID) method that uses Ceramic to create, update, and resolve DID documents. The DID standard provides a general format for verifiable decentralized digital identities. Given a specific DID string, a DID document which contains public keys, services, authentication authorization, etc. can be resolved.
 
-3IDs are self-sovereign identities (DIDs) that can authenticate, sign and encrypt data, map to data and services, and perform access control. 3IDs can represent people, organizations, applications, services, or devices and are controlled by one or many private keys, providing flexibility and interoperability across platforms. Learn more about 3IDs here.
+Ceramic's 3IDs allow users to authenticate, sign and encrypt data, map to data and services, and perform access control. 3IDs can represent people, organizations, applications, services, or devices and are controlled by one or many private keys, providing flexibility and interoperability across platforms. 
+
+> Learn more about 3IDs [here](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md).
 
 ### **Account Link**
+Account links publicly associate a 3ID to other public identities, such as public keys, smart contracts, or other 3IDs. Account links allow others to verify that two identities are owned by the same person or organization. 
 
-Account links publicly associate a 3ID to other public identities, such as public keys, smart contracts, or other 3IDs. Account links allow others to verify that two identities are owned by the same person or organization. Learn more about account links here.
+> Learn more about account links [here](https://github.com/ceramicnetwork/specs/blob/master/doctypes/account-link.md).
 
 ### **Policy**
+Policies are a flexible way to create single or multi-party statements and can be used to define context for 3IDs (service descriptors, metadata, routing information), statements about 3IDs (application data schema definitions), policies by 3IDs (service policies, privacy policies, access policies, payment policies, permissions), agreements between 3IDs (service agreements), and much more. 
 
-Policies are a flexible way to create single or multi-party statements and can be used to define context for 3IDs (service descriptors, metadata, routing information), statements about 3IDs (application data schema definitions), policies by 3IDs (service policies, privacy policies, access policies, payment policies, permissions), agreements between 3IDs (service agreements), and much more. Learn more about policies here.
+#### Policy Templates
+Here are some example templates to give you an idea of what's possible with policies, but you can always create your own based on your use case. [3Box](http://github.com/3box/3box) uses these templates to enable an interoperable, user-controlled data management system.
+
+> Learn more about policies [here](https://github.com/ceramicnetwork/specs/blob/master/doctypes/policy.md).
+
+| Policy Template | Description | Use Case |
+| --------------- | ----------- | -------- |
+| [Collection Policy]() | Describes a collection of databases with specific schemas | Useful for apps to define their data model, so others can easily consume the data |
+| [Service Policy]() | Describes simple functions that take an input and produce an output, but could also be used for more complex services such as database hosting, etc. | Useful for infrastructure service providers to define their service or API | Useful for  |
+| [Privacy Policy]() | Describes access control rights to databases in a Collection Policy  | Useful for allowing users to set permissions and control their data privacy while sharing data across apps |
+
 
 ### **Additional Doctypes**
 
-Have an idea for a new doctype? Propose it [here](http://github.com/ceramicnetwork/specs).
+Have an idea for a new doctype? Propose it [here](http://github.com/ceramicnetwork/specs/issues).
 
 # The Ceramic Ecosystem
 
