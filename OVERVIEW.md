@@ -2,7 +2,7 @@
  
 # **Introduction to the Ceramic Protocol**
 
-This document provides an introduction to the Ceramic protocol. For a technical overview of Ceramic, see technical specification.
+> This document provides an introduction to the Ceramic protocol. For a more technical overview, see [Ceramic Technical Specification](https://github.com/ceramicnetwork/specs).
 
 - [Introduction](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#introduction)
 - [Background](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#background)
@@ -18,7 +18,7 @@ This document provides an introduction to the Ceramic protocol. For a technical 
 
 Ceramic's mission is to create a web without silos.
 
-Ceramic is a permissionless protocol for creating tamper-proof documents. Ceramic documents are signed, append-only objects stored in IPFS, encoded using IPLD, and anchored in one or more blockchains. Ceramic's public document graph provides a single verifiable source of truth for building consensus around important documents, enabling participants to trustlessly share and efficiently coordinate around information in a platform-agnostic way. 
+[**Ceramic**](http://ceramic.network) is a permissionless protocol for creating tamper-proof documents. Ceramic documents are signed, append-only objects stored in [IPFS](https://github.com/ipfs/ipfs), encoded using [IPLD](https://github.com/ipld/ipld), and anchored in one or more blockchains. Ceramic's public document graph provides a single verifiable source of truth for building consensus around important documents, enabling participants to trustlessly share and efficiently coordinate around information in a platform-agnostic way. 
 
 By migrating information from isolated backend servers into the shared public commons governed by digital signatures and consensus, Ceramic solves a range of concerns native to siloed, centralized information including data authorship, ownership, format, availability, access, authenticity, integrity, security, privacy, and state. As a result, the Ceramic network provides the trusted infrastructure needed to enable an internet ecosystem that is boundlessly open, transparent, composable, collaborative, and interoperable.
 
@@ -56,7 +56,7 @@ Ceramic provides a public source of truth for creating and accessing important d
 
 Ceramic documents are signed, append-only, tamper-proof objects stored in IPFS, encoded using IPLD, and anchored in one or more blockchains. Documents are the core construct of the Ceramic protocol and can flexibly be modeled to represent many things. Click here to learn more about how Ceramic documents work.
 
-Ceramic currently supports three standard doctypes, but more can be added to the protocol by submitting an issue on the Ceramic Specs repository.
+Ceramic currently supports three standard doctypes, but more can be added to the protocol by submitting an issue on the [Ceramic Specs](http://github.com/ceramicnetwork/specs) repository.
 
 ### **3ID Identity**
 
@@ -72,7 +72,7 @@ Policies are a flexible way to create single or multi-party statements and can b
 
 ### **Additional Doctypes**
 
-Have an idea for a new doctype? Propose it here.
+Have an idea for a new doctype? Propose it [here](http://github.com/ceramicnetwork/specs).
 
 # The Ceramic Ecosystem
 
@@ -108,6 +108,6 @@ The Ceramic Ecosystem Alliance is a collaborative group of organizations, commun
 
 # Timeline
 
-Ceramic's core contributors are working hard to ship v1 of the network. We already have some working code in js-ceramic, and ideally will launch on mainnet sometime this summer. Hop in our Discord to ask more questions.
+Ceramic's core contributors are working hard to ship v1 of the network. We already have some working code in [js-ceramic](https://github.com/ceramicnetwork/js-ceramic), and ideally will launch into production sometime this summer. Hop in our [**Discord**](https://discord.gg/6VRZpGP) to ask more questions.
 
 # Additioinal **Resources**
