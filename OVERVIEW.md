@@ -133,15 +133,14 @@ Ceramic's core contributors are working hard to ship v1 of the network. We alrea
 ## Additional **Resources**
 
 ### Learn more
-- [**Technical Specs**](http://github.com/ceramicnetwork/specs)
-  - [Protocol Overview](https://github.com/ceramicnetwork/specs/)
-  - [Document Lifecycle](https://github.com/ceramicnetwork/specs/)
-  - [Document Log](https://github.com/ceramicnetwork/specs/)
-  - [Document Types](https://github.com/ceramicnetwork/specs/)
-  - [Document Update Propagation](https://github.com/ceramicnetwork/specs/)
-  - [Ceramic Services](https://github.com/ceramicnetwork/specs/)
-  - [Implementations](https://github.com/ceramicnetwork/specs/)
-  - [Other Considerations](https://github.com/ceramicnetwork/specs/)
+- [**Technical Specs**](https://github.com/ceramicnetwork/specs)
+  - [Protocol Overview](https://github.com/ceramicnetwork/specs#protocol-overview)
+  - [Document Lifecycle](https://github.com/ceramicnetwork/specs#document-lifecycle)
+  - [Document Log](https://github.com/ceramicnetwork/specs#document-log)
+  - [Document Types](https://github.com/ceramicnetwork/specs#document-types)
+  - [Document Update Propagation](https://github.com/ceramicnetwork/specs#document-update-propagation)
+  - [Ceramic Services](https://github.com/ceramicnetwork/specs#ceramic-services)
+  - [Implementations](https://github.com/ceramicnetwork/specs#implementations)
   
 ### Implementatons
 | Package | JavaScript | Description |
