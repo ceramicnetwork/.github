@@ -36,6 +36,8 @@
 
 
 ## Contributing
+The easiest way to get involved in Ceramic is to join our [**Discord**](https://discord.gg/6VRZpGP), where we are very active.
+
 To propose or contribute improvements to the core **Ceramic protocol**, such as adding support for additional doctypes, add an issue or submit a PR to the [**Ceramic Specs**](http://github.com/ceramicnetwork/specs) repository.
 
 To propose or contribute improvements to the Ceramic **JavaScript client**, add an issue or submit a PR to the [**js-ceramic**](http://github.com/ceramicnetwork/js-ceramic) repository.
