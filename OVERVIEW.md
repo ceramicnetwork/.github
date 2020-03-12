@@ -77,6 +77,10 @@ Account links publicly associate a 3ID to other public identities, such as publi
 ### **Policy**
 Policies are a flexible way to create single or multi-party statements and can be used to define context for 3IDs (service descriptors, metadata, routing information), statements about 3IDs (application data schema definitions), policies by 3IDs (service policies, privacy policies, access policies, payment policies, permissions), agreements between 3IDs (service agreements), and much more. 
 
+The policy doctype can be used to descibe services that are made available though through the Ceramic network. A service provider creates a policy document that includes the description of the api that can be used to reach the service (e.g. http api, libp2p protocol, etc). The policy document may also include payment information, i.e. if some form of payment is needed in order to use the service.
+
+Using Ceramic Service policies almost any type of services can be represented. Some examples of this include Payments, Data hosting, Indexing, etc. Adding a service to ceramic allows it to be used in a user centric way. Services can be enabled per user and apps can route to different services though the users identity.
+
 > Learn more about policies [here](https://github.com/ceramicnetwork/specs/blob/master/doctypes/policy.md).
 
 #### Policy Templates
