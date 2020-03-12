@@ -27,7 +27,7 @@ Ceramic documents are signed, append-only objects stored in [IPFS](https://githu
   - [Document Update Propagation](https://github.com/ceramicnetwork/specs#document-update-propagation)
   - [Ceramic Services](https://github.com/ceramicnetwork/specs#ceramic-services)
   - [Implementations](https://github.com/ceramicnetwork/specs#implementations)
-- [Doctypes]
+- Doctypes
   - [3id](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md)
   - [Account-link](https://github.com/ceramicnetwork/specs/blob/master/doctypes/account-link.md)
   - [Policy](https://github.com/ceramicnetwork/specs/blob/master/doctypes/policy.md)
