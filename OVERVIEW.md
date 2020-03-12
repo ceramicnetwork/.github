@@ -42,11 +42,11 @@ While Ceramic documents may act as standalone objects, they can also be combined
 
 As developers increasingly build composable applications that rely on user-managed identity, interoperable data, and shared infrastructure, they have less certainty over the types of resources that users will bring to their application at any given time. Because of this, a primary concern for developers is ensuring interoperability between a diverse set of unbundled technologies including (but not limited to) key pairs, wallets, data stores, and infrastructure services. As the variety of infrastructure grows, so does the challenge of maintaining interoperability.
 
-For it to succeed, the composable web needs an identity-centric interoperability protocol to provide applications with the information they need to to easily discover, route to, request access to, and interact with a user's resources regardless of which wallet users bring, which applications created the data, or where the resources are located. 
+For it to succeed, the composable web needs a permissionless, identity-centric interoperability protocol to provide applications with the information they need to to easily discover, route to, request access to, and interact with a user's resources regardless of which wallet users bring, which applications created the data, or where the resources are located. 
 
 To provide maximal interoperability, this protocol should allow users to: 1) permissionlessly register an interoperable identity (DID), 2) privately control this identity with one or more private keys, 3) publicly associate public keys and accounts to this identity, 4) associate resources to this identity while maintaining privacy, 5) set permissions for resources, 6) perform access control to resources, and 7) interoperably sign and/or encrypt information. This protocol should also allow: 8) service providers to publish their service definitions and service agreements to the network, and 9) applications to publish their data definitions to the network.
 
-To achieve permissionless interoperability and composabilty across the web, we need a user-centric way to defeat the many identity, data, and service silos that work to undermine these efforts. Ceramic's verifiable document graph offers a solution to these problems.
+Ceramic's verifiable document graph offers a solution to these problems.
 
 # A Scalable, Decentralized Document Graph
 
