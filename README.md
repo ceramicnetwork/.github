@@ -1,14 +1,13 @@
 ![ceramic opengraph](https://uploads-ssl.webflow.com/5e4b58d7f08158ece0209bbd/5e62a54c0e45bd7b2ef53d25_OpenGraphCeramic.png)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+[![](https://img.shields.io/badge/Chat%20on-Discord-orange.svg?style=flat)](https://discord.gg/6VRZpGP)
+[![Twitter](https://img.shields.io/twitter/follow/ceramicnetwork?label=Follow&style=social)](https://twitter.com/ceramicnetwork) 
+
 
 # Ceramic Protocol
 > [**Ceramic**](http://ceramic.network) is a permissionless protocol for creating tamper-proof documents. 
 
 Ceramic documents are signed, append-only objects stored in [IPFS](https://github.com/ipfs/ipfs), encoded using [IPLD](https://github.com/ipld/ipld), and anchored in one or more blockchains. Ceramic's public document graph provides a single verifiable source of truth for building consensus around important documents, enabling participants to trustlessly share and efficiently coordinate around information in a platform-agnostic way. Ceramic documents support novel use cases such as self-sovereign identity, interoperable data ecosystems, and user-centric infrastructure that allow developers to build more open, composable apps.
-
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
-[![](https://img.shields.io/badge/Chat%20on-Discord-orange.svg?style=flat)](https://discord.gg/6VRZpGP)
-[![Twitter](https://img.shields.io/twitter/follow/ceramicnetwork?label=Follow&style=social)](https://twitter.com/ceramicnetwork) 
-[![Github](https://img.shields.io/github/stars/ceramicnetwork/ceramic?style=social)](https://github.com/ceramicnetwork/ceramic)
 
 
 ## Learn More
@@ -20,15 +19,14 @@ Ceramic documents are signed, append-only objects stored in [IPFS](https://githu
   - [Ceramic Ecosystem Alliance (CEA)](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#join-the-ceramic-ecosystem-alliance)
   - [Timeline](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#timeline)
   - [Additional Resources](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#additioinal-resources)
-- [**Technical Specs**](http://github.com/ceramicnetwork/specs)
-  - [Protocol Overview](https://github.com/ceramicnetwork/specs/)
-  - [Document Lifecycle](https://github.com/ceramicnetwork/specs/)
-  - [Document Log](https://github.com/ceramicnetwork/specs/)
-  - [Document Types](https://github.com/ceramicnetwork/specs/)
-  - [Document Update Propagation](https://github.com/ceramicnetwork/specs/)
-  - [Ceramic Services](https://github.com/ceramicnetwork/specs/)
-  - [Implementations](https://github.com/ceramicnetwork/specs/)
-  - [Other Considerations](https://github.com/ceramicnetwork/specs/)
+- [**Technical Specs**](https://github.com/ceramicnetwork/specs)
+  - [Protocol Overview](https://github.com/ceramicnetwork/specs#protocol-overview)
+  - [Document Lifecycle](https://github.com/ceramicnetwork/specs#document-lifecycle)
+  - [Document Log](https://github.com/ceramicnetwork/specs#document-log)
+  - [Document Types](https://github.com/ceramicnetwork/specs#document-types)
+  - [Document Update Propagation](https://github.com/ceramicnetwork/specs#document-update-propagation)
+  - [Ceramic Services](https://github.com/ceramicnetwork/specs#ceramic-services)
+  - [Implementations](https://github.com/ceramicnetwork/specs#implementations)
 
 
 ## Stay Up to Date
