@@ -14,7 +14,7 @@
 
 ---
 
-# Introduction
+## Introduction
 
 Ceramic's mission is to create a web without silos.
 
@@ -38,7 +38,7 @@ While Ceramic documents may act as standalone objects, they can also be combined
 - User-managed access control to shared data sourced and services; and
 - Pay-as-you-go metered web services.
 
-# **Background**
+## **Background**
 
 As developers increasingly build composable applications that rely on user-managed identity, interoperable data, and shared infrastructure, they have less certainty over the types of resources that users will bring to their application at any given time. Because of this, a primary concern for developers is ensuring interoperability between a diverse set of unbundled technologies including (but not limited to) key pairs, wallets, data stores, and infrastructure services. As the variety of infrastructure grows, so does the challenge of maintaining interoperability.
 
@@ -48,7 +48,7 @@ To provide maximal interoperability, this protocol should allow users to: 1) per
 
 Ceramic's verifiable document graph offers a solution to these problems.
 
-# A Scalable, Decentralized Document Graph
+## A Scalable, Decentralized Document Graph
 
 Ceramic provides a public source of truth for creating and accessing important documents, enabling new use cases that require decentralized coordination or cross-platform interoperability. Because of its hybrid design (IPFS and blockchain), Ceramic's document graph is scalable, decentralized, blockchain-agnostic, efficient, and low cost (variable depending on the blochain anchor service you choose).
 
@@ -89,7 +89,7 @@ Here are some example templates to give you an idea of what's possible with poli
 
 Have an idea for a new doctype? Propose it [here](http://github.com/ceramicnetwork/specs/issues).
 
-# The Ceramic Ecosystem
+## The Ceramic Ecosystem
 
 Ceramic enables the emergence of a diverse, interoperable ecosystem of user-controlled wallets, data stores, and infrastructure services that allow developers to build lightweight, composable, collaborative applications. Here's how you can get involved.
 
@@ -117,12 +117,12 @@ Offer Ceramic-compatible services and list your infrastructure on the Ceramic ne
 
 Build your app using Ceramic's ecosystem of connected, interoperable services. Store your user and application data in Ceramic-enabled databases with infrastructure providers that support Ceramic service agreements. Also use Ceramic to discover available data sources to populate your application.
 
-# Join the Ceramic Ecosystem Alliance
+## Join the Ceramic Ecosystem Alliance
 
 The Ceramic Ecosystem Alliance is a collaborative group of organizations, communities, and individuals actively contributing to the research and development of the Ceramic protocol, integrating Ceramic standards into their products, or building services on the Ceramic network. Become a member and [**sign up here**](https://danny765911.typeform.com/to/AAFtVN).
 
-# Timeline
+## Timeline
 
 Ceramic's core contributors are working hard to ship v1 of the network. We already have some working code in [js-ceramic](https://github.com/ceramicnetwork/js-ceramic), and ideally will launch into production sometime this summer. Hop in our [**Discord**](https://discord.gg/6VRZpGP) to ask more questions.
 
-# Additional **Resources**
+## Additional **Resources**
