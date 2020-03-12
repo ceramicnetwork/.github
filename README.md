@@ -38,10 +38,8 @@ Ceramic documents are signed, append-only objects stored in [IPFS](https://githu
 ## Implementatons
 | Package | JavaScript | Description |
 | ------- | ---------- | ----------- |
-| Ceramic | [ceramicnetwork/js-ceramic](https://github.com/ceramicnetwork/js-ceramic) | Typescript implementation of the Ceramic protocol
+| Ceramic | [ceramicnetwork/js-ceramic](https://github.com/ceramicnetwork/js-ceramic) | Typescript implementation of the Ceramic protocol |
 
-
-#### New Implementations
 Want to work on an implementation in another language? [Open an issue](https://github.com/ceramicnetwork/ceramic/issues) in this repository to discuss it with others, find help, and coordinate efforts.
 
 
