@@ -65,12 +65,12 @@ Ceramic documents are signed, append-only, tamper-proof objects stored in IPFS, 
 
 Ceramic's 3IDs allow users to authenticate, sign and encrypt data, map to data and services, and perform access control. 3IDs can represent people, organizations, applications, services, or devices and are controlled by one or many private keys, providing flexibility and interoperability across platforms. 
 
-> Learn more about 3IDs [here](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md).
+> Learn more about 3IDs [here](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md) and see an example [here](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md#example).
 
 ### **Account Link**
 Account links publicly associate a 3ID to other public identities, such as public keys, smart contracts, or other 3IDs. Account links allow others to verify that two identities are owned by the same person or organization. 
 
-> Learn more about account links [here](https://github.com/ceramicnetwork/specs/blob/master/doctypes/account-link.md).
+> Learn more about account links [here](https://github.com/ceramicnetwork/specs/blob/master/doctypes/account-link.md) and see examples [here](https://github.com/ceramicnetwork/specs/blob/master/doctypes/account-link.md#examples).
 
 ### **Policy**
 Policies are a flexible way to create single or multi-party statements and can be used to define context for 3IDs (service descriptors, metadata, routing information), statements about 3IDs (application data schema definitions), policies by 3IDs (service policies, privacy policies, access policies, payment policies, permissions), agreements between 3IDs (service agreements), and much more. 
@@ -136,7 +136,7 @@ Ceramic's core contributors are working hard to ship v1 of the network. We alrea
 ## Additional **Resources**
 
 ### Learn more
-- [**Technical Specs**](https://github.com/ceramicnetwork/specs)
+- [Technical Specs](https://github.com/ceramicnetwork/specs)
   - [Protocol Overview](https://github.com/ceramicnetwork/specs#protocol-overview)
   - [Document Lifecycle](https://github.com/ceramicnetwork/specs#document-lifecycle)
   - [Document Log](https://github.com/ceramicnetwork/specs#document-log)
@@ -144,6 +144,10 @@ Ceramic's core contributors are working hard to ship v1 of the network. We alrea
   - [Document Update Propagation](https://github.com/ceramicnetwork/specs#document-update-propagation)
   - [Ceramic Services](https://github.com/ceramicnetwork/specs#ceramic-services)
   - [Implementations](https://github.com/ceramicnetwork/specs#implementations)
+- Doctypes
+  - [3id](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md)
+  - [Account-link](https://github.com/ceramicnetwork/specs/blob/master/doctypes/account-link.md)
+  - [Policy](https://github.com/ceramicnetwork/specs/blob/master/doctypes/policy.md)
   
 ### Implementatons
 | Package | JavaScript | Description |
