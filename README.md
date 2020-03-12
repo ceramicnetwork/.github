@@ -42,7 +42,7 @@ To propose or contribute improvements to the core **Ceramic protocol**, such as 
 
 To propose or contribute improvements to the Ceramic **JavaScript client**, add an issue or submit a PR to the [**js-ceramic**](http://github.com/ceramicnetwork/js-ceramic) repository.
 
-To propose or contribute other improvements or feature requests that don't fit neatly into the above, submit an issue on this repository, [**Ceramic**]((http://github.com/ceramicnetwork/ceramic))
+To propose or contribute other improvements or feature requests that don't fit neatly into the above, submit an issue on this repository, [**Ceramic**](http://github.com/ceramicnetwork/ceramic).
 
 
 ## Ceramic Ecosystem Alliance
