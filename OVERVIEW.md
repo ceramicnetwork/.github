@@ -6,13 +6,13 @@ This document provides an introduction to the Ceramic protocol. For a technical 
 
 **Content**
 
-- Introduction
-- Background
-- Document Graph
-- The Ceramic Ecosystem
-- Ceramic Ecosystem Alliance (CEA)
-- Timeline
-- Additional Resources
+- [Introduction](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#introduction)
+- [Background](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#background)
+- [Document Graph](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#a-scalable-decentralized-document-graph)
+- [The Ceramic Ecosystem](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#the-ceramic-ecosystem)
+- [Ceramic Ecosystem Alliance (CEA)](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#join-the-ceramic-ecosystem-alliance)
+- [Timeline](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#timeline)
+- [Additional Resources](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#additioinal-resources)
 
 ---
 
