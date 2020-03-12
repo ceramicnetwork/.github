@@ -123,30 +123,10 @@ The Ceramic Ecosystem Alliance is a collaborative group of organizations, commun
 
 ## Timeline
 
-Ceramic's core contributors are working hard to ship v1 of the network. We already have some working code in [js-ceramic](https://github.com/ceramicnetwork/js-ceramic), and ideally will launch into production sometime this summer. Hop in our [Discord](https://discord.gg/6VRZpGP) to ask more questions.
+Ceramic's core contributors are working hard to ship v1 of the network. We already have some working code in [js-ceramic](https://github.com/ceramicnetwork/js-ceramic), and ideally will launch into production sometime this summer. 
 
-## Additional **Resources**
+Hop in our [**Discord**](https://discord.gg/6VRZpGP) to ask more questions.
 
-### Learn more
-- [Technical Specs](https://github.com/ceramicnetwork/specs)
-  - [Protocol Overview](https://github.com/ceramicnetwork/specs#protocol-overview)
-  - [Document Lifecycle](https://github.com/ceramicnetwork/specs#document-lifecycle)
-  - [Document Log](https://github.com/ceramicnetwork/specs#document-log)
-  - [Document Types](https://github.com/ceramicnetwork/specs#document-types)
-  - [Document Update Propagation](https://github.com/ceramicnetwork/specs#document-update-propagation)
-  - [Ceramic Services](https://github.com/ceramicnetwork/specs#ceramic-services)
-  - [Implementations](https://github.com/ceramicnetwork/specs#implementations)
-- Doctypes
-  - [3id](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md)
-  - [Account-link](https://github.com/ceramicnetwork/specs/blob/master/doctypes/account-link.md)
-  - [Policy](https://github.com/ceramicnetwork/specs/blob/master/doctypes/policy.md)
-  
-### Implementatons
-| Package | JavaScript | Description |
-| ------- | ---------- | ----------- |
-| Ceramic | [ceramicnetwork/js-ceramic](https://github.com/ceramicnetwork/js-ceramic) | Typescript implementation of the Ceramic protocol
+## Continue Reading
 
-### Stay Up to Date
-- Chat: [Discord](https://discord.gg/6VRZpGP)
-- Follow: [Twitter](http://twitter.com/ceramicnetwork)
-- Subscribe: [Newsletter](http://ceramic.network)
+### [Ceramic Technical Specification  >](https://github.com/ceramicnetwork/specs)
