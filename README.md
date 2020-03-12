@@ -5,7 +5,7 @@
 
 
 # Ceramic Protocol
-> [**Ceramic**](http://ceramic.network) is a permissionless protocol for creating tamper-proof documents. 
+> [**Ceramic**](http://ceramic.network) is a permissionless protocol for creating tamper-proof, updatable documents. 
 
 Ceramic documents are signed, append-only objects stored in [IPFS](https://github.com/ipfs/ipfs), encoded using [IPLD](https://github.com/ipld/ipld), and anchored in one or more blockchains. Ceramic's public document graph provides a single verifiable source of truth for building consensus around important documents, enabling participants to trustlessly share and efficiently coordinate around information in a platform-agnostic way. Ceramic documents support novel use cases such as self-sovereign identity, interoperable data ecosystems, and user-centric infrastructure that allow developers to build more open, composable apps.
 
