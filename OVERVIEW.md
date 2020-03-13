@@ -48,6 +48,7 @@ As developers increasingly build composable applications that rely on user-manag
 For it to succeed, the composable web needs a permissionless, identity-centric interoperability protocol to provide applications with the information they need to to easily discover, route to, request access to, and interact with a user's resources regardless of which wallet users bring, which applications created the data, or where the resources are located. 
 
 To provide maximal interoperability, this protocol should allow users to: 
+
 1. Permissionlessly register an interoperable identity (DID);
 2. Privately control this identity with one or more private keys;
 3. Publicly associate public keys and accounts to this identity;
@@ -57,11 +58,11 @@ To provide maximal interoperability, this protocol should allow users to:
 7. Perform access control to resources; and
 8. Interoperably sign and/or encrypt information. 
  
-This protocol should also allow applications and services to: 
-9. Permissionlessly register an interoperable identity;
-10. Publish metadata, definitions, and policies;
-11. Publish data schemas;
-12. Publish service agreements.
+In addition to the requiriements above, this protocol should also allow applications and services to: 
+
+9. Publish metadata and definitions;
+10. Publish data schemas;
+11. Publish policies and service agreements.
 
 Ceramic's verifiable document graph offers a solution to these problems.
 
