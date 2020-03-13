@@ -34,7 +34,7 @@ Since Ceramic DIDs can represent any abstract entity (i.e users, organizations, 
 Although Ceramic documents may act as standalone objects, multiple documents can be combined to enable more abstract use cases that demonstrate the potential of identity-centric interoperability and the power of unbundling identities, data, and services from application servers. By simply combining a few of the documents above, Ceramic can enable: 
 
 - Portable, self-sovereign identity (SSI) systems;
-- Ecosystems of interoperable data sources and composoable web services;
+- Ecosystems of interoperable data sources and composable web services;
 - User-managed access control to shared data sources and services; and
 - Permissionless pay-as-you-go web services.
 
