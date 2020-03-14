@@ -17,13 +17,20 @@
 
 ## Introduction
 
-[**Ceramic**](http://ceramic.network) is a permissionless protocol for creating and accessing tamper-proof, updatable documents. Ceramic's public infrastructure provides a verifiable source of truth for building consensus around important information. By migrating information from isolated servers into the public commons governed by digital signatures and consensus, Ceramic solves a range of concerns native to centralized information silos.
+[**Ceramic**](http://ceramic.network) is a permissionless protocol for creating and accessing tamper-proof, updatable documents that can serve as the foundation for a web without silos. Ceramic's public infrastructure provides a source of truth for important information, removing the problems with isolated servers in favor of a public commons governed by digital signatures and consensus. Ceramic's verifiable and linkable documents removes many obstacles of centralized information silos and enables paves the way for interoperable data, composable web services, and a more connected web.
 
-Ceramic documents are flexible and can be modeled to represent any kind of information. However, they are especially appropriate for representing information which is relied upon by many parties, requires universal resolution and interoperability, and demands guaranteed trust, auditability and resilience. For these reasons, the Ceramic network is well-suited as a permissionless, platform-agnostic registry for decentralized identifiers (DIDs), additional (meta)data about those identifiers, and the policies that define how these identifiers interact with one another. 
+Ceramic Documents are simple, flexible, network agnostic, and can be modeled to represent any kind of information. They are especially appropriate for representing information which is relied upon by many parties, requires universal resolution and interoperability, and demands guaranteed trust, auditability and resilience. This makes Ceramic well-suited as a permissionless, platform-agnostic registry for decentralized identifiers (DIDs), additional (meta)data about those identifiers, and the policies that define how these identifiers interact with one another. 
 
-DIDs are abstract, key-agnostic interfaces used to identify unique participants, interoperably sign and encrypt information, authorize authentication to services, and store mappings to additional resources. While Ceramic DIDs are required to create and/or transact with documents on the Ceramic network, they can also be used for interacting with arbitrary off-chain services and data. Since Ceramic DIDs are actually documents on the Ceramic network and their signatures (actions) can always be resolved without any centralized service, they unlock identity-centric routing, interoperability, and data portability between *all platforms and services across the web.*
+Multiple Ceramic documents can be easily combined to enable powerful use cases that are possible when we unbundle data, identities and services from silo'd application servers and instead leverage identity-centric interoperability. To start, Ceramic will power: 
 
-Since Ceramic DIDs can represent any abstract entity (i.e users, organizations, applications, services, devices), the types of documents that they may want to create about themselves (or others) can vary widely depending on the particular use case. Here are some common examples of how Ceramic documents might be used:
+- Portable, self-sovereign identity (SSI) systems;
+- User-managed access control to shared data sources and services; 
+- Ecosystems of interoperable data sources and composable web services; and
+- Permissionless pay-as-you-go web services.
+
+DIDs on Ceramic are abstract, key-agnostic interfaces used to identify unique participants, interoperably sign and encrypt information, authorize authentication to services, store mappings to additional resources, and interact with arbitrary off-chain services and data. Since Ceramic DIDs are documents on the Ceramic network whose signatures (actions) can always be resolved without any centralized service, they unlock interoperability between *all platforms and services across the web.*
+
+Ceramic DIDs can represent any abstract entity (i.e users, organizations, applications, services, devices), and the types of documents can vary widely by use case. For example: 
 
 - Context for DIDs (descriptors, metadata, routing information);
 - Statements about DIDs (verifiable claims, data schema definitions);
@@ -31,17 +38,10 @@ Since Ceramic DIDs can represent any abstract entity (i.e users, organizations, 
 - Policies by DIDs (service policies, privacy policies, access policies, payment policies, permissions); and
 - Agreements between DIDs (service agreements).
 
-Although Ceramic documents may act as standalone objects, multiple documents can be combined to enable more abstract use cases that demonstrate the potential of identity-centric interoperability and the power of unbundling identities, data, and services from application servers. By simply combining a few of the documents above, Ceramic can enable: 
-
-- Portable, self-sovereign identity (SSI) systems;
-- Ecosystems of interoperable data sources and composable web services;
-- User-managed access control to shared data sources and services; and
-- Permissionless pay-as-you-go web services.
-
-As a result, the Ceramic network provides the trusted infrastructure required to enable a more connected, interoperable internet ecosystem that is boundlessly transparent, composable, and collaborative.
+Through the combination of these documents, Ceramic network provides the trusted infrastructure required to enable a more connected, interoperable internet ecosystem that is boundlessly transparent, composable, and collaborative.
 
 
-## **Background**
+## **Properties**
 
 As developers increasingly build composable applications that rely on user-managed identity, interoperable data, and shared infrastructure, they have less certainty over the types of resources that users will bring to their application at any given time. Because of this, a primary concern for developers is ensuring interoperability between a diverse set of unbundled technologies including (but not limited to) key pairs, wallets, data stores, and infrastructure services. As the variety of infrastructure grows, so does the challenge of maintaining interoperability.
 
