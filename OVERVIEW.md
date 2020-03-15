@@ -23,14 +23,14 @@ Although Ceramic can store any type of information, it is ideal for storing info
 
 For these reasons, Ceramic is especially well-suited as a permissionless, platform-agnostic registry for decentralized identifiers, additional metadata about those identifiers, and the policies that define how these identifiers interact with one another. Together, these primitives unlock a set of new use cases that are critical in today's digital context that seeks to give users more agency and developers more flexibility by unbundling user identities, data, and services from application servers:
 
-- Portable, self-sovereign identity
+- [Portable, self-sovereign identity](#Portable,-Self-Sovereign-Identity-Systems)
 - Interoperable user and application data
 - Open, pay-per-use web services
 - User-managed access control to data and services
 
 This provides users, applications, and services with a shared, interoperable environment to identify and interact online. As a result, Ceramic provides the trusted public infrastructure required to enable a more connected, interoperable internet ecosystem that is boundlessly transparent, composable, and collaborative.
 
-> For a real world example, see the [Use Cases & Applications] section below.
+> For more information, jump to the [Use Cases & Applications] section below.
 
 ### Background
 
@@ -48,11 +48,9 @@ In addition to the requiriements above, this protocol should also allow applicat
 
 Ceramic documents are signed, append-only objects stored in [IPFS](https://github.com/ipfs/ipfs), encoded using [IPLD](https://github.com/ipld/ipld), and anchored in one or more blockchains. Documents are the core construct of the Ceramic protocol and can flexibly be modeled to represent many things. 
 
-Documents can be used to descibe identities, applications, or services that are made available though through the Ceramic network. For example a service provider can create an identity and a policy document that includes the description of the api that can be used to reach the service (e.g. http api, libp2p protocol, etc). The policy document may also include payment information, i.e. if some form of payment is needed in order to use the service.
-
 Ceramic currently supports three standard [doctypes](https://github.com/ceramicnetwork/specs#document-types) ([3id](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md), [account-link](https://github.com/ceramicnetwork/specs/blob/master/doctypes/account-link.md), [policy](https://github.com/ceramicnetwork/specs/blob/master/doctypes/policy.md)), but more can be added to the protocol by submitting an issue on the [Ceramic Specs](http://github.com/ceramicnetwork/specs/issues) repository.
 
-Due to it's hybrid design relying on IPFS/IPLD and various blockchains, Ceramic's document graph is interoperable, scalable, permissionless, and low cost (variable depending on blochain anchor service).
+Due to its hybrid design relying on IPFS/IPLD and various blockchains, Ceramic's document graph is interoperable, scalable, permissionless, and low cost (variable depending on blochain anchor service).
 
 >Learn more about how [Ceramic documents work](https://github.com/ceramicnetwork/specs/blob/master/README.md#protocol-overview).
 
@@ -79,7 +77,7 @@ Ceramic DIDs will likely want to express additional metadata or context about th
 
 ### Policies
 
-Ceramic DIDs will also likely want to define explicit policies that govern various things about their identity or resources that help others others interact with them. A few examples:
+Ceramic DIDs will also likely want to define explicit policies that govern various things about their identity or resources that help others others interoperate with them. A few examples:
 
 - Schema Policies: Define schemas for data
 - Collection Policies: Define an app's data model (database types plus schema policies)
@@ -96,15 +94,33 @@ Ceramic DIDs may want to create statements about other DIDs. To achieve this the
 
 ## Use Cases & Applications
 
-Although Ceramic documents can act as standalone objects, most production systems and applications will combine multiple documents to enable extremely powerful use cases that demonstrate the potential of identity-centric interoperability and the unbondling of identities and resources from applications.
+Although Ceramic documents can act as standalone objects, most production systems and applications will combine multiple documents and participants to enable extremely powerful use cases that demonstrate the potential of identity-centric interoperability and the unbundling of identities and resources from networks and applications.
 
-### Portable, Self-Sovereign Identity (SSI) Systems
+### Portable, Self-Sovereign Identity Systems
 
+Self-sovereign identity (SSI) describes a system where participants can permissionlessly create and control their digital identity using one or more private keys. Technically, SSI could be enabled by any decentralized asymmetric cryptography system where public keys (identities) are controlled by private keys (passwords) such as bitcoin or ethereum. However, this type of system is still limited to the network on which these identities are registered, as well as the single account. These two constraints function as silos that prevent this identity from being used interoperably in additional contexts.
+
+For identities to be truly flexible and portable across platforms and keys, which makes them more useful in practice, we need an additional identity abstraction that lives at a layer above blockchain accounts. This is the value of DIDs. On Ceramic, DIDs function as the global public identity and they can be controlled by any number of private keys from any blockchain or cryptographic system. DIDs provide a single interface that owners can use to identify themselves, interoperably sign messages, encrypt data, and auhorize/access control to off-chain services that is agnostic to which blockchain a user is on. DIDs are the antidote to private key and network lock-in.
+
+Additionally, SSI is often meant to include much more than direct control of an identifier. Most times, this identifier needs more context so others can interact with it, such as profile details. Ceramic provides additional document types (see above) that allow owners to add metadata and other additional information to their SSI.
+
+Decentralized identities follow a standard specification for base functionality, and there may be multiple DID method providers. Ceramic supports DIDs as doctypes. Currently Ceramic supports the 3ID DID method, but additional ones may be defined on the network.
 
 ### Interoperable Data Ecosystems
 
+Along with identity portability, it is often desirable to have data portability across applications. This requires a few core functionalities. First, we need to have a universal way to identify a user across platforms, so that we can know which data is theirs. This is handled by SSI/DIDs (see above). Second, we need to know where this data lives. Third, we need to be able to access this data. Last, we need to know the schema of the data so we can consume it in our application without manual processing.
+
+By storing mappings to data resources in a user's DID, Ceramic provides an identity-centric way for data consumers to efficiently discover where information lives, whether on a specific server or a public network. Also by allowing Ceramic DIDs to define access control policies for their data resources, Ceramic provides an identity-centric way for users to provide consumers access to their information regardless of where it lives. Instead of access control happening on the server, it happens directly on the user. And last, Ceramic allows applications to define schemas for their data so that consumers can know a priori the shape of the data that will be returned, even if it is encrypted.
+
+Together these capabilities allow users to frictionolessly control and share their data across various applications.
+
 ### Open Web Services
-Using Ceramic service policies almost any type of services can be represented. Some examples of this include Payments, Data hosting, Indexing, etc. Adding a service to ceramic allows it to be used in a user centric way. Services can be enabled per user and apps can route to different services though the users identity.
+
+The last piece of the interoperability puzzle is providing more open, user-centric access to web services. This allows service providers (i.e. data hosting, indexing, anchoring, payments, or other arbitrary web/API services), to service requests from *all* consumers regardless of whether or not they have an account with the service provider. This allows service providers to remove the requirement of consumers creating an account and using an API key to access their service. As a result, services are no longer accessed using an API key from an application's backend, but rather are accessed by consumers meeting certain pre-defined conditions along with user consent. This allows service providers to grow their customer base on a per-use basis and remove all friction from accessing their services. 
+
+For example, this is required in the case of hosting user data that needs to be accessed by many different parties, most of whom don't have an account with the service. Using Ceramic, the data hosting service can define their service and create a service policy that includes the requirements a consumer must meet in order to access their service. When a user (or application) chooses to use this service to host their data in a database that is access controlled by a Ceramic DID, the user (or app) then adds this resource to their DID. When other consumers want to request this information they need to request access permissions from the user, and once approved, then fulfill the requirments of the hosting service (such as payments or other) before the data will be returned.
+
+Although this depicts an example of a data hosting service, Ceramic service policies can be used for almost any type of service.
 
 ### Example: 3Box
 [3Box](http://github.com/3box/3box) uses these three use cases to enable an interoperable, user-controlled data management system.
