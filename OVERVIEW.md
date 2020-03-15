@@ -17,65 +17,48 @@
 
 ## Introduction
 
-[**Ceramic**](http://ceramic.network) is a permissionless protocol for creating and accessing tamper-proof, updatable documents. Ceramic's public infrastructure provides a censorship resistant, verifiable source of truth for building consensus around important information. By migrating information from isolated servers into the public commons governed by digital signatures and consensus, Ceramic solves a range of concerns native to centralized information silos. 
+[**Ceramic**](http://ceramic.network) is a permissionless protocol for creating and accessing mutable, tamper-proof documents. Ceramic's public infrastructure provides a censorship resistant, verifiable source of truth for building consensus around important information. By migrating information from isolated servers into the public commons governed by digital signatures and consensus, Ceramic solves a range of concerns native to centralized information silos. 
 
-Although Ceramic can store any type of information, it is ideal for storing information that requires guaranteed trust (availability, auditability), cross-platform interoperability (universal resolvability), and multi-party consumption. For these reasons, it is especially well-suited as a permissionless, platform-agnostic registry for decentralized identifiers (DIDs), additional (meta)data about those identifiers, and the policies that define how these identifiers interact with one another. 
+Although Ceramic can store any type of information, it is ideal for storing information that requires guaranteed trust (availability, auditability), cross-platform interoperability (universal resolvability), and multi-party consumption. Because participants can create and resolve documents without any centralized service, Ceramic unlocks interoperability between *all platforms and services across the web.* 
 
-These primitives unlock a set of new use cases that are critical in today's digital context that seeks to unbundle user identities, data, and services from application servers, giving users more agency and developers more flexibility.
+For these reasons, Ceramic is especially well-suited as a permissionless, platform-agnostic registry for decentralized identifiers, additional metadata about those identifiers, and the policies that define how these identifiers interact with one another. Together, these primitives unlock a set of new use cases that are critical in today's digital context that seeks to give users more agency and developers more flexibility by unbundling user identities, data, and services from application servers:
 
 - Portable, self-sovereign identity
 - Interoperable user and application data
 - Open, pay-per-use web services
+- User-managed access control to data and services
 
-As a result, the Ceramic network provides the trusted infrastructure required to enable a more connected, interoperable internet ecosystem that is boundlessly transparent, composable, and collaborative.
+As a result, Ceramic provides the trusted public infrastructure required to enable a more connected, interoperable internet ecosystem that is boundlessly transparent, composable, and collaborative.
 
 ### Background
 
 As developers increasingly build composable applications that rely on user-managed identity, interoperable data, and shared infrastructure, they have less certainty over the types of resources that users will bring to their application at any given time. Because of this, a primary concern for developers is ensuring *interoperability* between a diverse set of unbundled technologies including (but not limited to) key pairs, wallets, data stores, and infrastructure services. As the variety of infrastructure grows, so does the challenge of maintaining interoperability.
 
-For it to succeed, the composable web needs a permissionless, identity-centric interoperability protocol to provide applications with all the information they need to to easily discover, route to, gain access to, and interact with a user's resources regardless of which wallet users bring, which applications created the data, or where the resources are located. 
+For it to succeed, the composable web needs a permissionless, identity-centric interoperability protocol to provide applications with all the information they need to easily discover, route to, gain access to, and interact with a user's resources regardless of which wallet users bring, which applications created the data, or where the resources are located. 
 
 ### Requirements
 
-To provide maximal interoperability, this protocol should allow users to: 1) Permissionlessly register an interoperable identity (DID); 2) Privately control this identity with one or more private keys; 3) Publicly associate public keys and accounts to this identity; 4) Publicly or privately associate resources to this identity; 5) Set permissions for resources; 6) Perform access control to resources; 7) Interoperably sign and/or encrypt information; and 8) Revoke private keys, public keys, and permissions for resources. 
+To provide maximal interoperability, this protocol should allow users to: 1) permissionlessly register an interoperable identity (DID); 2) privately control this identity with one or more private keys; 3) publicly associate public keys and accounts to this identity; 4) publicly or privately associate resources to this identity; 5) set permissions for resources; 6) perform access control to resources; 7) interoperably sign and/or encrypt information; and 8) revoke private keys, public keys, and permissions for resources. 
  
-In addition to the requiriements above, this protocol should also allow applications and services to: 9) Publish metadata and definitions; 10) Publish data schemas; and 11) Publish policies and service agreements.
+In addition to the requiriements above, this protocol should also allow applications and services to: 9) publish metadata and definitions; 10) publish data schemas; and 11) publish policies and service agreements.
 
 ## Ceramic: A Universal Document Graph
 
-Ceramic provides a public source of truth for creating and accessing important documents, enabling new use cases that require decentralized trust, coordination, or cross-platform interoperability. Because of its hybrid design (IPFS and blockchain), Ceramic's document graph is scalable, decentralized, blockchain-agnostic, efficient, and low cost (variable depending on the blochain anchor service you choose).
+Ceramic documents are signed, append-only objects stored in [IPFS](https://github.com/ipfs/ipfs), encoded using [IPLD](https://github.com/ipld/ipld), and anchored in one or more blockchains. Documents are the core construct of the Ceramic protocol and can flexibly be modeled to represent many things. Ceramic currently supports three standard [doctypes](https://github.com/ceramicnetwork/specs#document-types) ([3id](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md), [account-link](https://github.com/ceramicnetwork/specs/blob/master/doctypes/account-link.md), [policy](https://github.com/ceramicnetwork/specs/blob/master/doctypes/policy.md)), but more can be added to the protocol by submitting an issue on the [Ceramic Specs](http://github.com/ceramicnetwork/specs/issues) repository.
 
-Because Ceramic allows participants to resolve documents without any centralized service, it unlocks the identity-centric routing, interoperability, and data portability between *all platforms and services across the web.*
-
-
- 
+Due to it's hybrid design relying on IPFS/IPLD and various blockchains, Ceramic's document graph is interoperable (cross-chain), scalable, permissionless, and low cost (variable depending on blochain anchor service).
 
 >Learn more about how [Ceramic documents work](https://github.com/ceramicnetwork/specs/blob/master/README.md#protocol-overview).
 
-
-
-
-
-Ceramic's verifiable document graph offers a solution to these problems.
-
-
-
-- INSERT STATEMENT ABOUT IDENTITY_CENTRIC ROUTING
-
-### Ceramic Documents
-Ceramic documents are signed, append-only objects stored in [IPFS](https://github.com/ipfs/ipfs), encoded using [IPLD](https://github.com/ipld/ipld), and anchored in one or more blockchains. Documents are the core construct of the Ceramic protocol and can flexibly be modeled to represent many things. Ceramic currently supports three standard [doctypes](https://github.com/ceramicnetwork/specs#document-types), but more can be added to the protocol by submitting an issue on the [Ceramic Specs](http://github.com/ceramicnetwork/specs/issues) repository.
-
-
-
-#### Decentralized Identifiers (DIDs)
+### Decentralized Identifiers (DIDs)
 
 Ceramic DIDs are globally unique identities used to sign documents on the Ceramic network and also interact with other arbitrary off-chain services and data. DIDs are abstract, key-agnostic interfaces used to identify participants, interoperably sign and encrypt information, authorize authentication to services, and store mappings to additional resources. Ceramic makes no assumptions about what kind of entity a DID represents, so they can be users, organizations, applications, services, devices, etc. Since Ceramic DIDs can abstractly represent any entity, the types of documents that they may want to create varies widely depending on each use case. 
 
-#### Additional Ceramic Documents
+### Additional Ceramic Documents
 
 The sections below describe a few additional ways that Ceramic documents may be used.
 
-##### Metadata
+#### Metadata
 
 Ceramic DIDs will likely want to express additional metadata or context about themselves. Depending on the type of entity that a DID represents this may vary. A few examples:
 
@@ -90,7 +73,7 @@ Ceramic DIDs will likely want to express additional metadata or context about th
   - Data Links: Mappings to various data sources such as databases, verififiable claims, registries, ...
   - Service Links: Mappings to services and APIs
 
-##### Policies
+#### Policies
 
 Ceramic DIDs will also likely want to define explicit policies that govern various things about their identity or resources that help others others interact with them. A few examples:
 
@@ -99,13 +82,13 @@ Ceramic DIDs will also likely want to define explicit policies that govern vario
 - Service Policies: ToS for using a resource, may include service endpoint and payment info
 - Privacy Policies: User-defined access control permissions for their resources
 
-##### Agreements
+#### Agreements
 
 Ceramic DIDs may want to form explicit agreements between one another. An example:
 
 - Service Agreements: Multi-party agreements between a provider and purchaser of a service (i.e. data hosting)
 
-##### Claims
+#### Claims
 
 Ceramic DIDs may want to create statements about other DIDs. They can create a verifiable claim, which if accepted by the recipient, is included in the recipient's metadata above.
 
