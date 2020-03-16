@@ -35,7 +35,7 @@
 
 Although Ceramic can store any type of information, it is ideal for storing information that requires guaranteed trust, cross-platform interoperability, and multi-party consumption. Because participants can create and resolve documents without any centralized service, Ceramic unlocks interoperability between *all platforms and services across the web.* 
 
-For these reasons, Ceramic is especially well-suited as a registry for decentralized identities and other documents such as metadata and policies needed to enable boundless user-centric interoperability between an ecosystem of wallets, applications, databases, and services. Collectively, this information creates an identity-centric routing network that lives beyond the bounds or control of any single platform. This type of a system is critical in today's digital context that seeks to give users more agency and developers more flexibility by unbundling user identities, data, and services from application servers. Some of the things possible with Ceramic include:
+For these reasons, Ceramic is especially well-suited as a registry for decentralized identifiers and other documents needed to enable boundless interoperability between a connected ecosystem of users, wallets, applications, databases, and services. This type of a system is critical in today's digital context that seeks to give users more agency and developers more flexibility by unbundling user identities, data, and services from application servers. Some of the things possible with Ceramic include:
 
 - [Portable, self-sovereign identity](#portable-self-sovereign-identity)
 - [Interoperable user and application data](#interoperable-data-ecosystems)
@@ -43,7 +43,7 @@ For these reasons, Ceramic is especially well-suited as a registry for decentral
 
 > For more information, jump directly to [use cases](#use-cases) or view [examples](#examples).
 
-Ceramic's global ecosystem of interoperable identities, data, and services allows developers to build more modular applications. As a result, Ceramic is the trusted foundation for a more connected internet that is transparent, composable, and collaborative.
+Ceramic's global ecosystem of interoperable identities, data, and services allows developers to build more composable applications and as a result, Ceramic is the trusted foundation upon which a more connected, transparent, and user-centric internet is built.
 
 ### Background
 
@@ -51,7 +51,7 @@ As developers increasingly build composable applications that rely on user-manag
 
 For it to succeed, the composable web needs a permissionless, identity-centric interoperability protocol to provide applications with all the information they need to easily discover, route to, gain access to, and interact with a user's resources regardless of which wallet users bring, which applications created the data, or where the resources are located. 
 
-To provide maximal interoperability, this protocol should allow users to: 
+To provide maximal interoperability, this protocol should allow participants to: 
 
 1. Permissionlessly register an interoperable identity (DID); 
 2. Privately control this identity with one or more private keys;
@@ -80,10 +80,12 @@ Documents are a flexible primitive that can be modeled to represent many things.
 
 Ceramic DIDs are globally unique identities used to sign documents on the Ceramic network and also interact with arbitrary off-chain services and data. DIDs are abstract, key-agnostic interfaces used to identify participants, interoperably sign and encrypt information, authorize authentication/access control to services, and store mappings to additional resources. Ceramic makes no assumptions about what kind of entity a DID represents, so they can be users, organizations, applications, services, devices, etc. Additionally, Ceramic DIDs can be controlled by one or many private keys, providing flexibility and interoperability across wallets and platforms. 
 
-A DID consists of two core documents. Other resource mappings are stored through other documents below.
+A DID consists of two core documents:
 
 - **Decentralized Identifier (DID)**: A globally unique way to identify an entity
-- **Management Data**: Allows private keys to control a DID
+- **Management Data**: Allows one or many private keys to control a DID
+
+Other resource mappings are stored through additional documents below.
 
 > Ceramic currently supports the 3ID DID method. [Learn more about 3IDs](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md) or see an [example](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md#example).
 
@@ -125,13 +127,13 @@ Although Ceramic documents can act as standalone objects, most production system
 
 ### Portable, Self-Sovereign Identity
 
-Self-sovereign identity (SSI) describes a system where participants can permissionlessly create and control their digital identity using one or more private keys. Technically, SSI could be enabled by any decentralized asymmetric cryptography system where public keys (identities) are controlled by private keys (passwords) such as bitcoin or ethereum. However, this type of system is still limited to the network on which these identities are registered, as well as the single account. These two constraints function as silos that prevent this identity from being used interoperably in additional contexts.
+Self-sovereign identity (SSI) describes a system where participants can permissionlessly create and control their digital identity using one or more private keys. Technically, SSI could be enabled by any decentralized asymmetric cryptography system where public keys (identities) are controlled by private keys (passwords) such as bitcoin or ethereum. However, this type of system is still limited to the network on which these identities are registered, as well as the single private key account. These two constraints function as silos that prevent this identity from being used interoperably in additional contexts.
 
 For identities to be truly flexible and portable across platforms and keys, which makes them more useful in practice, we need an additional identity abstraction that lives at a layer above blockchain accounts. This is the value of DIDs. On Ceramic, DIDs function as the global public identity and they can be controlled by any number of private keys from any blockchain or cryptographic system. DIDs provide a single interface that owners can use to identify themselves, interoperably sign messages, encrypt data, and auhorize/access control to off-chain services that is agnostic to which blockchain a user is on. DIDs are the antidote to private key and network lock-in.
 
-Additionally, SSI is often meant to include much more than direct control of an identifier. Most times, this identifier needs more context so others can interact with it, such as profile details. Ceramic provides additional document types (see above) that allow owners to add metadata and other additional information to their SSI.
+Additionally, SSI is often meant to include much more than direct control of an identifier. Most times, this identifier needs more context so others can interact with it, such as profile details. Ceramic provides additional document types that allow owners to add metadata and other additional information to their SSI.
 
-Decentralized identities follow a standard specification for base functionality, and there may be multiple DID method providers. Ceramic supports DIDs as doctypes. Currently Ceramic supports the 3ID DID method, but additional ones may be defined on the network.
+DIDs follow a standard specification for base functionality, and there may be many DID providers. Ceramic supports DIDs as doctypes. Currently Ceramic supports the 3ID DID method, but additional ones may be defined on the network.
 
 ### Interoperable Data Ecosystems
 
@@ -143,16 +145,16 @@ Together these capabilities allow users to frictionolessly control and share the
 
 ### Open Web Services
 
-The last piece of the interoperability puzzle is providing more open, user-centric access to web services. This allows service providers (i.e. data hosting, indexing, anchoring, payments, or other arbitrary web/API services), to service requests from *all* consumers regardless of whether or not they have an account with the service provider. This allows service providers to remove the requirement of consumers creating an account and using an API key to access their service. As a result, services are no longer accessed using an API key from an application's backend, but rather are accessed by consumers meeting certain pre-defined conditions along with user consent. This allows service providers to grow their customer base on a per-use basis and remove all friction from accessing their services. 
+The last piece of the interoperability puzzle is providing more open access to web services. This allows service providers (i.e. data hosting, indexing, anchoring, payments, or other arbitrary web/API services) to service requests from *all* consumers regardless of whether or not they have an account with the service provider. This allows service providers to remove the requirement of consumers creating an account and using an API key to access their service. As a result, services are no longer accessed using an API key from an application's backend, but rather are accessed by meeting certain pre-defined conditions, potentially along with user consent. This allows service providers to grow their customer base on a per-use basis and remove all friction from accessing their services. 
 
 For example, this is required in the case of hosting user data that needs to be accessed by many different parties, most of whom don't have an account with the service. Using Ceramic, the data hosting service can define their service and create a service policy that includes the requirements a consumer must meet in order to access their service. When a user (or application) chooses to use this service to host their data in a database that is access controlled by a Ceramic DID, the user (or app) then adds this resource to their DID. When other consumers want to request this information they need to request access permissions from the user, and once approved, then fulfill the requirments of the hosting service (such as payments or other) before the data will be returned.
 
 Although this depicts an example of a data hosting service, Ceramic service policies can be used for almost any type of service.
 
 ### Examples
-To highlight what's possible, let's dive into how [3Box](http://github.com/3box/3box) relies on Ceramic to enable an interoperable, user-controlled data management system. 3Box is a framework that allows developers to store user and application data on a network of open data hosting services access controlled by users instead of on siloed application servers. Users are always in control of their data and can choose to permission it out to other applications, making it shareable across platforms and applications. To achieve this 3Box relies on self-sovereign identity, interoperable data, and open web services. 
+To highlight what's possible, let's dive into how [3Box](http://github.com/3box/3box) relies on Ceramic to enable an interoperable, user-controlled data management system. 3Box is a framework that allows developers to store user and application data on a network of open data hosting services access controlled by users instead of on siloed application servers. Users are always in control of their data and can choose to permission it out to other applications, making it shareable across platforms and applications. To achieve this 3Box relies on [self-sovereign identity](#portable-self-sovereign-identity), [interoperable data](#interoperable-data-ecosystems), and [open web services](#open-web-services). 
 
-For self-sovereign identity and to enable user-managed access control, 3Box uses the 3ID standard which allows users to control their identity, information, and services using all of their existing Ethereum wallet keys. To enable interoperable data and shared access web services, 3Box relies on the following set policy documents which are created by the various participants including applications, services, and users:
+For self-sovereign identity and to enable user-managed access control, 3Box uses Ceramic's 3ID DID method which allows users to control their identity, information, and services using all of their existing private wallet keys. To enable interoperable data and shared access web services, 3Box relies on the following set of policy documents which are created by the various participants including applications, services, and users:
 
 | Policy | Description | Use Case |
 | --------------- | ----------- | -------- |
@@ -160,7 +162,7 @@ For self-sovereign identity and to enable user-managed access control, 3Box uses
 | [Service Policy]() | Describes simple functions that take an input and produce an output. In this case, it's used for database hosting | Allows service providers to define their service or API and the requirements to access it |
 | [Privacy Policy]() | Describes user-managed access control rights to databases in the Collection Policy  | Allows users to set permissions and control their privacy while sharing data across apps |
 
-In practice, this collection of functionalities allows App A to store data for their users on a hosting service in databases that are access controlled by 3IDs. User B can now go to App C and give them permission to access their data from App A. To receive the data from the hosting service, App C must meet the requirements defined by the hosting service's service policy which may include payment information.
+In practice, this collection of functionalities allows App A to store data for User B on a hosting service in databases that are access controlled by 3IDs. User B can now go to App C and give them permission to access their data from App A. To receive the data from the hosting service, App C must meet the requirements defined by the hosting service's service policy which may include payment information.
 
 ## Ceramic Ecosystem
 
@@ -172,11 +174,11 @@ By now you understand that Ceramic enables the emergence of a diverse, interoper
 
 ### Databases
 
-**Integrate a Unified, User-Mangaged Access Control System**: Make your database's access control system compatible with Ceramic 3IDs so users can manage their information stored across all databases with a single identity and allow different applications to access their information. Ceramic will first support IPFS-based peer-to-peer databases OrbitDB and Textile.
+**Integrate a Unified, User-Mangaged Access Control System**: Make your database's access control system compatible with Ceramic 3IDs so users can manage their information stored across all databases with a single identity and allow different applications to access their information. Ceramic will first support IPFS-based peer-to-peer databases [OrbitDB](https://github.com/orbitdb/orbit-db) and [Textile](https://github.com/textileio).
 
 ### Services
 
-**Offer Shared, Collaborative Access Services**: Offer Ceramic-compatible services and list your infrastructure on the Ceramic network to allow various users and applications to gather the information required to interact with your service even if they're not your direct customers. This includes routing information, service agreements, and possibly even payment terms.
+**Offer Open, Shared Access Services**: Offer Ceramic-compatible services and list your infrastructure on the Ceramic network to allow others to interact with your service even if they're not your direct customers.
 
 ### Applications
 
