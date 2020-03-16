@@ -87,14 +87,14 @@ Ceramic DIDs are globally unique identities used to sign documents on the Cerami
 Ceramic DIDs will likely want to express additional metadata or context about themselves. Depending on the type of entity that a DID represents this may vary.
 
 - **Public Profiles**: Provide context about a DID
-  - Basic: General profile metadata such as name, image, logo, ...
-  - Descriptors: More complete descriptions for services, apps, ...
+  - Basic: General profile metadata such as name, image, logo, etc.
+  - Descriptors: More complete descriptions for services, apps, etc.
 - **Identity Links**: Allow others to verify that two identities are owned by the same DID
-  - Account Links: Public mappings to public keys, smart contracts, other DIDs, ...
-  - Social Links: Public mappings to twitter, github, ...
+  - Account Links: Public mappings to public keys, smart contracts, other DIDs, etc.
+  - Social Links: Public mappings to twitter, github, etc.
   - DNS Links: Public mappings to domain names
 - **Resource Links**: Allow others to verify that a resource is owned by the DID
-  - Data Links: Mappings to various data sources such as databases, verififiable claims, registries, ...
+  - Data Links: Mappings to various data sources such as databases, verififiable claims, registries, etc.
   - Service Links: Mappings to services and APIs
 
 ### Policies
