@@ -66,7 +66,7 @@ In addition to the requiriements above, this protocol should also allow applicat
 
 9. Publish metadata and definitions;
 10. Publish data schemas; and
-11 Publish policies and service agreements.
+11. Publish policies and service agreements.
 
 ## What should be stored on Ceramic?
 
