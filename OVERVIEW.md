@@ -108,11 +108,11 @@ Ceramic DIDs will also likely want to define explicit policies that govern vario
 
 ### Agreements
 
-Ceramic DIDs may want to form explicit agreements between one another. An example of this would be a service agreement, which is a multi-party agreement between a provider and purchaser of a service (i.e. data hosting).
+Ceramic DIDs may want to form explicit agreements between one another. An example of this would be a **service agreement**, which is a multi-party agreement between a provider and purchaser of a service (i.e. data hosting).
 
 ### Claims
 
-Ceramic DIDs may want to create statements about other DIDs. To achieve this they can create a verifiable claim, which is a flexible standard for creating signed statements or data. If the verifiable claim is accepted by the recipient, is included in the recipient's metadata above.
+Ceramic DIDs may want to create statements about other DIDs. To achieve this they can create a **verifiable claim**, which is a flexible standard for creating signed statements or data. If the verifiable claim is accepted by the recipient, is included in the recipient's metadata above.
 
 ## Use Cases
 
