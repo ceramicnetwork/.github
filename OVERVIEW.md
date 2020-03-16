@@ -7,12 +7,12 @@
 
 > Ceramic's mission is to create a web without silos. This document provides an introduction to the Ceramic protocol. For a more technical overview, see [Ceramic Technical Specification](https://github.com/ceramicnetwork/specs).
 
-- [Introduction](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#introduction)
-- [Background](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#background)
-- [Document Graph](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#a-scalable-decentralized-document-graph)
-- [The Ceramic Ecosystem](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#the-ceramic-ecosystem)
-- [Ceramic Ecosystem Alliance (CEA)](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#join-the-ceramic-ecosystem-alliance)
-- [Timeline](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#timeline)
+- [Introduction](#Introduction)
+- [Ceramic: A Universal Document Graph](#Ceramic:A-Universal-Document-Graph)
+- [Use Cases](#Use-Cases)
+- [The Ceramic Ecosystem](#The-Ceramic-Ecosystem)
+- [Ceramic Ecosystem Alliance (CEA)](#Join-the-Ceramic-Ecosystem-Alliance)
+- [Timeline](#timeline)
 
 
 ## Introduction
@@ -24,13 +24,13 @@ Although Ceramic can store any type of information, it is ideal for storing info
 For these reasons, Ceramic is especially well-suited as a permissionless, platform-agnostic registry for decentralized identifiers, additional metadata about those identifiers, and the policies that define how these identifiers interact with one another. Together, these primitives unlock a set of new use cases that are critical in today's digital context that seeks to give users more agency and developers more flexibility by unbundling user identities, data, and services from application servers:
 
 - [Portable, self-sovereign identity](#Portable,-Self-Sovereign-Identity-Systems)
-- Interoperable user and application data
-- Open, pay-per-use web services
+- [Interoperable user and application data](#Interoperable-Data-Ecosystems)
+- [Open, pay-per-use web services](#Open-Web-Services)
 - User-managed access control to data and services
 
 With these use cases, Ceramic creates an ecosystem of interoperable identities, data, and services that developers can use to build more modular applications. As a result, Ceramic is the trusted foundation for a more connected internet that is boundlessly transparent, composable, and collaborative.
 
-> For more information, jump to the [Use Cases & Applications] section below.
+> For more information, jump to the [Use Cases](#Use-Cases) section below.
 
 ### Background
 
@@ -92,7 +92,7 @@ Ceramic DIDs may want to form explicit agreements between one another. An exampl
 
 Ceramic DIDs may want to create statements about other DIDs. To achieve this they can create a verifiable claim, which is a flexible standard for creating signed statements or data. If the verifiable claim is accepted by the recipient, is included in the recipient's metadata above.
 
-## Use Cases & Applications
+## Use Cases
 
 Although Ceramic documents can act as standalone objects, most production systems and applications will combine multiple documents and participants to enable extremely powerful use cases that demonstrate the potential of identity-centric interoperability and the unbundling of identities and resources from networks and applications.
 
