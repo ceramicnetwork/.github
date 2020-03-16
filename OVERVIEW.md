@@ -28,7 +28,7 @@ For these reasons, Ceramic is especially well-suited as a permissionless, platfo
 - [Open, pay-per-use web services](#Open-Web-Services)
 - User-managed access control to data and services
 
-With these use cases, Ceramic creates an ecosystem of interoperable identities, data, and services that developers can use to build more modular applications. As a result, Ceramic is the trusted foundation for a more connected internet that is boundlessly transparent, composable, and collaborative.
+With these use cases, Ceramic creates a global ecosystem of interoperable identities, data, and services that developers can leverage to build more modular applications. As a result, Ceramic is the trusted foundation for a more connected internet that is boundlessly transparent, composable, and collaborative.
 
 > For more information, jump to the [Use Cases](#Use-Cases) section below.
 
