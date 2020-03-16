@@ -9,7 +9,7 @@
 
 - [Ceramic Overview](#ceramic-overview)
   - [Background](#background)
-- [What should should be stored on Ceramic?](#what-should-be-stored-on-ceramic)
+- [What should be stored on Ceramic?](#what-should-be-stored-on-ceramic)
   - [Decentralized Identifiers (DIDs)](#decentralized-identifiers-dids)
   - [Metadata](#metadata)
   - [Policies](#policies)
@@ -35,7 +35,7 @@
 
 Although Ceramic can store any type of information, it is ideal for storing information that requires guaranteed trust, cross-platform interoperability, and multi-party consumption. Because participants can create and resolve documents without any centralized service, Ceramic unlocks interoperability between *all platforms and services across the web.* 
 
-For these reasons, Ceramic is especially well-suited as a registry for decentralized identities and other documents needed to enable boundless user-centric interoperability between an ecosystem of wallets, applications, databases, and services, including additional metadata about those identifiers and policies that define how these identifiers interact with one another. Collectively, this information creates a decentralized identity, data, and service routing network that lives beyond the bounds or control of any single platform. This type of a system is critical in today's digital context that seeks to give users more agency and developers more flexibility by unbundling user identities, data, and services from application servers. Some of the things possible with Ceramic include:
+For these reasons, Ceramic is especially well-suited as a registry for decentralized identities and other documents such as metadata and policies needed to enable boundless user-centric interoperability between an ecosystem of wallets, applications, databases, and services. Collectively, this information creates an identity-centric routing network that lives beyond the bounds or control of any single platform. This type of a system is critical in today's digital context that seeks to give users more agency and developers more flexibility by unbundling user identities, data, and services from application servers. Some of the things possible with Ceramic include:
 
 - [Portable, self-sovereign identity](#portable-self-sovereign-identity)
 - [Interoperable user and application data](#interoperable-data-ecosystems)
