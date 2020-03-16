@@ -9,7 +9,7 @@
 
 - [Ceramic Overview](#ceramic-overview)
   - [Background](#background)
-- [What should I store on Ceramic?](#what-should-i-store-on-ceramic)
+- [What should should be stored on Ceramic?](#what-should-be-stored-on-ceramic)
   - [Decentralized Identifiers (DIDs)](#decentralized-identifiers-dids)
   - [Metadata](#metadata)
   - [Policies](#policies)
@@ -41,9 +41,9 @@ For these reasons, Ceramic is especially well-suited as a registry for decentral
 - [Interoperable user and application data](#interoperable-data-ecosystems)
 - [Open web services](#open-web-services)
 
-Ceramic's global ecosystem of interoperable identities, data, and services allows developers to build more modular applications. As a result, Ceramic is the trusted foundation for a more connected internet that is transparent, composable, and collaborative.
+> For more information, jump directly to [use cases](#use-cases) or view [examples](#examples).
 
-> For more information, jump to the [Use Cases](#use-cases) section below.
+Ceramic's global ecosystem of interoperable identities, data, and services allows developers to build more modular applications. As a result, Ceramic is the trusted foundation for a more connected internet that is transparent, composable, and collaborative.
 
 ### Background
 
@@ -68,17 +68,22 @@ In addition to the requiriements above, this protocol should also allow applicat
 10. Publish data schemas; and
 11 Publish policies and service agreements.
 
-## What should I store on Ceramic?
+## What should be stored on Ceramic?
 
 Ceramic provides a *universal graph of verifiable documents*. Ceramic documents are signed, append-only objects stored in [IPFS](https://github.com/ipfs/ipfs), encoded using [IPLD](https://github.com/ipld/ipld), and anchored in one or more blockchains. Due to its hybrid design relying on IPFS/IPLD and various blockchains, Ceramic's document graph is interoperable, scalable, permissionless, and low cost (variable depending on blochain anchor service).
 
-Documents are a flexible primitive that can be modeled to represent many things. Below, find some of the common ways that documents are used. Most of these can be created with the three standard [doctypes](https://github.com/ceramicnetwork/specs#document-types) currently supported by Ceramic: [3id](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md), [account-link](https://github.com/ceramicnetwork/specs/blob/master/doctypes/account-link.md), and [policy](https://github.com/ceramicnetwork/specs/blob/master/doctypes/policy.md). If your use case doesn't fit into one of these doctypes, you can add new doctypes to the protocol by submitting an issue on the [Ceramic specs](http://github.com/ceramicnetwork/specs/issues) repository.
+Documents are a flexible primitive that can be modeled to represent many things. Below you can find some of the common ways that documents are used.  Most of these can be created with the three standard [doctypes](https://github.com/ceramicnetwork/specs#document-types) currently supported by Ceramic: [3id](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md), [account-link](https://github.com/ceramicnetwork/specs/blob/master/doctypes/account-link.md), and [policy](https://github.com/ceramicnetwork/specs/blob/master/doctypes/policy.md). If your use case doesn't fit into one of these doctypes, you can add new doctypes to the protocol by submitting an issue on the [Ceramic specs](http://github.com/ceramicnetwork/specs/issues) repository.
 
 >Learn more about [Ceramic documents](https://github.com/ceramicnetwork/specs/blob/master/README.md#protocol-overview).
 
 ### Decentralized Identifiers (DIDs)
 
 Ceramic DIDs are globally unique identities used to sign documents on the Ceramic network and also interact with arbitrary off-chain services and data. DIDs are abstract, key-agnostic interfaces used to identify participants, interoperably sign and encrypt information, authorize authentication/access control to services, and store mappings to additional resources. Ceramic makes no assumptions about what kind of entity a DID represents, so they can be users, organizations, applications, services, devices, etc. Additionally, Ceramic DIDs can be controlled by one or many private keys, providing flexibility and interoperability across wallets and platforms. 
+
+A DID consists of two core documents. Other resource mappings are stored through other documents below.
+
+- **Decentralized Identifier (DID)**: A globally unique way to identify an entity
+- **Management Data**: Allows private keys to control a DID
 
 > Ceramic currently supports the 3ID DID method. [Learn more about 3IDs](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md) or see an [example](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md#example).
 
@@ -99,11 +104,11 @@ Ceramic DIDs will likely want to express additional metadata or context about th
 
 ### Policies
 
-Ceramic DIDs will also likely want to define explicit policies that govern various things about their identity or resources that help others others interoperate with them. A few examples:
+Ceramic DIDs will also likely want to define explicit policies that govern various things about their identity or resources that help others others interoperate with them.
 
 - **Schema Policies**: Define schemas for data
 - **Collection Policies**: Define an app's data model (database types plus schema policies)
-- **Service Policies**: ToS for using a resource, may include service endpoint and payment info (i.e. anchoring, data hosting, indexing
+- **Service Policies**: ToS and requirements for using a resource, may include service endpoint and payment info
 - **Privacy Policies**: User-defined access control permissions for their resources
 
 ### Agreements
