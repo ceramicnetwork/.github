@@ -5,18 +5,18 @@
 
 
 # Ceramic Protocol
-> [**Ceramic**](http://ceramic.network) is a permissionless protocol for creating tamper-proof, updatable documents. 
+> [**Ceramic**](http://ceramic.network) is a permissionless protocol for creating and accessing mutable, tamper-proof documents that serve as the foundation for a web without silos. 
 
-Ceramic documents are signed, append-only objects stored in [IPFS](https://github.com/ipfs/ipfs), encoded using [IPLD](https://github.com/ipld/ipld), and anchored in one or more blockchains. Ceramic's public document graph provides a single verifiable source of truth for building consensus around important documents, enabling participants to trustlessly share and efficiently coordinate around information in a platform-agnostic way. Ceramic documents support novel use cases such as self-sovereign identity, interoperable data ecosystems, and user-centric infrastructure that allow developers to build more open, composable apps.
+Ceramic documents are signed, append-only objects stored in [IPFS](https://github.com/ipfs/ipfs), encoded using [IPLD](https://github.com/ipld/ipld), and anchored in one or more blockchains. Ceramic's public document graph provides a single verifiable source of truth for building consensus around important documents, enabling participants to trustlessly share and efficiently coordinate around information in a platform-agnostic way. Ceramic documents support novel use cases such as self-sovereign identity, interoperable data ecosystems, and open web services that allow developers to build more open, composable apps.
 
 
 ## Learn More
 - [Ceramic Overview](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md)
-  - [Introduction](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#introduction)
-  - [Background](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#background)
-  - [Document Graph](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#a-scalable-decentralized-document-graph)
-  - [The Ceramic Ecosystem](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#the-ceramic-ecosystem)
-  - [Ceramic Ecosystem Alliance (CEA)](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#join-the-ceramic-ecosystem-alliance)
+  - [Introduction](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#ceramic-overview)
+  - [What Should be Stored on Ceramic?](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#what-should-be-stored-on-ceramic)
+  - [Use Cases](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#use-cases)
+  - [Ceramic Ecosystem](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#ceramic-ecosystem)
+  - [Ceramic Ecosystem Alliance](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#ceramic-ecosystem-alliance)
   - [Timeline](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#timeline)
 - [Ceramic Specification](https://github.com/ceramicnetwork/specs)
   - [Protocol Overview](https://github.com/ceramicnetwork/specs#protocol-overview)
