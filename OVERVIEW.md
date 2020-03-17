@@ -104,7 +104,7 @@ The first use case for tiles is creating verifiable, globally-available data sch
 
 #### Metadata
 
-Tiles are used to express additional metadata or context about Ceramic DIDs. At a minimun, DIDs need a DID Management tile so they can be controlled by one or more private keys. Other metadata needs will vary depending on the type of entity that a DID represents and the use case.
+Tiles are used to express additional metadata or context about Ceramic DIDs. At a minimun, DIDs need a DID Manager tile so they can be controlled by one or more private keys. Other metadata needs will vary depending on the type of entity that a DID represents and the use case.
 
 - **DID Manager**: Contains information required to allow one or many private keys to control a DID
 - **Public Profile**: Provide context about a DID
