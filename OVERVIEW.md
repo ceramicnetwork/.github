@@ -106,32 +106,31 @@ The first use case for tiles is creating verifiable, globally-available data sch
 
 Tiles are used to express additional metadata or context about Ceramic DIDs. At a minimun, DIDs need a DID Management tile so they can be controlled by one or more private keys. Other metadata needs will vary depending on the type of entity that a DID represents and the use case.
 
-- **DID Management**: Allows one or many private keys to control a DID
-- **Public Profiles**: Provide context about a DID
+- **DID Manager**: Contains information required to allow one or many private keys to control a DID
+- **Public Profile**: Provide context about a DID
   - Basic: General profile metadata such as name, image, logo, etc.
-  - Descriptors: More complete descriptions for services, apps, etc.
-- **Identity Links**: Allow others to verify that a non-cryptographic identifier is owned by a DID
+- **Identity Link**: Allow others to verify that a non-cryptographic identifier is owned by a DID
   - Social Links: Public mappings to twitter, github, etc.
   - DNS Links: Public mappings to domain names
-- **Resource Links**: Allow others to verify that a resource is owned by the DID
+- **Resource Link**: Allow others to verify that a resource is owned by the DID
   - Data Links: Mappings to various data sources such as databases, verififiable claims, registries, etc.
   - Service Links: Mappings to services and APIs
 
 #### Policies
 
-Tiles are used to to define explicit policies that govern various things about a DID's resources that help others interoperate with them. Here are a few examples:
+Tiles are used to define more explicit, specific terms around the design of a particular service or the access control requirements and permissions needed to access it. For example, policies might define the data model for an application, terms and requirements of a service, or the permissions set by a user to access their data.
 
-- **Collection Policies**: Define an app's data model (database types plus schema policies)
-- **Service Policies**: ToS and requirements for using a resource, may include service endpoint and payment info
-- **Privacy Policies**: User-defined access control permissions for their resources
+- **Collection Policy**: Used to define an app's data model (database types plus references to schema tiles)
+- **Service Policy**: ToS and requirements for using a resource, may include service endpoint and payment info
+- **Privacy Policy**: User-managed access control permissions to their resources
 
 #### Agreements
 
-Tiles are used to form explicit agreements between DIDs. An example of this would be a **service agreement**, which is a multi-party agreement between a provider and purchaser of a service (i.e. data hosting).
+Tiles are used to form explicit agreements between DIDs. An example of this would be a **Service Agreement**, which is a multi-party agreement between a provider and purchaser of a service (i.e. data hosting).
 
 #### Claims
 
-Tiles are used to create statements about other DIDs. To achieve this they can create a **verifiable claim**, which is a flexible standard for creating signed statements or data. If the verifiable claim is accepted by the recipient, is included in the recipient's metadata above.
+Tiles are used to create statements about other DIDs. To achieve this they can create a **Verifiable Claim**, which is a flexible standard for creating signed statements or data. If the verifiable claim is accepted by the recipient, is included in the recipient's metadata above.
 
 ## Use Cases
 
@@ -161,7 +160,7 @@ The last piece of the interoperability puzzle is providing more open access to w
 
 For example, this is required in the case of hosting user data that needs to be accessed by many different parties, most of whom don't have an account with the service. Using Ceramic, the data hosting service can define their service and create a service policy that includes the requirements a consumer must meet in order to access their service. When a user (or application) chooses to use this service to host their data in a database that is access controlled by a Ceramic DID, the user (or app) then adds this resource to their DID. When other consumers want to request this information they need to request access permissions from the user, and once approved, then fulfill the requirments of the hosting service (such as payments or other) before the data will be returned.
 
-Although Ceramic provides the information required for services to accept per-use payments from all parties, the Ceramic protocol itself does not handle the payments. Because these transactions will likely be small micropayments, Ceramic is extremely complementary to emerging permissionless cryptographic micropayment networks such as [Connext Network](https://github.com/ConnextProject) on EVM blockchains and [Lightning Network](https://github.com/lightningnetwork/lnd) on Bitcoin. In the most permissionless version of these systems, service providers and end users would run payment nodes and transact. In more practical versions, these responsibilities can be delegated to a third-payment payment processor. This model would also allow applications to pay for services on behalf of their users. We think this make the most sense in the near term.
+Although Ceramic provides the information required for services to accept per-use payments from all parties, the Ceramic protocol itself does not handle payments. Because these transactions will likely be small micropayments, Ceramic is extremely complementary to emerging permissionless cryptographic micropayment networks such as [Connext Network](https://github.com/ConnextProject) on EVM blockchains and [Lightning Network](https://github.com/lightningnetwork/lnd) on Bitcoin. In the most permissionless version of these systems, service providers and end users would run payment nodes and transact. In more practical versions, these responsibilities can be delegated to a third-payment payment processor. This model would also allow applications to pay for services on behalf of their users. We think this make the most sense in the near term.
 
 > Although this example depicts a data hosting service, Ceramic service policies can be used for almost any type of service.
 
