@@ -8,7 +8,6 @@
 > Ceramic's mission is to create a web without silos. This document provides an introduction to the Ceramic protocol. For a more technical overview, see [Ceramic Technical Specification](https://github.com/ceramicnetwork/specs).
 
 - [Ceramic Overview](#ceramic-overview)
-  - [Background](#background)
 - [What should be stored on Ceramic?](#what-should-be-stored-on-ceramic)
   - [Decentralized Identifiers (DIDs)](#decentralized-identifiers-dids)
   - [Metadata](#metadata)
