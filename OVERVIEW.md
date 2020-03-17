@@ -31,32 +31,35 @@
 - [Timeline](#timeline)
 
 
-## Ceramic Overview
+## Overview
 
-[**Ceramic**](http://ceramic.network) is a permissionless protocol for creating and accessing mutable, tamper-proof documents that serve as the foundation for a web without silos. Ceramic's public infrastructure provides a censorship resistant, verifiable source of truth for building consensus around important information. By migrating information from isolated servers into the public commons governed by digital signatures and consensus, Ceramic solves a range of concerns native to centralized information silos and paves the way for a more connected, interoperable web.
+[**Ceramic**](http://ceramic.network) is a permissionless protocol for creating and accessing mutable, tamper-proof documents that serve as the foundation for a web without silos. Ceramic's infrastructure provides a source of truth for important information that is public, interoperable, verifiable and censorship-resistant. By migrating critical information from isolated servers into the public commons of linked documents with cryptographic consensus, Ceramic enables apps to finally escape information and infrastructure silos and build in a compsable, efficient, and connected way. Ceramic can do for user data, services, and infrastructure what blockchains have done for assets. 
 
-Although Ceramic can store any type of information, it is ideal for storing information that requires guaranteed trust, cross-platform interoperability, and multi-party consumption. Because participants can create and resolve documents without any centralized service, Ceramic unlocks interoperability between *all platforms and services across the web.* 
-
-For these reasons, Ceramic is especially well-suited as a registry for decentralized identifiers and other documents needed to enable boundless interoperability between a connected ecosystem of users, wallets, applications, databases, and services. This type of a system is critical in today's digital context that seeks to give users more agency and developers more flexibility by unbundling user identities, data, and services from application servers. Some of the things possible with Ceramic include:
+Ceramic unlocks interoperability between *all platforms and services across the web,* because participants can create and resolve documents for any type of information without any centralized service. It is ideal for storing information that requires guaranteed trust, cross-platform interoperability, and multi-party consumption. This includes registries for decentralized identifiers, access control logs, policies for usage or services, and and other documents that anchor a dynamic, connected and unbundled ecosystem of users, wallets, applications, databases, and services. Ceramic enables: 
 
 - [Portable, self-sovereign identity](#portable-self-sovereign-identity)
 - [Interoperable user and application data](#interoperable-data-ecosystems)
-- [Open web services](#open-web-services)
+- [Open web services, without new accounts or logins](#open-web-services)
 
 > For more information, jump directly to [use cases](#use-cases) or view [examples](#examples).
 
-Ceramic's global ecosystem of interoperable identities, data, and services allows developers to build more composable applications and as a result, Ceramic is the trusted foundation upon which a more connected, transparent, and user-centric internet is built.
+Ceramic's global ecosystem of interoperable identities, data, and services allows developers to build composable applications with unprecedented interoperability, trust and scale. Ceramic is the foundation for developers to build a more connected, transparent, and user-centric internet.
 
 ### Background
 
-As developers increasingly build composable applications that rely on user-managed identity, interoperable data, and shared infrastructure, they have less certainty over the types of resources that users will bring to their application at any given time. Because of this, a primary concern for developers is ensuring *interoperability* between a diverse set of unbundled technologies including (but not limited to) key pairs, wallets, data stores, and infrastructure services. As the variety of infrastructure grows, so does the challenge of maintaining interoperability.
+Despite the benefits of cloud services, SaaS dev tools, and API businesses, building a fully featured product or service is still way too complex, fragile and limited. Even simple apps require deploying and maintaining a backend, securing and managing user data (more frought than ever), and tying a tangle of APIs and services together. Choices made early often lock you into technology providers long-term, which vendors exploit. And making your value-add interoperate with your users' other products and services is often difficult, unpredictable, hard-to-scale work. This is because infrastructure, information and access control are needlessly replicated and siloed for each application. 
 
-For it to succeed, the composable web needs a permissionless, identity-centric interoperability protocol to provide applications with all the information they need to easily discover, route to, gain access to, and interact with a user's resources regardless of which wallet users bring, which applications created the data, or where the resources are located. 
+They key to more interoperable, composable applications without the problems of these siloes is a common model for storing key information: a flexible, discoverable, yet privacy-preserving shared backend for information. The solution is a user-centric model for data and identities. By letting users control their data, share (or not) their other services and related information, and bring their identities and metadata across experiences, developers only need to worry about 1 API to scale interoperability and personalization indefinitely: the user. (This scales to any kind of identity - for users, organizations, apps, services, etc.)
 
-To provide maximal interoperability, this protocol should allow participants to: 
+By building with user-centric data and identities, developers can focus on the value-add in their product or service rather than tying together the various infrastructure that's needed. Users can bring pointers to their data, other services, preferences and policies with them across experiences. With flexible access control and auditable schemas, service agreements or other documents, each application can simply query a user for the right information. Data can be easily shared across experiences without compromising privacy; experiences can be composed real-time to a users preferences; bilateral account signups and agreements can be done away with, replaced by frictionless payment channels tied to identities. 
+
+This frees products and services from wearing dozens of hats, reconciling services and data, worrying about user trust and liability, and scrambling to attract and retain users through many points of friction. Instead, developers can build a value-add service that simply plugs into an already existing ecosystem of infrastructure, services, users and data that work seamlessly together. 
+
+### Properties
+The composable web needs a permissionless, identity-centric interoperability protocol to provide applications with all the information they need to easily discover, route to, gain access to, and interact with a user's resources regardless of which wallet users bring, which applications created the data, or where the resources are located. This protocol must: 
 
 1. Permissionlessly register an interoperable identity (DID); 
-2. Privately control this identity with one or more private keys;
+2. Privately control this identity with multiple private keys;
 3. Publicly associate public keys and accounts to this identity;
 4. Publicly or privately associate resources to this identity;
 5. Set permissions for resources;
@@ -64,11 +67,14 @@ To provide maximal interoperability, this protocol should allow participants to:
 7. Interoperably sign and/or encrypt information; and
 8. Revoke private keys, public keys, and permissions for resources. 
  
-In addition to the requiriements above, this protocol should also allow applications and services to:
+In addition to these base requirements, a protocol aiming to unlock interoperability practically should also allow applications and services to:
 
 9. Publish metadata and definitions;
 10. Publish data schemas; and
 11. Publish policies and service agreements.
+
+Finally, a solution aiming to make it simpler to build powerful applications must be easy for developers to use. It must fit existing mental and development models, be simple to understand and use, put no major burden on developers or users, and scale well with new use cases and copmlexity. Any solution does not meet these requirements will be too siloed to be interoperable, too rigid to be broadly used, or too isolated to meet the demands of today's builders. 
+
 
 ## What is stored on Ceramic?
 
@@ -76,15 +82,17 @@ Ceramic provides a *universal graph of verifiable documents*. Ceramic documents 
 
 Documents are a flexible primitive that can be modeled to represent many things, however each document must conform to a specific *doctype* supported by the protocol. Doctypes specify rules that govern what is a valid update to the document such as signatures and state transitions. This allows Ceramic nodes to verify the state of a given document in a decentralized way.
 
-Ceramic currently supports three standard [doctypes](https://github.com/ceramicnetwork/specs#document-types): [3id](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md), [account-link](https://github.com/ceramicnetwork/specs/blob/master/doctypes/account-link.md), and [tile](https://github.com/ceramicnetwork/specs/blob/master/doctypes/tile.md). Below, find some of the common ways that these doctypes are used. If your use case doesn't fit into one of these doctypes, you can add new doctypes to the protocol by submitting an issue on the [Ceramic specs](http://github.com/ceramicnetwork/specs/issues) repository.
+Ceramic currently supports three standard [doctypes](https://github.com/ceramicnetwork/specs#document-types): [3ID](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md), [account-link](https://github.com/ceramicnetwork/specs/blob/master/doctypes/account-link.md), and [tile](https://github.com/ceramicnetwork/specs/blob/master/doctypes/tile.md). Below, find some of the common ways that these doctypes are used. If your use case doesn't fit into one of these doctypes, you can add new doctypes to the protocol by submitting an issue on the [Ceramic specs](http://github.com/ceramicnetwork/specs/issues) repository.
 
 >Learn more about [Ceramic documents](https://github.com/ceramicnetwork/specs/blob/master/README.md#protocol-overview).
 
-### Decentralized Identifiers (DIDs)
+### 3ID - Decentralized Identifiers (DIDs)
 
-DIDs are globally unique identities used to sign documents on the Ceramic network and also interact with arbitrary off-chain services and data. More specifically, they are abstract, key-agnostic interfaces used to uniquely identify entities, interoperably sign and encrypt information, authorize authentication/access control to services, and store mappings to additional resources. Ceramic makes no assumptions about what kind of entity a DID represents, so they can be users, organizations, applications, services, devices, etc. Additionally, Ceramic DIDs can be controlled by one or many private keys, providing flexibility and interoperability across wallets and platforms. 
+3IDs are globally unique identities used to sign documents on the Ceramic network and also interact with arbitrary off-chain services and data. More specifically, they are abstract, key-agnostic interfaces used to uniquely identify entities, interoperably sign and encrypt information, authorize authentication/access control to services, and store mappings to additional resources. Ceramic makes no assumptions about what kind of entity a DID represents, so they can be users, organizations, applications, services, devices, etc. 
 
-> Learn more about [3IDs](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md) or see an [example](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md#example). Ceramic currently supports the 3ID DID method, but other methods may be added to the network as additional doctypes.
+3IDs can be controlled by one or many private keys, providing flexibility and interoperability across wallets and platforms. More than 15,000 3IDs are already being used to manage user-centric data and profiles via 3Box. 3IDs conform to the. Ceramic currently supports the 3ID DID method, but other DID methods aligned to the [W3C DID spec](https://www.w3.org/TR/did-core/) may be added to the network as additional doctypes. 
+
+> Learn more about [3IDs](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md) or see an [example](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md#example). 
 
 ### Account Links
 
@@ -98,11 +106,13 @@ Tiles, the third doctype supported by Ceramic, are the most general form of a do
 
 > Learn more about [tiles](https://github.com/ceramicnetwork/specs/blob/master/doctypes/tile.md).
 
+These are a number of planned use cases for tiles already: 
+
 #### Schemas
 
-The first use case for tiles is creating verifiable, globally-available data schemas. Schema tiles allow a user to define a canonical schema that can be used by anyone anywhere in the world, encouraging multiple parties to converge around standard schemas. This makes schema tiles valuable in their own right. However, schema tiles are also needed to provide structure to information contained in other tiles. Because of this, schema tiles are the core building block for other tiles, such as those below. Schemas tiles can be thought of as templates for other tiles.
+The first use case for tiles is creating verifiable, globally-available data schemas. Schema tiles allow a user to define a canonical schema that can be used by anyone anywhere in the world, encouraging multiple parties to converge around standard schemas. This makes schema tiles valuable in their own right. Schema tiles are also used to provide structure to information contained in other tiles. Because of this, schema tiles are the core building block for other tiles, such as those below. Schemas tiles can be thought of as templates for other tiles.
 
-#### Metadata
+#### DID Metadata
 
 Tiles are used to express additional metadata or context about Ceramic DIDs. At a minimun, DIDs need a DID Manager tile so they can be controlled by one or more private keys. Other metadata needs will vary depending on the type of entity that a DID represents and the use case.
 
@@ -118,7 +128,7 @@ Tiles are used to express additional metadata or context about Ceramic DIDs. At 
 
 #### Policies
 
-Tiles are used to define more explicit, specific terms around the design of a particular service or the access control requirements and permissions needed to access it. For example, policies might define the data model for an application, terms and requirements of a service, or the permissions set by a user to access their data.
+Tiles are used to define more explicit, specific terms around the design of a particular service or the access control requirements and permissions needed to access it. For example, policies can define the data model for an application, terms and requirements of a service, or the permissions set by a user to access their data.
 
 - **Collection Policy**: Used to define an app's data model (database types plus references to schema tiles)
 - **Service Policy**: ToS and requirements for using a resource, may include service endpoint and payment info
@@ -134,31 +144,30 @@ Tiles are used to create statements about other DIDs. To achieve this they can c
 
 ## Use Cases
 
-Most production systems and applications will combine multiple DIDs, account links, and tiles to enable extremely powerful use cases that demonstrate the potential of identity-centric interoperability and the unbundling of identities and resources from networks and applications.
+Most production systems and applications will combine these simple primitives - DIDs, account links, and tiles. In doing so, they can achieve the benefits of simplicity, interoperability and scale that is only possible when unbundling resources from specific networks and moving information from app silos to this identity-centric public infastructure. Here are a few powerful use cases that will be unlocked: 
 
 ### Portable, Self-Sovereign Identity
 
-Self-sovereign identity (SSI) describes a system where participants can permissionlessly create and control their digital identity using one or more private keys. Technically, SSI could be enabled by any decentralized asymmetric cryptography system where public keys (identities) are controlled by private keys (passwords) such as bitcoin or ethereum. However, this type of system is still limited to the network on which these identities are registered, as well as the single private key account. These two constraints function as silos that prevent this identity from being used interoperably in additional contexts.
+Self-sovereign identity (SSI) describes a system where participants can permissionlessly create and control their digital identity using one or more private keys. Technically, SSI could be enabled by any decentralized asymmetric cryptography system where public keys (identities) are controlled by private keys (passwords) such as bitcoin or ethereum. However, this type of system would be limited to the network on which these identities are registered, as well as the single private key account. These two constraints function as silos that prevent this identity from being used interoperably in additional contexts.
 
 For identities to be truly flexible and portable across platforms and keys, which makes them more useful in practice, we need an additional identity abstraction that lives at a layer above blockchain accounts. This is the value of DIDs. On Ceramic, DIDs function as the global public identity and they can be controlled by any number of private keys from any blockchain or cryptographic system. DIDs provide a single interface that owners can use to identify themselves, interoperably sign messages, encrypt data, and auhorize/access control to off-chain services that is agnostic to which blockchain a user is on. DIDs are the antidote to private key and network lock-in.
 
-Additionally, SSI is often meant to include much more than direct control of an identifier. Most times, this identifier needs more context so others can interact with it, such as profile details. Ceramic tiles allow DID owners to add metadata and other additional information to their SSI.
+SSI is often meant to include much more than direct control of an identifier. Most times, this identifier needs more context so others can interact with it, such as profile details. Ceramic tiles allow DID owners to add metadata and other additional information to their SSI, and for DIDs to build up metadata, identity links, and other data over time, making for a flexible and dynamic SSI solution. 
 
-DIDs follow a standard specification for base functionality, and there may be many DID providers. Ceramic supports DIDs as doctypes. Currently Ceramic supports the 3ID DID method, but additional methods may be defined in the protocol.
 
 ### Interoperable Data Ecosystems
 
-Along with identity portability, it is often desirable to have data portability across applications. This requires a few core functionalities. First, we need to have a universal way to identify a user across platforms, so that we can know which data is theirs. This is handled by SSI/DIDs (see above). Second, we need to know where this data lives. Third, we need to be able to access this data. Last, we need to know the schema of the data so we can consume it in our application without manual processing.
+For powerful interoperable experiences, data portability across applications is required. This requires a few core functionalities. First, we need to have a universal way for users to identify themselves across platforms, so that we can know which data is theirs. This is handled by SSI/DIDs (see above). Second, we need to know where this data lives to request it. Third, we need to be able to access this data, with users' permission. Last, we need to know the schema of the data so we can consume it in our application without manual processing.
 
-By storing mappings to data resources in a user's DID, Ceramic provides an identity-centric way for data consumers to efficiently discover where information lives, whether on a specific server or a public network. Also by allowing Ceramic DIDs to define access control policies for their data resources, Ceramic provides an identity-centric way for users to provide consumers access to their information regardless of where it lives. Instead of access control happening on the server, it happens directly on the user. And last, Ceramic allows applications to define schemas for their data so that consumers can know a priori the shape of the data that will be returned, even if it is encrypted.
+Ceramic makes this simple for all parties. By storing mappings to data resources in a user's DID, Ceramic provides a way for applications (and other data consumers) to efficiently discover where information lives, whether on a specific server or a public network. Also by allowing Ceramic DIDs to define access control policies for their data resources via tiles, Ceramic provides an identity-centric way for users to provide consumers access to their information regardless of where it lives. Instead of access control happening on the server, it happens directly on the user. Finally, Ceramic allows applications to define schemas for any data being saved so that data consumers can know a priori the shape of the data that will be returned, even if it is encrypted.
 
-Together these capabilities allow users to frictionolessly control and share their data across various applications.
+Together these capabilities allow users to frictionolessly control and share their data across various applications, and developers to make use of a richer, higher quality dataset than ever - without storing any of it. 
 
 ### Open Web Services
 
-The last piece of the interoperability puzzle is providing more open access to web services. This allows service providers (i.e. data hosting, indexing, anchoring, payments, or other arbitrary web/API services) to service requests from *all* consumers regardless of whether or not they have an account with the service provider. This allows service providers to remove the requirement of consumers creating an account and using an API key to access their service. As a result, services are no longer accessed using an API key from an application's backend, but rather are accessed by meeting certain pre-defined conditions, potentially along with user consent. This allows service providers to grow their customer base on a per-use basis and remove all friction from accessing their services. 
+The last piece of the interoperability puzzle is providing more open access to web services. All service providers on Ceramic (i.e. data hosting, indexing, anchoring, payments, or other arbitrary web/API services) can service requests from *all* other identities, with no need for bilateral, one-off accounts. Service providers can remove the requirement of creating an account and using an API key to access their service, instead using existing 3IDs. Rather than an API key to an application's backend, services can be accessed wheneever a user, application or other service meets certain pre-defined conditions. This allows service providers remove all friction from accessing their services and to grow their customer base on a per-use (or other predefined) basis.
 
-For example, this is required in the case of hosting user data that needs to be accessed by many different parties, most of whom don't have an account with the service. Using Ceramic, the data hosting service can define their service and create a service policy that includes the requirements a consumer must meet in order to access their service. When a user (or application) chooses to use this service to host their data in a database that is access controlled by a Ceramic DID, the user (or app) then adds this resource to their DID. When other consumers want to request this information they need to request access permissions from the user, and once approved, then fulfill the requirments of the hosting service (such as payments or other) before the data will be returned.
+For example, a service provider that is hosting user data that needs to be accessed by many different parties can now serve all of them without each of them needing an account with the service. Using Ceramic, the data hosting service can define their service and create a service policy that includes the requirements a consumer must meet in order to access their service. When a user (or application) chooses to use this service to host their data in a database that is access controlled by a Ceramic DID, the user (or app) then adds this resource to their DID. When other consumers want to request this information they need to request access permissions from the user, and once approved, then fulfill the requirments of the hosting service (such as payments or other) before the data will be returned.
 
 Although Ceramic provides the information required for services to accept per-use payments from all parties, the Ceramic protocol itself does not handle payments. Because these transactions will likely be small micropayments, Ceramic is extremely complementary to emerging permissionless cryptographic micropayment networks such as [Connext Network](https://github.com/ConnextProject) on EVM blockchains and [Lightning Network](https://github.com/lightningnetwork/lnd) on Bitcoin. In the most permissionless version of these systems, service providers and end users would run payment nodes and transact. In more practical versions, these responsibilities can be delegated to a third-payment payment processor. This model would also allow applications to pay for services on behalf of their users. We think this make the most sense in the near term.
 
@@ -169,10 +178,10 @@ To make everything more concrete, let's dive into how [3Box](http://github.com/3
 
 For self-sovereign identity and to enable user-managed access control, 3Box uses Ceramic's 3ID DID method which allows users to control their identity, information, and services using all of their existing private wallet keys. To enable interoperable data and shared access web services, 3Box relies on the following set of tiles which are created by the various participants including applications, services, and users:
 
-| Tile | Description | Use Case |
+| Tile | Description | Function |
 | --------------- | ----------- | -------- |
-| [Schema(s)]() | Describes a data schema used in a partcicular database | Allows developers to define their data schemas or use existing ones |
-| [Collection Policy]() | Describes a collection of databases linked to Schema tiles | Allows applications to define their databases and the data models they use so others can easily consume the data |
+| [Schema(s)]() | Describes a data schema used in a partcicular database | Allows developers to define their data schemas, or use existing ones |
+| [Collection Policy]() | Describes a collection of databases. Links to Schema tiles | Allows applications to define their databases and the data models they use so others can easily consume the data |
 | [Service Policy]() | Describes simple functions that take an input and produce an output. In this case, it's used for hosting of databases in the Collection Policy | Allows service providers to define their service or API and the requirements to access it |
 | [Privacy Policy]() | Describes user-managed access control rights to databases in the Collection Policy  | Allows users to set permissions and control their privacy while sharing data across apps |
 
@@ -184,7 +193,7 @@ By now you understand that Ceramic enables the emergence of a diverse, interoper
 
 ### Wallets and Authentication Systems
 
-**Integrate Platform-Agnostic, Self-Sovereign Identity**: Give your users a Ceramic 3ID, which is an abstraction from individual key pair and contract accounts that eliminates private key lock-in. DIDs are used for interoperable data signing, encryption, and service authorization with all the wallet keys your users already have.
+**Integrate Platform-Agnostic, Self-Sovereign Identity**: Give your wallet the ability to let users manage their data as well as their keys via 3ID, which is an abstraction from individual key pair and contract accounts that eliminates private key lock-in. DIDs are used for interoperable data signing, encryption, and service authorization with all the wallet keys your users already have.
 
 ### Databases
 
