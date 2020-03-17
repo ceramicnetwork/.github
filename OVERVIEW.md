@@ -8,7 +8,7 @@
 > Ceramic's mission is to create a web without silos. This document provides an introduction to the Ceramic protocol. For a more technical overview, see [Ceramic Technical Specification](https://github.com/ceramicnetwork/specs).
 
 - [Ceramic Overview](#ceramic-overview)
-- [What should be stored on Ceramic?](#what-should-be-stored-on-ceramic)
+- [What is stored on Ceramic?](#what-is-stored-on-ceramic)
   - [Decentralized Identifiers (DIDs)](#decentralized-identifiers-dids)
   - [Account Links](#account-links)
   - [Tiles](#tiles)
@@ -70,7 +70,7 @@ In addition to the requiriements above, this protocol should also allow applicat
 10. Publish data schemas; and
 11. Publish policies and service agreements.
 
-## What should be stored on Ceramic?
+## What is stored on Ceramic?
 
 Ceramic provides a *universal graph of verifiable documents*. Ceramic documents are signed, append-only objects stored in [IPFS](https://github.com/ipfs/ipfs), encoded using [IPLD](https://github.com/ipld/ipld), and anchored in one or more blockchains. Due to its hybrid design relying on IPFS/IPLD and various blockchains, Ceramic's document graph is interoperable, scalable, permissionless, and low cost (variable depending on blochain anchor service). 
 
