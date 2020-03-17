@@ -8,12 +8,15 @@
 > Ceramic's mission is to create a web without silos. This document provides an introduction to the Ceramic protocol. For a more technical overview, see [Ceramic Technical Specification](https://github.com/ceramicnetwork/specs).
 
 - [Ceramic Overview](#ceramic-overview)
-- [What should be stored on Ceramic?](#what-should-be-stored-on-ceramic)
+- [What is stored on Ceramic?](#what-is-stored-on-ceramic)
   - [Decentralized Identifiers (DIDs)](#decentralized-identifiers-dids)
-  - [Metadata](#metadata)
-  - [Policies](#policies)
-  - [Agreements](#agreements)
-  - [Claims](#claims)
+  - [Account Links](#account-links)
+  - [Tiles](#tiles)
+    - [Schemas](#schemas)
+    - [Metadata](#metadata)
+    - [Policies](#policies)
+    - [Agreements](#agreements)
+    - [Claims](#claims)
 - [Use Cases](#use-cases)
   - [Self-Sovereign Identity](#portable-self-sovereign-identity)
   - [Interoperable Data](#interoperable-data-ecosystems)
@@ -67,62 +70,71 @@ In addition to the requiriements above, this protocol should also allow applicat
 10. Publish data schemas; and
 11. Publish policies and service agreements.
 
-## What should be stored on Ceramic?
+## What is stored on Ceramic?
 
-Ceramic provides a *universal graph of verifiable documents*. Ceramic documents are signed, append-only objects stored in [IPFS](https://github.com/ipfs/ipfs), encoded using [IPLD](https://github.com/ipld/ipld), and anchored in one or more blockchains. Due to its hybrid design relying on IPFS/IPLD and various blockchains, Ceramic's document graph is interoperable, scalable, permissionless, and low cost (variable depending on blochain anchor service).
+Ceramic provides a *universal graph of verifiable documents*. Ceramic documents are signed, append-only objects stored in [IPFS](https://github.com/ipfs/ipfs), encoded using [IPLD](https://github.com/ipld/ipld), and anchored in one or more blockchains. Due to its hybrid design relying on IPFS/IPLD and various blockchains, Ceramic's document graph is interoperable, scalable, permissionless, and low cost (variable depending on blochain anchor service). 
 
-Documents are a flexible primitive that can be modeled to represent many things. Below you can find some of the common ways that documents are used.  Most of these can be created with the three standard [doctypes](https://github.com/ceramicnetwork/specs#document-types) currently supported by Ceramic: [3id](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md), [account-link](https://github.com/ceramicnetwork/specs/blob/master/doctypes/account-link.md), and [policy](https://github.com/ceramicnetwork/specs/blob/master/doctypes/policy.md). If your use case doesn't fit into one of these doctypes, you can add new doctypes to the protocol by submitting an issue on the [Ceramic specs](http://github.com/ceramicnetwork/specs/issues) repository.
+Documents are a flexible primitive that can be modeled to represent many things, however each document must conform to a specific *doctype* supported by the protocol. Doctypes specify rules that govern what is a valid update to the document such as signatures and state transitions. This allows Ceramic nodes to verify the state of a given document in a decentralized way.
+
+Ceramic currently supports three standard [doctypes](https://github.com/ceramicnetwork/specs#document-types): [3id](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md), [account-link](https://github.com/ceramicnetwork/specs/blob/master/doctypes/account-link.md), and [tile](https://github.com/ceramicnetwork/specs/blob/master/doctypes/tile.md). Below, find some of the common ways that these doctypes are used. If your use case doesn't fit into one of these doctypes, you can add new doctypes to the protocol by submitting an issue on the [Ceramic specs](http://github.com/ceramicnetwork/specs/issues) repository.
 
 >Learn more about [Ceramic documents](https://github.com/ceramicnetwork/specs/blob/master/README.md#protocol-overview).
 
 ### Decentralized Identifiers (DIDs)
 
-Ceramic DIDs are globally unique identities used to sign documents on the Ceramic network and also interact with arbitrary off-chain services and data. DIDs are abstract, key-agnostic interfaces used to identify participants, interoperably sign and encrypt information, authorize authentication/access control to services, and store mappings to additional resources. Ceramic makes no assumptions about what kind of entity a DID represents, so they can be users, organizations, applications, services, devices, etc. Additionally, Ceramic DIDs can be controlled by one or many private keys, providing flexibility and interoperability across wallets and platforms. 
+DIDs are globally unique identities used to sign documents on the Ceramic network and also interact with arbitrary off-chain services and data. More specifically, they are abstract, key-agnostic interfaces used to uniquely identify entities, interoperably sign and encrypt information, authorize authentication/access control to services, and store mappings to additional resources. Ceramic makes no assumptions about what kind of entity a DID represents, so they can be users, organizations, applications, services, devices, etc. Additionally, Ceramic DIDs can be controlled by one or many private keys, providing flexibility and interoperability across wallets and platforms. 
 
-A DID consists of two core documents:
+> Learn more about [3IDs](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md) or see an [example](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md#example). Ceramic currently supports the 3ID DID method, but other methods may be added to the network as additional doctypes.
 
-- **Decentralized Identifier (DID)**: A globally unique way to identify an entity
-- **Management Data**: Allows one or many private keys to control a DID
+### Account Links
 
-Other resource mappings are stored through additional documents below.
+Account links are the second doctype supported by Ceramic. Account links are verifiable public mappings that allow a DID to prove that it owns a different public cryptohraphic identity that is also capable of signing, such as a public key, smart contract, or other DID.
 
-> Ceramic currently supports the 3ID DID method. [Learn more about 3IDs](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md) or see an [example](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md#example).
+> Learn more about [account links](https://github.com/ceramicnetwork/specs/blob/master/doctypes/account-link.md).
 
-### Metadata
+### Tiles
 
-Ceramic DIDs will likely want to express additional metadata or context about themselves. Depending on the type of entity that a DID represents this may vary.
+Tiles, the third doctype supported by Ceramic, are the most general form of a document and can be used to represent almost any kind of information. Tiles are a way to make verifiable statements by one or more DIDs. Tiles may act as standalone objects or they can reference other tiles. This allows for composability between various tiles, creating a relational graph of verifiable, mutable information.
 
-- **Public Profiles**: Provide context about a DID
+> Learn more about [tiles](https://github.com/ceramicnetwork/specs/blob/master/doctypes/tile.md).
+
+#### Schemas
+
+The first use case for tiles is creating verifiable, globally-available data schemas. Schema tiles allow a user to define a canonical schema that can be used by anyone anywhere in the world, encouraging multiple parties to converge around standard schemas. This makes schema tiles valuable in their own right. However, schema tiles are also needed to provide structure to information contained in other tiles. Because of this, schema tiles are the core building block for other tiles, such as those below. Schemas tiles can be thought of as templates for other tiles.
+
+#### Metadata
+
+Tiles are used to express additional metadata or context about Ceramic DIDs. At a minimun, DIDs need a DID Manager tile so they can be controlled by one or more private keys. Other metadata needs will vary depending on the type of entity that a DID represents and the use case.
+
+- **DID Manager**: Contains information required to allow one or many private keys to control a DID
+- **Public Profile**: Provide context about a DID
   - Basic: General profile metadata such as name, image, logo, etc.
-  - Descriptors: More complete descriptions for services, apps, etc.
-- **Identity Links**: Allow others to verify that two identities are owned by the same DID
-  - Account Links: Public mappings to public keys, smart contracts, other DIDs, etc.
+- **Identity Link**: Allow others to verify that a non-cryptographic identifier is owned by a DID
   - Social Links: Public mappings to twitter, github, etc.
   - DNS Links: Public mappings to domain names
-- **Resource Links**: Allow others to verify that a resource is owned by the DID
+- **Resource Link**: Allow others to verify that a resource is owned by the DID
   - Data Links: Mappings to various data sources such as databases, verififiable claims, registries, etc.
   - Service Links: Mappings to services and APIs
 
-### Policies
+#### Policies
 
-Ceramic DIDs will also likely want to define explicit policies that govern various things about their identity or resources that help others others interoperate with them.
+Tiles are used to define more explicit, specific terms around the design of a particular service or the access control requirements and permissions needed to access it. For example, policies might define the data model for an application, terms and requirements of a service, or the permissions set by a user to access their data.
 
-- **Schema Policies**: Define schemas for data
-- **Collection Policies**: Define an app's data model (database types plus schema policies)
-- **Service Policies**: ToS and requirements for using a resource, may include service endpoint and payment info
-- **Privacy Policies**: User-defined access control permissions for their resources
+- **Collection Policy**: Used to define an app's data model (database types plus references to schema tiles)
+- **Service Policy**: ToS and requirements for using a resource, may include service endpoint and payment info
+- **Privacy Policy**: User-managed access control permissions to their resources
 
-### Agreements
+#### Agreements
 
-Ceramic DIDs may want to form explicit agreements between one another. An example of this would be a **service agreement**, which is a multi-party agreement between a provider and purchaser of a service (i.e. data hosting).
+Tiles are used to form explicit agreements between DIDs. An example of this would be a **Service Agreement**, which is a multi-party agreement between a provider and purchaser of a service (i.e. data hosting).
 
-### Claims
+#### Claims
 
-Ceramic DIDs may want to create statements about other DIDs. To achieve this they can create a **verifiable claim**, which is a flexible standard for creating signed statements or data. If the verifiable claim is accepted by the recipient, is included in the recipient's metadata above.
+Tiles are used to create statements about other DIDs. To achieve this they can create a **Verifiable Claim**, which is a flexible standard for creating signed statements or data. If the verifiable claim is accepted by the recipient, is included in the recipient's metadata above.
 
 ## Use Cases
 
-Although Ceramic documents can act as standalone objects, most production systems and applications will combine multiple documents and participants to enable extremely powerful use cases that demonstrate the potential of identity-centric interoperability and the unbundling of identities and resources from networks and applications.
+Most production systems and applications will combine multiple DIDs, account links, and tiles to enable extremely powerful use cases that demonstrate the potential of identity-centric interoperability and the unbundling of identities and resources from networks and applications.
 
 ### Portable, Self-Sovereign Identity
 
@@ -130,9 +142,9 @@ Self-sovereign identity (SSI) describes a system where participants can permissi
 
 For identities to be truly flexible and portable across platforms and keys, which makes them more useful in practice, we need an additional identity abstraction that lives at a layer above blockchain accounts. This is the value of DIDs. On Ceramic, DIDs function as the global public identity and they can be controlled by any number of private keys from any blockchain or cryptographic system. DIDs provide a single interface that owners can use to identify themselves, interoperably sign messages, encrypt data, and auhorize/access control to off-chain services that is agnostic to which blockchain a user is on. DIDs are the antidote to private key and network lock-in.
 
-Additionally, SSI is often meant to include much more than direct control of an identifier. Most times, this identifier needs more context so others can interact with it, such as profile details. Ceramic provides additional document types that allow owners to add metadata and other additional information to their SSI.
+Additionally, SSI is often meant to include much more than direct control of an identifier. Most times, this identifier needs more context so others can interact with it, such as profile details. Ceramic tiles allow DID owners to add metadata and other additional information to their SSI.
 
-DIDs follow a standard specification for base functionality, and there may be many DID providers. Ceramic supports DIDs as doctypes. Currently Ceramic supports the 3ID DID method, but additional ones may be defined on the network.
+DIDs follow a standard specification for base functionality, and there may be many DID providers. Ceramic supports DIDs as doctypes. Currently Ceramic supports the 3ID DID method, but additional methods may be defined in the protocol.
 
 ### Interoperable Data Ecosystems
 
@@ -148,20 +160,23 @@ The last piece of the interoperability puzzle is providing more open access to w
 
 For example, this is required in the case of hosting user data that needs to be accessed by many different parties, most of whom don't have an account with the service. Using Ceramic, the data hosting service can define their service and create a service policy that includes the requirements a consumer must meet in order to access their service. When a user (or application) chooses to use this service to host their data in a database that is access controlled by a Ceramic DID, the user (or app) then adds this resource to their DID. When other consumers want to request this information they need to request access permissions from the user, and once approved, then fulfill the requirments of the hosting service (such as payments or other) before the data will be returned.
 
-Although this depicts an example of a data hosting service, Ceramic service policies can be used for almost any type of service.
+Although Ceramic provides the information required for services to accept per-use payments from all parties, the Ceramic protocol itself does not handle payments. Because these transactions will likely be small micropayments, Ceramic is extremely complementary to emerging permissionless cryptographic micropayment networks such as [Connext Network](https://github.com/ConnextProject) on EVM blockchains and [Lightning Network](https://github.com/lightningnetwork/lnd) on Bitcoin. In the most permissionless version of these systems, service providers and end users would run payment nodes and transact. In more practical versions, these responsibilities can be delegated to a third-payment payment processor. This model would also allow applications to pay for services on behalf of their users. We think this make the most sense in the near term.
+
+> Although this example depicts a data hosting service, Ceramic service policies can be used for almost any type of service.
 
 ### Examples
-To highlight what's possible, let's dive into how [3Box](http://github.com/3box/3box) relies on Ceramic to enable an interoperable, user-controlled data management system. 3Box is a framework that allows developers to store user and application data on a network of open data hosting services access controlled by users instead of on siloed application servers. Users are always in control of their data and can choose to permission it out to other applications, making it shareable across platforms and applications. To achieve this 3Box relies on [self-sovereign identity](#portable-self-sovereign-identity), [interoperable data](#interoperable-data-ecosystems), and [open web services](#open-web-services). 
+To make everything more concrete, let's dive into how [3Box](http://github.com/3box/3box) relies on Ceramic to enable an interoperable, user-controlled data management system. 3Box is a framework that allows developers to store user and application data on a network of open data hosting services access controlled by users instead of on siloed application servers. Users are always in control of their data and can choose to permission it out to other applications, making it shareable across platforms and applications. To achieve this 3Box relies on [self-sovereign identity](#portable-self-sovereign-identity), [interoperable data](#interoperable-data-ecosystems), and [open web services](#open-web-services). 
 
-For self-sovereign identity and to enable user-managed access control, 3Box uses Ceramic's 3ID DID method which allows users to control their identity, information, and services using all of their existing private wallet keys. To enable interoperable data and shared access web services, 3Box relies on the following set of policy documents which are created by the various participants including applications, services, and users:
+For self-sovereign identity and to enable user-managed access control, 3Box uses Ceramic's 3ID DID method which allows users to control their identity, information, and services using all of their existing private wallet keys. To enable interoperable data and shared access web services, 3Box relies on the following set of tiles which are created by the various participants including applications, services, and users:
 
-| Policy | Description | Use Case |
+| Tile | Description | Use Case |
 | --------------- | ----------- | -------- |
-| [Collection Policy]() | Describes a collection of databases with specific schemas | Allows applications to define their databases and data models so others can easily consume the data |
-| [Service Policy]() | Describes simple functions that take an input and produce an output. In this case, it's used for database hosting | Allows service providers to define their service or API and the requirements to access it |
+| [Schema(s)]() | Describes a data schema used in a partcicular database | Allows developers to define their data schemas or use existing ones |
+| [Collection Policy]() | Describes a collection of databases linked to Schema tiles | Allows applications to define their databases and the data models they use so others can easily consume the data |
+| [Service Policy]() | Describes simple functions that take an input and produce an output. In this case, it's used for hosting of databases in the Collection Policy | Allows service providers to define their service or API and the requirements to access it |
 | [Privacy Policy]() | Describes user-managed access control rights to databases in the Collection Policy  | Allows users to set permissions and control their privacy while sharing data across apps |
 
-In practice, this collection of functionalities allows App A to store data for User B on a hosting service in databases that are access controlled by 3IDs. User B can now go to App C and give them permission to access their data from App A. To receive the data from the hosting service, App C must meet the requirements defined by the hosting service's service policy which may include payment information.
+This collection of functionalities allows App A to store data for User B on a hosting service in databases that are access controlled by User B's 3ID. User B can now go to App C and give them permission to access their data from App A. To receive the data from the hosting service, App C must meet the requirements defined by the hosting service's service policy which may include payment information.
 
 ## Ceramic Ecosystem
 
