@@ -100,7 +100,7 @@ Tiles, the third doctype supported by Ceramic, are the most general form of a do
 
 #### Schemas
 
-The first use case for tiles is creating verifiable, globally-available data schemas. Schema tiles allow a user to define a canonical schema that can be used by anyone anywhere in the world, encouraging multiple parties to converge around standard schemas. This makes schema tiles valuable in their own right. However, schema tiles are also needed to provide structure to information contained in other tiles. Because of this, schema tiles are the core building block for other tiles, such as those below.
+The first use case for tiles is creating verifiable, globally-available data schemas. Schema tiles allow a user to define a canonical schema that can be used by anyone anywhere in the world, encouraging multiple parties to converge around standard schemas. This makes schema tiles valuable in their own right. However, schema tiles are also needed to provide structure to information contained in other tiles. Because of this, schema tiles are the core building block for other tiles, such as those below. Schemas tiles can be thought of as templates for other tiles.
 
 #### Metadata
 
@@ -171,7 +171,7 @@ For self-sovereign identity and to enable user-managed access control, 3Box uses
 
 | Tile | Description | Use Case |
 | --------------- | ----------- | -------- |
-| [Schema(s)]() | Describes a data schema used in a partcicular database | Allows developers to define their data schemas |
+| [Schema(s)]() | Describes a data schema used in a partcicular database | Allows developers to define their data schemas or use existing ones |
 | [Collection Policy]() | Describes a collection of databases linked to Schema tiles | Allows applications to define their databases and the data models they use so others can easily consume the data |
 | [Service Policy]() | Describes simple functions that take an input and produce an output. In this case, it's used for hosting of databases in the Collection Policy | Allows service providers to define their service or API and the requirements to access it |
 | [Privacy Policy]() | Describes user-managed access control rights to databases in the Collection Policy  | Allows users to set permissions and control their privacy while sharing data across apps |
