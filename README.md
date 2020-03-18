@@ -13,7 +13,7 @@ Ceramic documents are signed, append-only objects stored in [IPFS](https://githu
 ## Learn More
 - [Ceramic Introduction](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md)
   - [Ceramic Overview](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#ceramic-overview)
-  - [What is Stored on Ceramic?](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#what-is-stored-on-ceramic)
+  - [Ceramic Documents](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#ceramic-documents)
   - [Use Cases](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#use-cases)
   - [Ceramic Ecosystem](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#ceramic-ecosystem)
   - [Ceramic Ecosystem Alliance](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#ceramic-ecosystem-alliance)
