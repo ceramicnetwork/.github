@@ -5,9 +5,13 @@
 
 
 # Ceramic Protocol
-> [**Ceramic**](http://ceramic.network) is a permissionless protocol for creating and accessing mutable, tamper-proof documents that serve as the foundation for a web without silos. 
+> [**Ceramic**](http://ceramic.network) is a permissionless protocol for creating unstoppable documents that serve as the foundation for a connected, interoperable web without silos. 
 
-Ceramic documents are signed, append-only objects stored in [IPFS](https://github.com/ipfs/ipfs), encoded using [IPLD](https://github.com/ipld/ipld), and anchored in one or more blockchains. Ceramic's public document graph provides a single verifiable source of truth for building consensus around important documents, enabling participants to trustlessly share and efficiently coordinate around information in a platform-agnostic way. Ceramic documents support novel use cases such as self-sovereign identity, interoperable data ecosystems, and open web services that allow developers to build more open, composable apps.
+Ceramic's public infrastructure allows participants to create signed, append-only, tamper-proof documents that act as a censorship-resistant and universally available source of truth for important information. Ceramic documents are stored in [IPFS](https://github.com/ipfs/ipfs), encoded using [IPLD](https://github.com/ipld/ipld), and anchored in one or more blockchains. Because Ceramic's Universal Document Graph is public, permissionless, and verifiable, it unlocks information access and interoperability between *all platforms and services across the web*.
+
+Although Ceramic can be used to store any kind of signed information, it is well-suited as a universal routing layer for storing decentralized identifiers (DIDs) and their associated metadata, data schemas, policies for usage of web services, access control permissions, and other documents that collectively enable boundless interoperability between an ecosystem of connected wallets, applications, databases, and services.
+
+Together, Ceramic documents give users more control and interoperability over their identity, information, and resources, and allow developers to build composable apps with unprecedented modulariity, trust, and scale.
 
 
 ## Learn More
