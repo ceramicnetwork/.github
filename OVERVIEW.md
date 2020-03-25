@@ -78,7 +78,7 @@ Finally, a solution aiming to make it simpler to build powerful applications mus
 
 ## Ceramic Documents
 
-Ceramic provides a *universal graph of verifiable documents*. Ceramic documents are signed, append-only objects stored in [IPFS](https://github.com/ipfs/ipfs), encoded using [IPLD](https://github.com/ipld/ipld), and anchored in one or more blockchains. Due to its hybrid design relying on IPFS/IPLD and various blockchains, Ceramic's document graph is interoperable, scalable, permissionless, and low cost (variable depending on blochain anchor service). 
+Ceramic provides a *universal graph of verifiable documents*. Ceramic documents are signed, append-only objects stored in [IPFS](https://github.com/ipfs/ipfs), encoded using [IPLD](https://github.com/ipld/ipld), and anchored in one or more blockchains. Due to its hybrid design relying on IPFS/IPLD and various blockchains, Ceramic's document graph is interoperable, scalable, permissionless, and low cost (variable depending on blockchain anchor service). 
 
 Documents are a flexible primitive that can be modeled to represent many things, however each document must conform to a specific *doctype* supported by the protocol. Doctypes specify rules that govern what is a valid update to the document such as signatures and state transitions. This allows Ceramic nodes to verify the state of a given document in a decentralized way.
 
@@ -114,7 +114,7 @@ The first use case for tiles is creating verifiable, globally-available data sch
 
 #### Metadata
 
-Tiles are used to express additional metadata or context about Ceramic DIDs. At a minimun, DIDs need a DID Manager tile so they can be controlled by one or more private keys. Other metadata needs will vary depending on the type of entity that a DID represents and the use case.
+Tiles are used to express additional metadata or context about Ceramic DIDs. At a minimum, DIDs need a DID Manager tile so they can be controlled by one or more private keys. Other metadata needs will vary depending on the type of entity that a DID represents and the use case.
 
 - **DID Manager**: Contains information required to allow one or many private keys to control a DID
 - **Public Profile**: Provide context about a DID
