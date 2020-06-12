@@ -14,7 +14,7 @@ Index:
 
 ## Working Groups
 
-## Governance
+### Governance
 
 ### Identity
 
