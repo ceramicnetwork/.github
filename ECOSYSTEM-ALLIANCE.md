@@ -54,6 +54,9 @@ The CEA meets every two weeks to share and discuss the results of working group 
 | [BrightID](http://brightid.org)     | ✅                 | ✅                | ✅                | ✅                 |    
 | [Passbase](http://passbase.io)     | ✅                 | ✅                | ✅                | ✅                 |    
 | [Akasha](http://akasha.org)       | ✅                 | ✅                | ✅                | ✅                 |    
+| [Lunie](http://lunie.io)       | ✅                 | ✅                | ✅                | ✅                 |    
+| [Rainbow](http://rainbow.org)       | ✅                 | ✅                | ✅                | ✅                 |    
+| [Alchemy](http://alchemy.io)       | ✅                 | ✅                | ✅                | ✅                 |    
 
 
 ## Join the CEA
