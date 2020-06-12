@@ -18,9 +18,12 @@ The CEA ***is not*** a replacement for [Ceramic Core Calls]() (Core Community Ca
 ## Structure
 
 The CEA has three levels of organiztional structure:
-- **Members**: The totality of all CEA participants.
-- **Working Groups (WG)**: Collections of members tackling specific areas of interest, such as Ceramic governance or identity.
-- **Stewards**: CEA members in charge of running CEA meetings and ensuring integrity of process.
+
+`Members`: All participants.
+
+`Working Groups`: Collections of members tackling specific areas of interest, such as Ceramic governance or identity.
+
+`Stewards`: CEA members in charge of running CEA meetings and ensuring integrity of process.
 
 ## Meetings
 
