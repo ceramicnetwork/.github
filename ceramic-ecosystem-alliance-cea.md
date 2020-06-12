@@ -1,3 +1,5 @@
+![CEA Banner Image](assets/cea/cea-github-readme.png)
+
 # Ceramic Ecosystem Alliance (CEA)
 
 > The CEA is a grassroots network of projects and individuals collaborating on standards and use cases for the Ceramic Network.
