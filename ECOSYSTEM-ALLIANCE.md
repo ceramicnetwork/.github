@@ -2,7 +2,6 @@
 
 > The CEA is a group of projects and individuals collaborating on standards and use cases for the Ceramic Network.
 
-Index:
 - [Objectives]()
 - [Organization & Structure]()
 - [Working Groups]()
@@ -24,19 +23,20 @@ Index:
 
 ## Members
 
-| Members        | Governance        | Identity          | Interop Data      | Multi-Chain       |
-| :------------- | :-----------      | :-----------      | :-----------      | :-----------      |
-| 3Box           | ✅                 | ✅                | ✅                | ✅                 |
-| Textile           | ✅                 | ✅                | ✅                | ✅                 |
-| IPFS           | ✅                 | ✅                | ✅                | ✅                 |
+| Members                           | Governance        | Identity          | Interop Data      | Multi-Chain       |
+| :-------------                    | :-----------      | :-----------      | :-----------      | :-----------      |
+| [3Box](http://3box.io)            | ✅                 | ✅                | ✅                | ✅                 |
+| [Textile](http://textile.io)      | ✅                 | ✅                | ✅                | ✅                 |
+| [IPFS](http://ipfs.io)            | ✅                 | ✅                | ✅                | ✅                 |
 | Sia           | ✅                 | ✅                | ✅                | ✅                 |
 | Storj           | ✅                 | ✅                | ✅                | ✅                 |
 | Dappkit           | ✅                 | ✅                | ✅                | ✅                 |
 | OrbitDB           | ✅                 | ✅                | ✅                | ✅                 |
 | Aragon            | ✅                 | ✅                | ✅                | ✅                 |    
-| Gitcoin            | ✅                 | ✅                | ✅                | ✅                 |    
-| MetaMask            | ✅                 | ✅                | ✅                | ✅                 |    
-| Magic            | ✅                 | ✅                | ✅                | ✅                 |    
+| [Gitcoin](http://gitcoin.com)     | ✅                 | ✅                | ✅                | ✅                 |    
+| [MetaMask](http://metamask.io)    | ✅                 | ✅                | ✅                | ✅                 |    
+| [Magic](http://magic.link)        | ✅                 | ✅                | ✅                | ✅                 |    
 | Temporal/RTrade  | ✅                 | ✅                | ✅                | ✅                 |    
-| Infura            | ✅                 | ✅                | ✅                | ✅                 |    
+| [Infura](http://infura.io)        | ✅                 | ✅                | ✅                | ✅                 |    
 
+## Join the CEA
