@@ -26,5 +26,17 @@ Index:
 
 | Members        | Governance        | Identity          | Interop Data      | Multi-Chain       |
 | :------------- | :-----------      | :-----------      | :-----------      | :-----------      |
-| 3Box           | ✅                 | ✅                | ✅               | ✅                 |
-| TBD            | ✅                 | ✅                | ✅               | ✅                 |    
+| 3Box           | ✅                 | ✅                | ✅                | ✅                 |
+| Textile           | ✅                 | ✅                | ✅                | ✅                 |
+| IPFS           | ✅                 | ✅                | ✅                | ✅                 |
+| Sia           | ✅                 | ✅                | ✅                | ✅                 |
+| Storj           | ✅                 | ✅                | ✅                | ✅                 |
+| Dappkit           | ✅                 | ✅                | ✅                | ✅                 |
+| OrbitDB           | ✅                 | ✅                | ✅                | ✅                 |
+| Aragon            | ✅                 | ✅                | ✅                | ✅                 |    
+| Gitcoin            | ✅                 | ✅                | ✅                | ✅                 |    
+| MetaMask            | ✅                 | ✅                | ✅                | ✅                 |    
+| Magic            | ✅                 | ✅                | ✅                | ✅                 |    
+| Temporal/RTrade  | ✅                 | ✅                | ✅                | ✅                 |    
+| Infura            | ✅                 | ✅                | ✅                | ✅                 |    
+
