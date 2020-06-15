@@ -13,56 +13,47 @@ Although Ceramic can be used to store any kind of signed information, it is well
 
 Together, Ceramic documents give users more control and interoperability over their identity, information, and resources, and allow developers to build composable apps with unprecedented modulariity, trust, and scale.
 
+## Resources
 
-## Learn More
-- [Ceramic Introduction](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md)
-  - [Ceramic Overview](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#ceramic-overview)
-  - [Ceramic Documents](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#ceramic-documents)
-  - [Use Cases](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#use-cases)
-  - [Ceramic Ecosystem](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#ceramic-ecosystem)
-  - [Ceramic Ecosystem Alliance](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#ceramic-ecosystem-alliance)
-  - [Timeline](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md#timeline)
-- [Ceramic Specification](https://github.com/ceramicnetwork/specs)
-  - [Protocol Overview](https://github.com/ceramicnetwork/specs#protocol-overview)
-  - [Document Lifecycle](https://github.com/ceramicnetwork/specs#document-lifecycle)
-  - [Document Identifiers](https://github.com/ceramicnetwork/specs#document-identifiers)
-  - [Document Log](https://github.com/ceramicnetwork/specs#document-log)
-  - [Document Types](https://github.com/ceramicnetwork/specs#document-types)
-  - [Document Update Propagation](https://github.com/ceramicnetwork/specs#document-update-propagation)
-  - [Ceramic Services](https://github.com/ceramicnetwork/specs#ceramic-services)
-  - [Implementations](https://github.com/ceramicnetwork/specs#implementations)
-- Ceramic Doctypes
-  - [3id](https://github.com/ceramicnetwork/specs/blob/master/doctypes/3id.md)
-  - [Tile](https://github.com/ceramicnetwork/specs/blob/master/doctypes/tile.md)
-  - [Account-link](https://github.com/ceramicnetwork/specs/blob/master/doctypes/account-link.md)
+### Learn more
 
-## Stay Up to Date
-- Chat: [Discord](https://discord.gg/6VRZpGP)
-- Follow: [Twitter](http://twitter.com/ceramicnetwork)
-- Subscribe: [Newsletter](http://ceramic.network)
+- [Ceramic Introduction](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md): Learn more about the Ceramic network.
+- [Ceramic Specification](https://github.com/ceramicnetwork/specs): Learn more about the current technical protocol specification.
 
+### Join the community
+
+- **Chat**: Join the [Ceramic Discord](https://discord.gg/6VRZpGP) server for discussions related to the Ceramic network.
+- **Calendar of Events**: Add the [Ceramic calendar](https://calendar.google.com/calendar/b/3?cid=Y2VyYW1pYy5uZXR3b3JrX3JsNzFrcXZtNzE4ZGY4aWk2cDZzanNmbDdjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20) to attend Ceramic Community Calls and Core Devs Calls.
+- **Twitter**: Follow [@ceramicnetwork](http://twitter.com/ceramicnetwork) on twitter for official updates.
+- **Newsletter**: Subscribe to the [Ceramic Neweletter](http://ceramic.network) to receive recaps of activity.
+
+### Start building
+
+Ceramic is currently live with the Slip testnet that anchors document updates on the Ethereum Ropsten testnet. You can view the current Ceramic roadmap [here](https://github.com/ceramicnetwork/ceramic/issues/19).
 
 ## Implementatons
+
 | Package | JavaScript | Description |
 | ------- | ---------- | ----------- |
 | Ceramic | [ceramicnetwork/js-ceramic](https://github.com/ceramicnetwork/js-ceramic) | Typescript implementation of the Ceramic protocol |
 
-Want to work on an implementation in another language? [Open an issue](https://github.com/ceramicnetwork/ceramic/issues) in this repository to discuss it with others, find help, and coordinate efforts.
-
+> Want to work on an implementation in another language? [Open an issue](https://github.com/ceramicnetwork/ceramic/issues) in this repository to discuss it with others, find help, and coordinate efforts.
 
 ## Contributing
-The easiest way to get involved in Ceramic is to join our [Discord](https://discord.gg/6VRZpGP), where we are very active.
 
-To propose or contribute improvements to the core Ceramic protocol, such as adding support for additional doctypes, open an issue in the [ceramicnetwork/specs](http://github.com/ceramicnetwork/specs/issues) repository.
+### Report bugs and/or issues
 
-To propose or contribute improvements to the Ceramic JavaScript client, open an issue in the [ceramicnetwork/js-ceramic](http://github.com/ceramicnetwork/js-ceramic/issues) repository.
+To report a bug or issue with code, open a new Github issue on the affected repository.
+
+### Propose improvements and/or standards 
+
+[Ceramic Improvement Proposals (CIPs)](http://github.com/ceramicnetwork/cip) is a process used to propose improvements to the core Ceramic protocol or use case standards. Create a Ceramic Improvement Proposal (CIP) by opening a new issue in the [ceramicnetwork/CIP](https://github.com/ceramicnetwork/CIP/issues) repository.
 
 To propose or contribute other feature requests or improvements that don't fit neatly into the above, such as creating an implementation in another language, open an issue in the [ceramicnetwork/ceramic](http://github.com/ceramicnetwork/ceramic/issues) repository.
 
+### Create or join working groups
 
-## Ceramic Ecosystem Alliance
-The Ceramic Ecosystem Alliance is a collaborative group of organizations, communities, and individuals actively contributing to the research and development of the Ceramic protocol, integrating Ceramic standards into their products, or building services on the Ceramic network. Become a member and [**sign up here**](https://danny765911.typeform.com/to/AAFtVN).
-
+The [Ceramic Ecosystem Alliance (CEA)](http://github.com/ceramicnetwork/CEA) is a grassroots organization that allows community members to self-organize into topic-based working groups. These working groups allow members to closely collaborate on important issues and produce meaningful outcomes, often in the form of [CIPs](http://github.com/ceramicnetwork/CIP) with wide buy-in from the community. The CEA meets every two weeks, and individual working groups meet on their own schedule. [Click here](https://github.com/ceramicnetwork/CEA#join-the-cea) to join the CEA and get access to the calendar.
 
 ## License
 MIT
