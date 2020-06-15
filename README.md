@@ -27,11 +27,11 @@ Together, Ceramic documents give users more control and interoperability over th
 - **Twitter**: Follow [@ceramicnetwork](http://twitter.com/ceramicnetwork) on twitter for official updates.
 - **Newsletter**: Subscribe to the [Ceramic Neweletter](http://ceramic.network) to receive recaps of activity.
 
-### Start building
+## Start building
 
 Ceramic is currently live with the Slip testnet that anchors document updates on the Ethereum Ropsten testnet. You can view the current Ceramic roadmap [here](https://github.com/ceramicnetwork/ceramic/issues/19).
 
-## Implementatons
+### Implementatons
 
 | Package | JavaScript | Description |
 | ------- | ---------- | ----------- |
