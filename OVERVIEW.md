@@ -3,10 +3,10 @@
 [![](https://img.shields.io/badge/Chat%20on-Discord-orange.svg?style=flat)](https://discord.gg/6VRZpGP)
 [![Twitter](https://img.shields.io/twitter/follow/ceramicnetwork?label=Follow&style=social)](https://twitter.com/ceramicnetwork) 
 
-Ceramic is a dynamic information management protocol for the open web.
+> Ceramic is a dynamic information management protocol for the open web.
 
 ## Summary
-Ceramic is a peer-to-peer network for creating and accessing smart documents that provides a whole new way to permissionlessly manage dynamic information on the internet.
+Ceramic is a peer-to-peer network for creating and accessing smart documents which provide a new framework for permissionlessly managing dynamic information on the internet.
 
 > For a more technical overview, see [Ceramic Technical Specification](https://github.com/ceramicnetwork/specs).
 
@@ -25,12 +25,13 @@ In addition to the general benefits of storing data in a decentralized environme
 **Limited liability**: Maybe you want to give users control over their own information so you aren't responsible for custodying their data and liable for nefarious attacks. **Guaranteed trust**: Maybe you want to rebuild trust with users by guaranteeing that you can't be evil.
 
 ### Worldwide Content Network
+Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor.
 
 ### Unlimited Composability
 Permissionless collaboration. Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor.
 
-### Smart Programmability
-Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor.
+### Programmable Content
+Smart programmability Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor.
 
 ### Decentralized State Management
 **Version control**, mutability, strict ordering, strong enough guarantees to handle the most sensitive cryptographic operations such as key mnagement (i.e. rotations/revocation). Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor.
@@ -39,6 +40,7 @@ Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ip
 A way to unify, not further divide, the web3 stack. Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor.
 
 ### DID-Based User Model
+Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor.
 
 
 ## Smart Documents
@@ -59,10 +61,10 @@ A smart document consists of an append-only log of records that are anchored in 
 
 
 ### Document Structure
-
+Documents are permalinked, append-only logs of records that are anchored in a blockchain. Every smart document adhered to the same structure. 
 | Feature | Description |
 | ------- | ----------- |
-| Permalinks | Every Ceramic document is uniquely identified by an immutable permalink, called a DocId. DocIds never change, even if the document is updated thousands of times. DocIds are used to query the current version of the document from nodes on the network. |
+| Permalink | Every Ceramic document is uniquely identified by an immutable permalink, called a DocId. DocIds never change, even if the document is updated thousands of times. DocIds are used to query the current version of the document from nodes on the network. |
 | Log | A document is an append-only log linked records that are anchored in a blockchan. |
 | Records | Every document log begins with a genesis record (and its blockchain anchor record), and updates are made with signed records (and their blockchain anchor records). Together, document records form an immutable chain of updates. As a result, documents are individual "doc-chains." |
 | Versions | Every time a document update is anchored on a blockchain, it forms a new version. Historical versions of a document can be referenced or queried by appending the versionID to the docID. |
@@ -72,28 +74,107 @@ A smart document consists of an append-only log of records that are anchored in 
 | Feature | Description |
 | ------- | ----------- |
 | Owners | DID authorship. Ceramic doens't provide a locked-in account model. |
-| Doctypes | Every document must specify a doctype, which is its smart engine. Doctypes describe the rules for content and logic for state transitions. Doctype rules are enforced by nodes every time updates are made to the document. |
-| Schemas | Documents can optionally define a schema. If a schema is defined, nodes will validate that every update made to the document conforms to its schema and will discard malformed updates. |
+| Doctype | Every document must specify a doctype, which is its smart engine. Doctypes describe the rules for content and logic for state transitions. Doctype rules are enforced by nodes every time updates are made to the document. |
+| Schema | Documents can optionally define a schema. If a schema is defined, nodes will validate that every update made to the document conforms to its schema and will discard malformed updates. |
 | Tags | Documents can optionally define tags. Tags are keywords that allow documents to be categorized and contextualized. They are especially useful when indexing or searching for documents. |
 | Blockchain | Every document update is anchored in a given blockchain. You can choose which blockchain your document is anchored in. |
-| Persistence | Lorem |
+| Backup | Persistence |
+| Hooks |  |
 
-
-
-
-### Storage
-
+### Document Storage
 What can be stored in the contents of a document?
 
-**Content**: What a given document can store is defined by its doctype and schema. Content can range from simple JSON storage to more complex and use-case specific information.
-
-**Scripts**:
-
-
-
+| Feature | Description |
+| ------- | ----------- |
+| Content | What a given document can store is defined by its doctype and schema. Content can range from simple JSON storage to more complex and use-case specific information. |
+| Scripts | Lorem |
 
 
+## Peer-to-Peer Network
+Ceramic is a peer-to-peer network of nodes that are used to create, update, and query documents. 
 
+### How does it work?
+Unlike blockchains and other global state machines, there is no global state on Ceramic. Since there is a massive amount of content in the world, this design would be too heavy to run in resource-constrained environments such as the browser or on mobile devices. Instead Ceramic opts for localized doc-state.
+
+### Node Functions
+Ceramic nodes are responsible for managing documents, orchestrating backups and anchoring, gossiping updates, and responding to queries for a given set of documents which it cares about.
+| Function | Description |
+| ------- | ----------- |
+| Create documents | Add a description |
+| Validate updates | Schema validation, state transition rules specified by the doctype. |
+| Pin content | DID authorship. Ceramic doens't provide a locked-in account model. |
+| Pin state | DID authorship. Ceramic doens't provide a locked-in account model. |
+| Execute hooks | Add description |
+| Orchestrate backups | Every document must specify a doctype, which is its smart engine. Doctypes describe the rules for content and logic for state transitions. Doctype rules are enforced by nodes every time updates are made to the document. |
+| Delegate anchors | Documents can optionally define a schema. If a schema is defined, nodes will validate that every update made to the document conforms to its schema and will discard malformed updates. |
+| Gossip updates | Gossip updates to documents with other nodes using libp2p |
+| Respond to queries | Lorem |
+
+### Node Configurations
+Ceramic nodes are extremely flexible and configurable. Because there is no global state on Ceramic, node operators need to configure their node to perform actions in a certain way based on the users, functionality, and use cases they desire to service.
+| Configuration | Description |
+| ------- | ----------- |
+| DocIds | Loreem |
+| Anchor Services | DID authorship. Ceramic doens't provide a locked-in account model. |
+| Backup Services | Every document must specify a doctype, which is its smart engine. Doctypes describe the rules for content and logic for state transitions. Doctype rules are enforced by nodes every time updates are made to the document. |
+| Doctypes | Documents can optionally define a schema. If a schema is defined, nodes will validate that every update made to the document conforms to its schema and will discard malformed updates. |
+| Hooks | Documents can optionally define a schema. If a schema is defined, nodes will validate that every update made to the document conforms to its schema and will discard malformed updates. |
+
+### Clients
+
+Ceramic can be run directly in-browser using ceramic-core, or it can be run remotely in Node.js and connected to via an HTTP API. The Ceramic monorepo containing both implementations can be found at [ceramicnetwork/js-ceramic](https://github.com/ceramicnetwork/js-ceramic).
+
+
+## Example Use Cases
+
+### Identity Management
+Ceramic can be used as a platform for complete decentralized identity management.
+
+| Use Case | Description | Example |
+| ------- | ----------- | ---------- |
+| DIDs | Insert description | 3ID DID (CIP-6) |
+| Indexes | Insert description | Identity Index (IDX) (CIP-11) |
+| Verifiable Claims | Insert description | 3ID DID (CIP-6) |
+| Key Management | Insert description | Auth Keychain (CIP-6) |
+| Profiles | Insert description | Basic Profile (CIP-6) |
+| Social Graph | Insert description |  (CIP-6) |
+| Linked Accounts | Insert description | 3ID DID (CIP-6) |
+| Profiles | Insert description | 3ID DID (CIP-6) |
+| Data Collections | Insert description | 3ID DID (CIP-6) |
+| Access Control | Insert description | 3ID DID (CIP-6) |
+
+
+### Schemas
+Ceramic documents are great for managing schemas in the public context where they can easily be discovered and reused by others. Because documents have referencable versions, you can choose to utilize a specific version of a schema without worrying about the schema changing while using it.
+
+### Access Control
+There are many ways that Ceramic documents can be used as access controllers for other resources; a few examples: 
+1. Store user-managed access control lists for a given resource, which can be checked by a service provider prior to permitting access.
+2. Store various access control keys (write, read, follow, etc) to other resources encrypted inside documents, which allows the user to share those keys with others upon request.
+
+### User Registries
+Applications can create documents which store their user table and can also do things like permit users to register a new username. To do this, your application would need to create a DID and operate a microservice which manages your app's key. 
+
+### Content Publishing
+
+
+### Social Media Content
+Store social media content such as 1, 2, 3, 4, 5, and more in the public domain instead of your applications server. A few benefits of storing this content on Ceramic:
+1. Users can update/edit their content at anytime.
+2. Content can be shared across platforms.
+3. Content can be added to their Identity Index, to enable identity-centric cross-platform discoverability.
+
+### Data Storage
+
+### Content Routing
+
+### Service Interoperability
+Publish public API and service definitions.
+
+
+## Building with Ceramic
+
+## Continue Reading
 
 
 
