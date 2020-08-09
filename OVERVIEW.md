@@ -24,6 +24,8 @@ In addition to the general benefits of storing data in a decentralized environme
 ### Data Security 
 **Limited liability**: Maybe you want to give users control over their own information so you aren't responsible for custodying their data and liable for nefarious attacks. **Guaranteed trust**: Maybe you want to rebuild trust with users by guaranteeing that you can't be evil.
 
+### Worldwide Content Network
+
 ### Unlimited Composability
 Permissionless collaboration. Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor.
 
@@ -31,7 +33,7 @@ Permissionless collaboration. Lorem ipsum dolor lorem ipsum dolor lorem ipsum do
 Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor.
 
 ### Decentralized State Management
-**Version control** Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor.
+**Version control**, mutability, strict ordering, strong enough guarantees to handle the most sensitive cryptographic operations such as key mnagement (i.e. rotations/revocation). Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor.
 
 ### Complimentary Infrastructure
 A way to unify, not further divide, the web3 stack. Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor.
@@ -40,7 +42,10 @@ A way to unify, not further divide, the web3 stack. Lorem ipsum dolor lorem ipsu
 
 
 ## Smart Documents
-Smart documents are the core unit of information on the Ceramic network. A smart document consists of an append-only log of records that are anchored in a blockchain. and associated metadata that governs how the protocol handles the documents. State management for content. Doc-chains. Programmabilty, state transititions, rules, and logic that will be enforced by the protocol. Strict ordering.
+Smart documents are the core unit of information on the Ceramic network. 
+
+### How does it work?
+A smart document consists of an append-only log of records that are anchored in a blockchain. and associated metadata that governs how the protocol handles the documents. State management for content. Doc-chains. Programmabilty, state transititions, rules, and logic that will be enforced by the protocol. Strict ordering.
 
 </br>
 </br>
@@ -57,25 +62,23 @@ Smart documents are the core unit of information on the Ceramic network. A smart
 
 | Feature | Description |
 | ------- | ----------- |
-| Append-only logs | A document consists of a series of linked records that are anchored in a blockchan. Every document begins with a genesis record (and its blockchain anchor record), and updates are made with signed records (and their blockchain anchor records). Together, document records form an immutable chain of updates. As a result, documents are individual "doc-chains." |
 | Permalinks | Every Ceramic document is uniquely identified by an immutable permalink, called a DocId. DocIds never change, even if the document is updated thousands of times. DocIds are used to query the current version of the document from nodes on the network. |
+| Log | A document is an append-only log linked records that are anchored in a blockchan. |
+| Records | Every document log begins with a genesis record (and its blockchain anchor record), and updates are made with signed records (and their blockchain anchor records). Together, document records form an immutable chain of updates. As a result, documents are individual "doc-chains." |
 | Versions | Every time a document update is anchored on a blockchain, it forms a new version. Historical versions of a document can be referenced or queried by appending the versionID to the docID. |
-| DID Authorship | Ceramic doens't provide a locked-in account model. |
 
 
-### Settings & Logic
+### Document Configurations
+| Feature | Description |
+| ------- | ----------- |
+| Owners | DID authorship. Ceramic doens't provide a locked-in account model. |
+| Doctypes | Every document must specify a doctype, which is its smart engine. Doctypes describe the rules for content and logic for state transitions. Doctype rules are enforced by nodes every time updates are made to the document. |
+| Schemas | Documents can optionally define a schema. If a schema is defined, nodes will validate that every update made to the document conforms to its schema and will discard malformed updates. |
+| Tags | Documents can optionally define tags. Tags are keywords that allow documents to be categorized and contextualized. They are especially useful when indexing or searching for documents. |
+| Blockchain | Every document update is anchored in a given blockchain. You can choose which blockchain your document is anchored in. |
+| Persistence | Lorem |
 
-**Doctypes**: Every document must specify a doctype, which is its smart engine. Doctypes describe the rules for content and logic for state transitions. Doctype rules are enforced by nodes every time updates are made to the document.
 
-**Schemas**: Documents can optionally define a schema. If a schema is defined, nodes will validate that every update made to the document conforms to its schema and will discard malformed updates.
-
-**Tags**: Documents can optionally define tags. Tags are keywords that allow documents to be categorized and contextualized. They are especially useful when indexing or searching for documents.
-
-**Hooks**:
-
-**Blockchain Anchoring:** Every document update is anchored in a given blockchain which provides strict ordering to
-
-**Configurable Persistence**
 
 
 ### Storage
