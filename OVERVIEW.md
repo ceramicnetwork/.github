@@ -197,16 +197,26 @@ Ceramic can be run directly in-browser using ceramic-core, or it can be run remo
 ### Identity Management
 Ceramic can be used as a platform for complete decentralized identity management.
 
-| Use Case | Description | Example |
-| ------- | ----------- | ---------- |
-| DIDs | Insert description | 3ID DID (CIP-6) |
-| Indexes | Insert description | Identity Index (IDX) (CIP-11) |
-| Verifiable Claims | Insert description | 3ID DID (CIP-6) |
-| Key Management | Insert description | Auth Keychain (CIP-6) |
-| Profiles | Insert description | Basic Profile (CIP-6) |
-| Social Graph | Insert description |  (CIP-6) |
-| Linked Accounts | Insert description | 3ID DID (CIP-6) |
-| Profiles | Insert description | 3ID DID (CIP-6) |
+#### DIDs
+DIDs are globally-unique identifiers that can sign/encrypt information, authorize access to resources, and interact various services and data online. DIDs may be used to represent users, organizations, applications, services, devices, etc. *See [3ID (CIP-6)]() for an example of how Ceramic documents can be used to create DIDs.*
+
+#### Identity Indexes
+*See [Identity Index (IDX) (CIP-11)]() for an example of how Ceramic documents can be used to construct an identity index.*
+
+#### Verifiable Claims
+
+#### Social Graph
+
+#### Profiles
+
+#### Linked Accounts
+Decentralized keybase. domains, social accounts, *See [Accounts Index (CIP-N)]() for an example of how Ceramic documents can be used as a directory of linked accounts.*
+
+
+#### Key Management
+*See [Auth Keychain (CIP-N)]() for an example of how Ceramic documents can be used as a DID keychain.*
+
+
 | Data Collections | Insert description | 3ID DID (CIP-6) |
 | Access Control | Insert description | 3ID DID (CIP-6) |
 
