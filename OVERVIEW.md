@@ -46,7 +46,7 @@ Ceramic is designed to compliment and integrate with your existing application i
 Due to the above, Ceramic's document management infrastructure serves to unify (instead of divide) the web3/dweb (and internet more broadly) stack.
 
 ### A Better User Model
-With a motivation for widespread interoperability and eliminating any form of lock-in, Ceramic can be used with any kind of identity system. Technically, vvv. DID-based user model.
+With a motivation for widespread interoperability and eliminating any form of lock-in, Ceramic can be used with any kind of identity system. Technically, vvv. DID-based user model. Ceramic doens't provide a locked-in account model. DIDs are the W3C standard for decentralized identifiers. (add link)
 
 
 ## Smart Documents
@@ -65,25 +65,39 @@ Smart documents can exist as independent objects or can be linked together to fo
 </br>
 </br>
 
+
 ### Document Structure
-A smart document is an append-only log of records that is anchored in a blockchain. Every smart document adheres to the same general structure, which is outlined below.
-| Feature | Description |
-| ------- | ----------- |
-| Permalink | Every Ceramic document is uniquely identified by an immutable permalink, called a DocId. DocIds never change, even if the document is updated thousands of times. DocIds are used to query the current version of the document from nodes on the network. |
-| Log | A document is an append-only log linked records that are anchored in a blockchan. |
-| Records | Every document log begins with a genesis record (and its blockchain anchor record), and updates are made with signed records (and their blockchain anchor records). Together, document records form an immutable chain of updates. As a result, documents are individual "doc-chains." |
-| Versions | Every time a document update is anchored on a blockchain, it forms a new version. Historical versions of a document can be referenced or queried by appending the versionID to the docID. |
+A smart document is an append-only log of sequential records that are anchored in a blockchain. Every smart document adheres to the same general structure, which is outlined below.
+
+- **DocId**: A unique, immutable document identifier similar to a permalink. DocIds never change, even if the document is updated thousands of times. DocIds are the canonical reference to a document and are used to query the current version of the document from nodes.
+
+- **Document Log**: An append-only log of linked records that makes up a document. The document log can be thought of as a "doc-chain."
+
+- **Records**: Individual records (genesis, signed, anchor) that make up the document log.
+
+- **Versions**: New document versions are created every time an anchor record (signifying a blockchain transaction) is added to the document log. Historical versions of a document can be referenced or queried by appending the versionID to the docID.
+
 
 ### Document Configurations
-| Feature | Description |
-| ------- | ----------- |
-| Owners | DID authorship. Ceramic doens't provide a locked-in account model. |
-| Doctype | Every document must specify a doctype, which is its smart engine. Doctypes describe the rules for content and logic for state transitions. Doctype rules are enforced by nodes every time updates are made to the document. |
-| Schema | Documents can optionally define a schema. If a schema is defined, nodes will validate that every update made to the document conforms to its schema and will discard malformed updates. |
-| Tags | Documents can optionally define tags. Tags are keywords that allow documents to be categorized and contextualized. They are especially useful when indexing or searching for documents. |
-| Blockchain | Every document update is anchored in a given blockchain. You can choose which blockchain your document is anchored in. |
-| Backup | Persistence |
-| Hooks |  |
+Smart documents can be uniquely configured and implemented to possess specific capabilities. The currently-available configurations are described below.
+
+#### Required
+- **Owners**: Documents can be owned by one or more DID. Depending on the doctype, all or some of the owners must sign document updates in order to be valid.
+
+- **Doctype**: The document's smart engine. Doctypes describe the content rules and state transition logic that governs the document. Rules specified by doctypes are enforced by the protocol every time an update is made to a document.
+
+- **Blockchain**: Documents need to specify a blockchain for anchoring document updates. Blockchains provide strict ordering to records and trust to document state.
+
+#### Optional
+
+- **Schema**: A schema defines the format of content in a document. If a schema is included, the protocol validates that every update conforms to the schema and will discard malformed updates. *Optional*.
+
+- **Tags**: Tags are a set of keywords that allow documents to be categorized and contextualized within the network. They are especially useful when indexing or searching for documents. *Optional*.
+
+- **Backup**: Documents may specify one or more backup services for persisting content beyond the node. Document content will always be pinned locally on the node using IPFS, but oftentimes additional storge guarantees are useful. *Optional*.
+
+- **Hooks**: Hooks are microprograms that run on the node to perform various utility functions for documents. Documents can specify which hooks they wnt to use, and if the node has installed those hooks they will be executed when appropriate. *Optional*.
+
 
 ### Document Storage
 What can be stored in the contents of a document?
@@ -95,13 +109,10 @@ What can be stored in the contents of a document?
 
 
 ## The Ceramic Network
-Ceramic is a peer-to-peer network of nodes that are used to create, update, and query documents. 
-
-### How does it work?
-Unlike blockchains and other global state machines, there is no global state on Ceramic. Since there is a massive amount of content in the world, this design would be too heavy to run in resource-constrained environments such as the browser or on mobile devices. Instead Ceramic opts for localized doc-state.
+The Ceramic Network is a peer-to-peer infrastructure that is used to manage documents. Unlike blockchains and other global state machines, there is no global state on Ceramic. Since there is a massive amount of content in the world, this design would be too heavy to run in resource-constrained environments such as the browser or on mobile devices. Instead Ceramic opts for localized doc-state. Anyone can run a node to manage their own set of documents, or the documents of many users.
 
 ### Node Functions
-Ceramic nodes are responsible for managing documents, orchestrating backups and anchoring, gossiping updates, and responding to queries for a given set of documents which it cares about.
+Ceramic nodes run the Ceramic protocol and are responsible for managing documents, orchestrating backups and anchoring, gossiping updates, and responding to queries for a given set of documents which it cares about.
 | Function | Description |
 | ------- | ----------- |
 | Create documents | Add a description |
