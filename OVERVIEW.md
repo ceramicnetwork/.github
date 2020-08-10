@@ -79,7 +79,7 @@ A smart document is an append-only log of sequential records that are anchored i
 
 
 ### Document Configurations
-Smart documents can be uniquely configured and implemented to possess specific capabilities. The currently-available configurations are described below.
+Smart documents can be uniquely configured and implemented. The currently-available configurations are described below.
 
 #### Required
 - **Owners**: Documents can be owned by one or more DID. Depending on the doctype, all or some of the owners must sign document updates in order to be valid.
@@ -90,22 +90,17 @@ Smart documents can be uniquely configured and implemented to possess specific c
 
 #### Optional
 
-- **Schema**: A schema defines the format of content in a document. If a schema is included, the protocol validates that every update conforms to the schema and will discard malformed updates. *Optional*.
+- **Schema**: A schema defines the format of content in a document. If a schema is included, the protocol validates that every update conforms to the schema and will discard malformed updates.
 
-- **Tags**: Tags are a set of keywords that allow documents to be categorized and contextualized within the network. They are especially useful when indexing or searching for documents. *Optional*.
+- **Tags**: Tags are a set of keywords that allow documents to be categorized and contextualized within the network. They are especially useful when indexing or searching for documents.
 
-- **Backup**: Documents may specify one or more backup services for persisting content beyond the node. Document content will always be pinned locally on the node using IPFS, but oftentimes additional storge guarantees are useful. *Optional*.
+- **Backup**: Documents may specify one or more backup services for persisting content beyond the node. Document content will always be pinned locally on the node using IPFS, but oftentimes additional storge guarantees are useful.
 
-- **Hooks**: Hooks are microprograms that run on the node to perform various utility functions for documents. Documents can specify which hooks they wnt to use, and if the node has installed those hooks they will be executed when appropriate. *Optional*.
+- **Hooks**: Hooks are micro-programs that run on the node to perform various utility functions for documents. Documents can specify which hooks they wnt to use, and if the node has installed those hooks they will be executed when appropriate.
 
 
 ### Document Storage
-What can be stored in the contents of a document?
-
-| Feature | Description |
-| ------- | ----------- |
-| Content | What a given document can store is defined by its doctype and schema. Content can range from simple JSON storage to more complex and use-case specific information. |
-| Scripts | Lorem |
+Smart documents can store a variety of data, ranging from JSON content to execution scripts. What each document can store is defined by a combination of its doctype and schema.
 
 
 ## The Ceramic Network
@@ -113,27 +108,46 @@ The Ceramic Network is a peer-to-peer infrastructure that is used to manage docu
 
 ### Node Functions
 Ceramic nodes run the Ceramic protocol and are responsible for managing documents, orchestrating backups and anchoring, gossiping updates, and responding to queries for a given set of documents which it cares about.
-| Function | Description |
-| ------- | ----------- |
-| Create documents | Add a description |
-| Validate updates | Schema validation, state transition rules specified by the doctype. |
-| Pin content | DID authorship. Ceramic doens't provide a locked-in account model. |
-| Pin state | DID authorship. Ceramic doens't provide a locked-in account model. |
-| Execute hooks | Add description |
-| Orchestrate backups | Every document must specify a doctype, which is its smart engine. Doctypes describe the rules for content and logic for state transitions. Doctype rules are enforced by nodes every time updates are made to the document. |
-| Delegate anchors | Documents can optionally define a schema. If a schema is defined, nodes will validate that every update made to the document conforms to its schema and will discard malformed updates. |
-| Gossip updates | Gossip updates to documents with other nodes using libp2p |
-| Respond to queries | Lorem |
+
+#### Required
+
+- **Validate updates**: Schema validation, state transition rules specified by the doctype.
+
+- **Pin content**: DID authorship. Ceramic doens't provide a locked-in account model.
+
+- **Pin state**: DID authorship. Ceramic doens't provide a locked-in account model.
+
+- **Gossip updates**: Gossip updates to documents with other nodes using libp2p.
+
+- **Respond to queries**: Add description.
+
+
+#### Optional
+
+- **Delegate anchors**: Documents can optionally define a schema. If a schema is defined, nodes will validate that every update made to the document conforms to its schema and will discard malformed updates.
+
+- **Orchestrate backups**: Every document must specify a doctype, which is its smart engine. Doctypes describe the rules for content and logic for state transitions. Doctype rules are enforced by nodes every time updates are made to the document.
+
+- **Execute hooks**: Add description
+
 
 ### Node Configurations
 Ceramic nodes are extremely flexible and configurable. Because there is no global state on Ceramic, node operators need to configure their node to perform actions in a certain way based on the users, functionality, and use cases they desire to service.
-| Configuration | Description |
-| ------- | ----------- |
-| DocIds | Loreem |
-| Anchor Services | DID authorship. Ceramic doens't provide a locked-in account model. |
-| Backup Services | Every document must specify a doctype, which is its smart engine. Doctypes describe the rules for content and logic for state transitions. Doctype rules are enforced by nodes every time updates are made to the document. |
-| Doctypes | Documents can optionally define a schema. If a schema is defined, nodes will validate that every update made to the document conforms to its schema and will discard malformed updates. |
-| Hooks | Documents can optionally define a schema. If a schema is defined, nodes will validate that every update made to the document conforms to its schema and will discard malformed updates. |
+
+#### Required
+
+- **Doctypes**: A set of doctypes that this node is capable of interacting with. Doctypes are packages that must be installed when the node is instantiated. Nodes come with three pre-installed doctypes: [Tile (CIP-N)](), [3ID (CIP-6)](), and [Account Link (CIP-N)]().
+
+#### Optional
+
+- **DocIds**: A list of documents that this node is responsible for watching and pinning.
+
+- **Anchor services**: A list of blockchain anchor services to which this node may forward valid updates for finalization. Each anchor service may differentiate according to chain, frequency, cost, etc.
+
+- **Backup services**: A list of backup services to which this node may forward content for redundant storage.
+
+- **Hooks**: A set of micro-programs that this node is capable of interacting with. Hooks are packages that must be installed when the node is instantiated.
+
 
 ### Clients
 
