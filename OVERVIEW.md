@@ -207,17 +207,11 @@ Publish public API and service definitions.
 
 ### [Ceramic Technical Specification  >](https://github.com/ceramicnetwork/specs)
 
+----
 
+## Appendix
 
-
-
-
-
-
-
-
-
-### Technology Comparisons
+### Figure 1. Technology Comparisons
 Let's examine Ceramic compared to a few popular alternatives.
 | Feature | Ceramic | IPFS | Filecoin | ThreadsDB | Traditional DB | ETH Registry | OrbitDB | Arweave |
 | ------- | ----------- | ---------- | ---- | ---- | ---- | ---- | ---- | ---- |
@@ -233,6 +227,20 @@ Let's examine Ceramic compared to a few popular alternatives.
 | *Discovery* | **Public** | Public | Public | Private | Private | Public | Private | Public |
 | *Network* | **P2P** | P2P | P2P | Federated | N/A | P2P | Federated | P2P |
 
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
 -----
 -----
 
