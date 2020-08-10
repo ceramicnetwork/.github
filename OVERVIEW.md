@@ -1,8 +1,9 @@
 ![](https://uploads-ssl.webflow.com/5ebcbef3ac4954196dcdc7b5/5f30d276e0a2e410f229f1a6_ceramicgithubwhite.png)
-# Ceramic Overview
+# Ceramic: A Peer-to-Peer Dynamic Data System
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 [![](https://img.shields.io/badge/Chat%20on-Discord-orange.svg?style=flat)](https://discord.gg/6VRZpGP)
 [![Twitter](https://img.shields.io/twitter/follow/ceramicnetwork?label=Follow&style=social)](https://twitter.com/ceramicnetwork) 
+
 
 > Ceramic is a dynamic information management protocol for the open web.
 
@@ -24,6 +25,7 @@
 ## Summary
 [**Ceramic**](http://ceramic.network) is a peer-to-peer platform for building decentralized applications using smart documents. The Ceramic protocol allows anyone to permissionlessly store and manage dynamic content on the internet in a secure, collaborative, and trust-minimized manner. For a more technical overview, see [Ceramic Technical Specification](https://github.com/ceramicnetwork/specs).
 
+
 ## Abstract
 The Ceramic platform allows anyone to securely manage mutable content in a trust-minimized and peer-to-peer way. Ceramic's decentralized content management framework eliminates the need for relying on servers in order to guarantee the state or integrity of information. Ceramic achieves this by combining a peer-to-peer network, cryptographic append-only logs, programmable document logic, and blockchain anchoring to guarantee strict state management and version control of documents that may change or need to be edited over time.
 
@@ -36,7 +38,7 @@ The Web3, or Dweb, movement aims to allow developers to build next-generation ap
 
 ### Data Management Systems: Cloud Hosted or Decentralized and Static
 One of the primary reasons why Web3 has not progressed as fast as its decentralized counterparts is because the Web3 development "stack" is incomplete. Currently developers wanting to manage data for their application are limited to a few choices: centrally-hosted traditional databases ([SQL]()), centrally-hosted p2p databases ([Textile Threads](), [OrbitDB]()), decentralized file storage networks ([Filecoin](), [Arweave](), [Sia]()), blockchains ([Ethereum](), [Flow](), [Near]()), or local storage (in-browser). Although each option may have merit for specific use cases, there exists an obvious capability gap somewhere between dynamic centralized databases and static decentralized files. There is no way to manage dynamic, mutable content in a purely decentralized and peer-to-peer manner. 
-
+Related Work, File Storage Networks, Blockchains, P2P DBs
 
 ### Ceramic: Peer-to-Peer Programmable Data
 Ceramic aims to fill this gap with *smart documents*. Smart documents turn static files into dynamic objects with permalinks, versions, capabilities, and logic not possible on a centralized database or a decentralized file store/blockchain. Smart documents manage content according to a set of programmable rules. Simple programs may enforce that only owners can update content, but more complex programs may mutate content based on external actions such as the change in a related document. From state transition rules to complex operations, smart documents allow you to program content in the same way that smart contracts have allowed you to program money.
@@ -48,16 +50,19 @@ The Ceramic Network is a trusted, peer-to-peer, dynamic information management p
 
 
 #### Secure, Scalable Version Control
+Paragraph about version control/state management and why this is the hard problem to solve.
+
 Secure: Decentralized/p2p/Permissionless/blockchain with Strict ordering. Required to handle sentitive cryptographic operations. When constructing a decentralized content management protocol, a primary concern is how to guarantee document *state management and version control*. There are many different approaches to this problem; blockchains utilize consensus to guarantee strict ordering over a global state, while peer-to-peer databases forego strict ordering and usually employ some form of eventually consistent mechanism (i.e. CRDT). 
 
 Scalable: No global state. Neither of these approaches are appropriate for Ceramic's use case. Ceramic needs to have strict ordering within each document (so documents can be trusted enough to handle cryptographic key management/rotation/revocation), yet no global state (so the network can scale). To achieve this, each Ceramic document anchors its updates on a blockchain which provides trusted and immutable timestamps to document operations, but the network itself maintains no global state. Instead, each document has its own state. By foregoing global state in favor of doc state, Ceramic can horizontally scale to handle the massive amount of information in the world without creating one ever-growing bloated ledger, while also allowing nodes to be run in resource contstained environments such as browsers and mobile/IoT devices.
 
-#### Programmable Logic
 
+#### Programmable Logic
+Programmable content. Static decentralized files are somewhat straightforward since they don't change, but if we want to enable dynamic decentralized data we need the ability to write programs that govern content mutations with explicit logic. Simple programs may enforce that only owners can update content, but more complex programs may mutate content based on external actions such as the change in a related document. Ceramic solves this by allowing content to be programmed in various ways. From state transition rules to complex operations, smart documents allow you to program content in the same way that smart contracts have allowed you to program money.
 
 
 #### Data Collaboration and Composability
-Open
+Open/ Public Discovery
 Not owned or controlled by any single gatekeeper. Public access and availability. Discovery, sharing, collaboration.
 By establishing a public, permissionless content network, Ceramic allows for cross-platform content discovery, sharing, and composability. With Ceramic, anyone can openly query and interact with content stored on the network as opposed to needing to gain access to a given server. Furthermore, documents can be referenced by other documents or built upon in various ways. Simply put, Ceramic does for content what blockchains have done to finance. Ceramic's global ecosystem of interoperable resources allows developers to build composable applications with unprecedented modularity, trust, and scale.
 
@@ -66,79 +71,10 @@ Ceramic is designed to compliment and integrate with your existing application i
 Smart documents can backup content to whichever storage infrastructure you prefer, including decentralied networks (i.e. Filecoin, Sia, Arweave) or centralized databases (i.e. SQL). Smart documents can anchor updates on whichever blockchain or consensus system you prefer (i.e. Ethereum, Flow, Cosmos, Near). Smart documents can invoke scripts on whichever compute platform you prefer (i.e. blockchain, servers). Smart documents can be used to augment and extend your existing data management capabilities for new use cases (i.e. p2p databases, file storage). 
 
 
-
 ## System Features
 
 ### Smart Documents
-
-#### Doctypes: Document Logic Engines
-
-#### Blockchain Anchoring
-
-### Peer-to-Peer Data Management Network
-Ceramic aims to provide the permissionless content management infrastructure upon which a trusted, worldwide content ecosystem can be built. By liberating dynamic content management from centralized servers, the Ceramic network can act as the decentralized discovery and state management layer that adds trust to our collective content online. Because participants can create and resolve documents for any type of information without any centralized service, Ceramic unlocks interoperability between *all platforms and services across the web*. Ceramic is ideal for storing information that requires guaranteed trust, cross-platform interoperability, and multi-party consumption. Ceramic is the trusted foundation upon which a more connected, transparent, and user-centric internet is built. Worldwide content ecosystem.
-
-#### DIDs: A Flexible User Model
-To combat lock-in and to enable information to truly exist beyond the bounds of any single platform, Ceramic needs to support a platform-agnostic identity model. For this reason, Ceramic was designed with a DID-based user model. DIDs are the [W3C standard]() for decentralized identifiers and there are more than 40 DID methods currently used in production. Any DID can create and manage documents on Ceramic. Additionally, various DID methods such as [3ID (CIP-6)]() can be controlled using any/many different cryptographic wallet key pairs, so users can interact with Ceramic using the key pair or account of their choice.
-
-
-## Related Work
-
-
-### File Storage Networks
-
-
-### Blockchains
-
-
-### Peer-to-Peer Databases
-
-
-
-## System Anatomy
-
-
-### Ceramic Architecture Overview
-
-
-
-### Client Node Software
-
-### Major Data Structures
-
-
-#### Append-Only Logs
-
-
-
-## The Ceramic Network
-The Ceramic Network is a trusted, peer-to-peer, dynamic information management platform for building next-generation decentralied applications. The Ceramic network has been designed from the ground up to handle extreme scale, be customizable, ensure trust, 
-
-#### Permissionless Network
-Ceramic aims to provide the permissionless content management infrastructure upon which a trusted, worldwide content ecosystem can be built. By liberating dynamic content management from centralized servers, the Ceramic network can act as the decentralized discovery and state management layer that adds trust to our collective content online. Because participants can create and resolve documents for any type of information without any centralized service, Ceramic unlocks interoperability between *all platforms and services across the web*. Ceramic is ideal for storing information that requires guaranteed trust, cross-platform interoperability, and multi-party consumption. Ceramic is the trusted foundation upon which a more connected, transparent, and user-centric internet is built. Worldwide content ecosystem.
-
-#### Public Discovery
-
-
-#### Content Composability & Collaboration
-By establishing a public, permissionless content network, Ceramic allows for cross-platform content discovery, sharing, and composability. With Ceramic, anyone can openly query and interact with content stored on the network as opposed to needing to gain access to a given server. Furthermore, documents can be referenced by other documents or built upon in various ways. Simply put, Ceramic does for content what blockchains have done to finance. Ceramic's global ecosystem of interoperable resources allows developers to build composable applications with unprecedented modularity, trust, and scale.
-
-#### Flexible User Model
-To combat lock-in and to enable information to truly exist beyond the bounds of any single platform, Ceramic needs to support a platform-agnostic identity model. For this reason, Ceramic was designed with a DID-based user model. DIDs are the [W3C standard]() for decentralized identifiers and there are more than 40 DID methods currently used in production. Any DID can create and manage documents on Ceramic. Additionally, various DID methods such as [3ID (CIP-6)]() can be controlled using any/many different cryptographic wallet key pairs, so users can interact with Ceramic using the key pair or account of their choice.
-
-#### Complimentary Infrastructure
-Ceramic is designed to compliment and integrate with your existing application infrastructure instead of replacing it. Ceramic delivers this in a handful of ways.
-Smart documents can backup content to whichever storage infrastructure you prefer, including decentralied networks (i.e. Filecoin, Sia, Arweave) or centralized databases (i.e. SQL). Smart documents can anchor updates on whichever blockchain or consensus system you prefer (i.e. Ethereum, Flow, Cosmos, Near). Smart documents can invoke scripts on whichever compute platform you prefer (i.e. blockchain, servers). Smart documents can be used to augment and extend your existing data management capabilities for new use cases (i.e. p2p databases, file storage). 
-
-#### Strict Ordering Without Global State // Secure, Trusted, & Scalable
-When constructing a decentralized content management protocol, a primary concern is how to guarantee document *state management and version control*. There are many different approaches to this problem; blockchains utilize consensus to guarantee strict ordering over a global state, while peer-to-peer databases forego strict ordering and usually employ some form of eventually consistent mechanism (i.e. CRDT). Neither of these approaches are appropriate for Ceramic's use case. Ceramic needs to have strict ordering within each document (so documents can be trusted enough to handle cryptographic key management/rotation/revocation), yet no global state (so the network can scale). To achieve this, each Ceramic document anchors its updates on a blockchain which provides trusted and immutable timestamps to document operations, but the network itself maintains no global state. Instead, each document has its own state. By foregoing global state in favor of doc state, Ceramic can horizontally scale to handle the massive amount of information in the world without creating one ever-growing bloated ledger, while also allowing nodes to be run in resource contstained environments such as browsers and mobile/IoT devices.
-
-
-## Smart Documents
-Smart documents are the core unit of information on the Ceramic network. They are mutable, tamper-proof files whose content rules and update logic can be programmed with guaranteed execution. Smart documents transform content from static files into dynamic objects.
-
-Smart documents can exist as independent objects or can be linked together to form a graph of related information.
- and associated metadata that governs how the protocol handles the documents. State management for content. Doc-chains. Programmabilty, state transititions, rules, and logic that will be enforced by the protocol. Strict ordering.
+Smart documents are the core unit of information on the Ceramic network. A smart document is an append-only log of sequential records that are anchored in a blockchain. Every smart document adheres to the same general structure, which is outlined below. They are mutable, tamper-proof files whose content rules and update logic can be programmed with guaranteed execution. Smart documents transform content from static files into dynamic objects. Smart documents can exist as independent objects or can be linked together to form a graph of related information. and associated metadata that governs how the protocol handles the documents. State management for content. Doc-chains. Programmabilty, state transititions, rules, and logic that will be enforced by the protocol. Strict ordering.
 
 </br>
 </br>
@@ -162,116 +98,47 @@ Smart documents can exist as independent objects or can be linked together to fo
 </br>
 </br>
 
-#### Programmable Content
-Programmable content. Static decentralized files are somewhat straightforward since they don't change, but if we want to enable dynamic decentralized data we need the ability to write programs that govern content mutations with explicit logic. Simple programs may enforce that only owners can update content, but more complex programs may mutate content based on external actions such as the change in a related document. Ceramic solves this by allowing content to be programmed in various ways. From state transition rules to complex operations, smart documents allow you to program content in the same way that smart contracts have allowed you to program money.
+#### DocIds: Immutable Permalinks
+A unique, immutable document identifier similar to a permalink. DocIds never change, even if the document is updated thousands of times. DocIds are the canonical reference to a document and are used to query the current version of the document from nodes.
+
+#### Documents: Append-Only Log of Records
+Documents are modeled as an append-only log of linked records that makes up a document. The document log can be thought of as a "doc-chain." Individual records (genesis, signed, anchor) that make up the document log. Smart documents can store a variety of data, ranging from JSON content to execution scripts. What each document can store is defined by a combination of its doctype and schema.
+
+#### Timestamps: Blockchain Anchoring
+Documents need to specify a blockchain for anchoring document updates. Blockchains provide strict ordering to records and trust to document state. Versions: New document versions are created every time an anchor record (signifying a blockchain transaction) is added to the document log. Historical versions of a document can be referenced or queried by appending the versionID to the docID.
+
+#### Doctypes: Logic Engines
+The document's smart engine. Doctypes describe the content rules and state transition logic that governs the document. Rules specified by doctypes are enforced by the protocol every time an update is made to a document.
+
+#### Hooks: Document Micro-programs
 
 
-### Document Structure
-A smart document is an append-only log of sequential records that are anchored in a blockchain. Every smart document adheres to the same general structure, which is outlined below.
+#### Metadata: Schemas and Tags
+A schema defines the format of content in a document. If a schema is included, the protocol validates that every update conforms to the schema and will discard malformed updates. Tags are a set of keywords that allow documents to be categorized and contextualized within the network. They are especially useful when indexing or searching for documents.
 
-**DocId**: A unique, immutable document identifier similar to a permalink. DocIds never change, even if the document is updated thousands of times. DocIds are the canonical reference to a document and are used to query the current version of the document from nodes.
+#### Backup: External Data Persistence
+Documents may specify one or more backup services for persisting content beyond the node. Document content will always be pinned locally on the node using IPFS, but oftentimes additional storge guarantees are useful.
 
-**Document Log**: An append-only log of linked records that makes up a document. The document log can be thought of as a "doc-chain."
+### Peer-to-Peer Network
+The Ceramic Network is a trusted, peer-to-peer, dynamic information management platform for building next-generation decentralied applications. The Ceramic network has been designed from the ground up to handle extreme scale, be customizable, ensure trust, Ceramic aims to provide the permissionless content management infrastructure upon which a trusted, worldwide content ecosystem can be built. By liberating dynamic content management from centralized servers, the Ceramic network can act as the decentralized discovery and state management layer that adds trust to our collective content online. Because participants can create and resolve documents for any type of information without any centralized service, Ceramic unlocks interoperability between *all platforms and services across the web*. Ceramic is ideal for storing information that requires guaranteed trust, cross-platform interoperability, and multi-party consumption. Ceramic is the trusted foundation upon which a more connected, transparent, and user-centric internet is built. Worldwide content ecosystem.
 
-**Records**: Individual records (genesis, signed, anchor) that make up the document log.
+#### Ceramic Client Nodes
+Ceramic nodes run the Ceramic protocol and are responsible for managing documents, orchestrating backups and anchoring, gossiping updates, and responding to queries for a given set of documents which it cares about. Anyone can run a node to manage their own set of documents, or the documents of many users.
 
-**Versions**: New document versions are created every time an anchor record (signifying a blockchain transaction) is added to the document log. Historical versions of a document can be referenced or queried by appending the versionID to the docID.
+**Validate updates**: Schema validation, state transition rules specified by the doctype. **Pin content**: DID authorship. Ceramic doens't provide a locked-in account model. **Pin state**: DID authorship. Ceramic doens't provide a locked-in account model. **Gossip updates**: Gossip updates to documents with other nodes using libp2p. **Respond to queries**: Add description.***Delegate anchors*** Documents can optionally define a schema. If a schema is defined, nodes will validate that every update made to the document conforms to its schema and will discard malformed updates. **Orchestrate backups**: Every document must specify a doctype, which is its smart engine. Doctypes describe the rules for content and logic for state transitions. Doctype rules are enforced by nodes every time updates are made to the document. **Execute hooks**: Add description
 
-
-### Document Settings
-Smart documents can be uniquely configured and implemented. The currently-available configurations are described below.
-
-#### Required
-
-**Owners**: Documents can be owned by one or more DID. Depending on the doctype, all or some of the owners must sign document updates in order to be valid.
-
-**Doctype**: The document's smart engine. Doctypes describe the content rules and state transition logic that governs the document. Rules specified by doctypes are enforced by the protocol every time an update is made to a document.
-
-**Blockchain**: Documents need to specify a blockchain for anchoring document updates. Blockchains provide strict ordering to records and trust to document state.
-
-#### Optional
-
-**Schema**: A schema defines the format of content in a document. If a schema is included, the protocol validates that every update conforms to the schema and will discard malformed updates.
-
-**Tags**: Tags are a set of keywords that allow documents to be categorized and contextualized within the network. They are especially useful when indexing or searching for documents.
-
-**Backup**: Documents may specify one or more backup services for persisting content beyond the node. Document content will always be pinned locally on the node using IPFS, but oftentimes additional storge guarantees are useful.
-
-**Hooks**: Hooks are micro-programs that run on the node to perform various utility functions for documents. Documents can specify which hooks they wnt to use, and if the node has installed those hooks they will be executed when appropriate.
-
-
-### Document Storage
-Smart documents can store a variety of data, ranging from JSON content to execution scripts. What each document can store is defined by a combination of its doctype and schema.
-
-### Technology Comparisons
-Let's examine Ceramic compared to a few popular alternatives.
-| Feature | Ceramic | IPFS | Filecoin | ThreadsDB | Traditional DB | ETH Registry | OrbitDB | Arweave |
-| ------- | ----------- | ---------- | ---- | ---- | ---- | ---- | ---- | ---- |
-| *Unit* | **Smart document** | File | File | Database | Database | Smart contract | Database | Transaction |
-| *Content ID* | **DocId** | CID | CID | DBID | HTTP Endpoint | Address | DBID | Transaction |
-| *Data Format* | **IPLD** | IPLD | IPLD | IPLD | N/A | Transaction | IPLD | Transaction |
-| *Data Persistence* | **Configurable** | Hosted | Decentralized | Configurable | Hosted | Decentralized | Hosted | Decentralized |
-| *Mutable* | ✅ | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ | ❌ |
-| *Ordering* | **Strict** | NA/ | N/A | CRDT | Variable | Strict | CRDT | Strict |
-| *State Persistence* | **Decentralized** | N/A | N/A | Federated | Centralized | Decentralized | Federated | N/A |
-| *Programability* | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ |
-| *User Model* | **DIDs** | N/A | Filecoin Key | DB Key | Server Auth | Blockchain Key | DB Key | Arweave Key |
-| *Discovery* | **Public** | Public | Public | Private | Private | Public | Private | Public |
-| *Network* | **P2P** | P2P | P2P | Federated | N/A | P2P | Federated | P2P |
-
-
-## Ceramic Nodes
-Anyone can run a node to manage their own set of documents, or the documents of many users.
-
-### Network Design
-#### Content Discoverability
-
-### Node Functions
-Ceramic nodes run the Ceramic protocol and are responsible for managing documents, orchestrating backups and anchoring, gossiping updates, and responding to queries for a given set of documents which it cares about.
-
-#### Required
-
-- **Validate updates**: Schema validation, state transition rules specified by the doctype.
-
-- **Pin content**: DID authorship. Ceramic doens't provide a locked-in account model.
-
-- **Pin state**: DID authorship. Ceramic doens't provide a locked-in account model.
-
-- **Gossip updates**: Gossip updates to documents with other nodes using libp2p.
-
-- **Respond to queries**: Add description.
-
-
-#### Optional
-
-- **Delegate anchors**: Documents can optionally define a schema. If a schema is defined, nodes will validate that every update made to the document conforms to its schema and will discard malformed updates.
-
-- **Orchestrate backups**: Every document must specify a doctype, which is its smart engine. Doctypes describe the rules for content and logic for state transitions. Doctype rules are enforced by nodes every time updates are made to the document.
-
-- **Execute hooks**: Add description
-
-
-### Node Configurations
-Ceramic nodes are extremely flexible and configurable. Because there is no global state on Ceramic, node operators need to configure their node to perform actions in a certain way based on the users, functionality, and use cases they desire to service.
-
-#### Required
-
-- **Doctypes**: A set of doctypes that this node is capable of interacting with. Doctypes are packages that must be installed when the node is instantiated. Nodes come with three pre-installed doctypes: [Tile (CIP-N)](), [3ID (CIP-6)](), and [Account Link (CIP-N)]().
-
-#### Optional
-
-- **DocIds**: A list of documents that this node is responsible for watching and pinning.
-
-- **Anchor services**: A list of blockchain anchor services to which this node may forward valid updates for finalization. Each anchor service may differentiate according to chain, frequency, cost, etc.
-
-- **Backup services**: A list of backup services to which this node may forward content for redundant storage.
-
-- **Hooks**: A set of micro-programs that this node is capable of interacting with. Hooks are packages that must be installed when the node is instantiated.
-
-
-### Clients
+In order for nodes to perform these functions, they need to be configured. Ceramic nodes are extremely flexible and configurable. Because there is no global state on Ceramic, node operators need to configure their node to perform actions in a certain way based on the users, functionality, and use cases they desire to service. **Doctypes**: A set of doctypes that this node is capable of interacting with. Doctypes are packages that must be installed when the node is instantiated. Nodes come with three pre-installed doctypes: [Tile (CIP-N)](), [3ID (CIP-6)](), and [Account Link (CIP-N)](). **DocIds**: A list of documents that this node is responsible for watching and pinning. **Anchor services**: A list of blockchain anchor services to which this node may forward valid updates for finalization. Each anchor service may differentiate according to chain, frequency, cost, etc. **Backup services**: A list of backup services to which this node may forward content for redundant storage. **Hooks**: A set of micro-programs that this node is capable of interacting with. Hooks are packages that must be installed when the node is instantiated.
 
 Ceramic can be run directly in-browser using ceramic-core, or it can be run remotely in Node.js and connected to via an HTTP API. The Ceramic monorepo containing both implementations can be found at [ceramicnetwork/js-ceramic](https://github.com/ceramicnetwork/js-ceramic).
+
+#### Libp2p: Gossip Protocol for Document Replication and Queries
+
+Data replication / network activity events and updates
+
+Queries
+
+#### DIDs: A Flexible User Model
+To combat lock-in and to enable information to truly exist beyond the bounds of any single platform, Ceramic needs to support a platform-agnostic identity model. For this reason, Ceramic was designed with a DID-based user model. DIDs are the [W3C standard]() for decentralized identifiers and there are more than 40 DID methods currently used in production. Any DID can create and manage documents on Ceramic. Additionally, various DID methods such as [3ID (CIP-6)]() can be controlled using any/many different cryptographic wallet key pairs, so users can interact with Ceramic using the key pair or account of their choice. Documents can be owned by one or more DID. Depending on the doctype, all or some of the owners must sign document updates in order to be valid.
 
 
 ## Use Cases
@@ -296,7 +163,6 @@ DIDs are globally-unique identifiers that can sign/encrypt information, authoriz
 #### Linked Accounts
 Decentralized keybase. domains, social accounts, *See [Accounts Index (CIP-N)]() for an example of how Ceramic documents can be used as a directory of linked accounts.* Account links are verifiable public mappings that allow a DID to prove that it owns a different public cryptographic identity that is also capable of signing, such as a public key, smart contract, or other DID.
 
-
 #### Key Management
 *See [Auth Keychain (CIP-N)]() for an example of how Ceramic documents can be used as a DID keychain.*
 
@@ -304,11 +170,10 @@ Decentralized keybase. domains, social accounts, *See [Accounts Index (CIP-N)]()
 
 | Access Control | Insert description | 3ID DID (CIP-6) |
 
-
-### Schemas
+### Discoverable and Shareable Schemas
 Ceramic documents are great for managing schemas in the public context where they can easily be discovered and reused by others. Because documents have referencable versions, you can choose to utilize a specific version of a schema without worrying about the schema changing while using it.
 
-### Access Control
+### User-Managed Access Control Systems
 There are many ways that Ceramic documents can be used as access controllers for other resources; a few examples: 
 1. Store user-managed access control lists for a given resource, which can be checked by a service provider prior to permitting access.
 2. Store various access control keys (write, read, follow, etc) to other resources encrypted inside documents, which allows the user to share those keys with others upon request.
@@ -342,6 +207,31 @@ Publish public API and service definitions.
 
 ### [Ceramic Technical Specification  >](https://github.com/ceramicnetwork/specs)
 
+
+
+
+
+
+
+
+
+
+
+### Technology Comparisons
+Let's examine Ceramic compared to a few popular alternatives.
+| Feature | Ceramic | IPFS | Filecoin | ThreadsDB | Traditional DB | ETH Registry | OrbitDB | Arweave |
+| ------- | ----------- | ---------- | ---- | ---- | ---- | ---- | ---- | ---- |
+| *Unit* | **Smart document** | File | File | Database | Database | Smart contract | Database | Transaction |
+| *Content ID* | **DocId** | CID | CID | DBID | HTTP Endpoint | Address | DBID | Transaction |
+| *Data Format* | **IPLD** | IPLD | IPLD | IPLD | N/A | Transaction | IPLD | Transaction |
+| *Data Persistence* | **Configurable** | Hosted | Decentralized | Configurable | Hosted | Decentralized | Hosted | Decentralized |
+| *Mutable* | ✅ | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ | ❌ |
+| *Ordering* | **Strict** | NA/ | N/A | CRDT | Variable | Strict | CRDT | Strict |
+| *State Persistence* | **Decentralized** | N/A | N/A | Federated | Centralized | Decentralized | Federated | N/A |
+| *Programability* | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ |
+| *User Model* | **DIDs** | N/A | Filecoin Key | DB Key | Server Auth | Blockchain Key | DB Key | Arweave Key |
+| *Discovery* | **Public** | Public | Public | Private | Private | Public | Private | Public |
+| *Network* | **P2P** | P2P | P2P | Federated | N/A | P2P | Federated | P2P |
 
 -----
 -----
