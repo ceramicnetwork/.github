@@ -25,9 +25,7 @@
 
 
 ## Abstract
-The Ceramic platform allows anyone to securely manage dynamic content in a trust-minimized, peer-to-peer way. Ceramic is a new framework for managing any type of information on the internet that eliminates the need to rely on servers in order to guarantee the state of your information.
-
-Consists of two main components:
+The Ceramic platform allows anyone to securely manage dynamic content in a trust-minimized, peer-to-peer way. Ceramic is a new framework for managing any type of information on the internet that eliminates the need to rely on servers in order to guarantee the state of your information. Consists of two main components:
 
 *Smart Documents* is a specification for creating and interacting with smart documents. Smart documents provide developers with a decentralized way of managing individual units of dynamic content in a way that hasn't been possble before. Smart documents allow content to be programmed, strictly ordered, etc. In a way, smart documents allow for programmable content in the same way that smart contracts allowed for programmable for money.
  
@@ -41,22 +39,13 @@ Every website, application, or digital service runs on data, however our informa
 
 The Web3, or dWeb, movement aims to allow developers to build applications using data protocols and services that distribute responsibility, open access, improve collaboration, lower cost, guarantee trust/security, and give users control. However unlike the rapid innovation we've witnessed in decentralized finance (i.e. DeFi), we have not seen the same level of development, maturity, or innovation in decentralized data. As a result, the adoption of Web3 has lagged other applications of decentralized technology.
 
-In addition to the general benefits of storing data in a decentralized environment (which is beyond the scope of this introduction), here are the benefits of building with smart documents:
-
-### Beyond Databases & Files
 Currently developers wanting to manage data for their application are limited to a few choices: centrally-hosted traditional databases (i.e. [SQL]()), centrally-hosted p2p databases (i.e. [Textile Threads](), [OrbitDB]()), decentralized file storage networks (i.e. [Filecoin](), [Arweave](), [Sia]()), blockchains (i.e. [Ethereum]()), or local storage (in-browser). Although each option may have merit for specific use cases, there exists an obvious capability gap. We're still missing a way to manage dynamic, mutable content in a purely decentralized context. We have decentralized static files and centralized/federated dynamic databases, but nothing that marries the best of both worlds. Ceramic aims to fill this gap with *smart documents*.
 
-### Programmable Content
-Programmable content. Static decentralized files are somewhat straightforward since they don't change, but if we want to enable dynamic decentralized data we need the ability to write programs that govern content mutations with explicit logic. Simple programs may enforce that only owners can update content, but more complex programs may mutate content based on external actions such as the change in a related document. Ceramic solves this by allowing content to be programmed in various ways. From state transition rules to complex operations, smart documents allow you to program content in the same way that smart contracts have allowed you to program money.
-
-
+Smart documents are dynamic objects that manage content according to a set of specified rules. Static decentralized files are somewhat straightforward since they don't change, but if we want to enable dynamic decentralized data we need the ability to write programs that govern content mutations with explicit logic. Simple programs may enforce that only owners can update content, but more complex programs may mutate content based on external actions such as the change in a related document. Ceramic solves this by allowing content to be programmed in various ways. From state transition rules to complex operations, smart documents allow you to program content in the same way that smart contracts have allowed you to program money.
 
 
 ## The Ceramic Network
-The Ceramic Network is a trusted, peer-to-peer, dynamic information management platform for building next-generation decentralied applications.
-
-### Network Design
-At every level, the Ceramic network has been designed to handle extreme scale, be customizable, 
+The Ceramic Network is a trusted, peer-to-peer, dynamic information management platform for building next-generation decentralied applications. At every level, the Ceramic network has been designed to handle extreme scale, be customizable, ensure trust, 
 
 #### Permissionless Network
 Ceramic aims to provide the permissionless content management infrastructure upon which a trusted, worldwide content ecosystem can be built. By liberating dynamic content management from centralized servers, the Ceramic network can act as the decentralized discovery and state management layer that adds trust to our collective content online. Because participants can create and resolve documents for any type of information without any centralized service, Ceramic unlocks interoperability between *all platforms and services across the web*. Ceramic is ideal for storing information that requires guaranteed trust, cross-platform interoperability, and multi-party consumption. Ceramic is the trusted foundation upon which a more connected, transparent, and user-centric internet is built. Worldwide content ecosystem.
@@ -106,13 +95,8 @@ Smart documents can exist as independent objects or can be linked together to fo
 </br>
 </br>
 
-### Smart Document Design
-
 #### Programmable Content
 Programmable content. Static decentralized files are somewhat straightforward since they don't change, but if we want to enable dynamic decentralized data we need the ability to write programs that govern content mutations with explicit logic. Simple programs may enforce that only owners can update content, but more complex programs may mutate content based on external actions such as the change in a related document. Ceramic solves this by allowing content to be programmed in various ways. From state transition rules to complex operations, smart documents allow you to program content in the same way that smart contracts have allowed you to program money.
-
-### Strict Ordering Without Global State
-When constructing a decentralized content management protocol, a primary concern is how to guarantee document *state management and version control*. There are many different approaches to this problem; blockchains utilize consensus to guarantee strict ordering over a global state, while peer-to-peer databases forego strict ordering and usually employ some form of eventually consistent mechanism (i.e. CRDT). Neither of these approaches are appropriate for Ceramic's use case. Ceramic needs to have strict ordering within each document (so documents can be trusted enough to handle cryptographic key management/rotation/revocation), yet no global state (so the network can scale). To achieve this, each Ceramic document anchors its updates on a blockchain which provides trusted and immutable timestamps to document operations, but the network itself maintains no global state. Instead, each document has its own state. By foregoing global state in favor of doc state, Ceramic can horizontally scale to handle the massive amount of information in the world without creating one ever-growing bloated ledger, while also allowing nodes to be run in resource contstained environments such as browsers and mobile/IoT devices.
 
 
 ### Document Structure
