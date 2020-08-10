@@ -12,8 +12,9 @@
 - [Summary]()
 - [Abstract]()
 - [Motivation]()
-- [Smart Documents]()
 - [The Ceramic Network]()
+- [Smart Documents]()
+- [Ceramic Nodes]()
 - [Use Cases]()
 - [Building]()
 - [Contributing]()
@@ -25,9 +26,13 @@
 
 
 ## Abstract
-The Ceramic platform allows anyone to securely manage dynamic content in a trust-minimized, peer-to-peer way. Ceramic is a new framework for managing any type of information on the internet that eliminates the need to rely on servers in order to guarantee the state of your information. Consists of two main components:
+The Ceramic platform allows anyone to securely manage mutable content in a trust-minimized, peer-to-peer way. Ceramic's decentralized content management framework eliminates the need for relying on servers in order to guarantee the state or integrity of information. Ceramic achieves this by combining a peer-to-peer network, cryptographic append-only logs, programmable document logic, and blockchain anchoring to guarantee strict state management and version control of documents that may change or need to be edited over time.
+
+The *Ceramic Network* is a 
 
 *Smart Documents* is a specification for creating and interacting with smart documents. Smart documents provide developers with a decentralized way of managing individual units of dynamic content in a way that hasn't been possble before. Smart documents allow content to be programmed, strictly ordered, etc. In a way, smart documents allow for programmable content in the same way that smart contracts allowed for programmable for money.
+ 
+*Ceramic Nodes* perform the heavy-lifting within the network
  
 The *Ceramic Network* is a decentralized, peer-to-peer network for storing and managing smart documents. Ceramic's public, permissionless infrastructure provides a verifiable, censorship-resistant source of truth for important information. All documents managed on the network are publicly discoverable and openly available for anyone else to consume, encouraging collaboration and unlocking composabilty of content. 
 
