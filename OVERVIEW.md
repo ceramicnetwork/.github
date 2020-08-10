@@ -14,11 +14,17 @@ Ceramic aims to provide a new framework for managing any type of information on 
 
 The *Ceramic Protocol* is a <insert description>. Documents are the . Smart documents are a core component for building dweb applications (on the p2p stack). For more information, jump directly to [use cases](#use-cases).
  
-The *Ceramic Network* is a decentralized, peer-to-peer (p2p) network for managing documents. Ceramic's public infrastructure provides a verifiable, censorship-resistant source of truth for important information. Nodes on the network are responsible for managing documents, keeping track of document states, orchestrating external document services (i.e. backup, anchoring), responding to queries
+The *Ceramic Network* is a decentralized, peer-to-peer network of nodes that collectively manage documents. Ceramic's public infrastructure provides a verifiable, censorship-resistant source of truth for managing important information.
 
 
 ## Motivation
-Every website, application, or service that we use on a daily basis runs on data, however our information management infrastructure has not yet evolved to meet the emerging demands of next-generation applications that seek to provide dynamic, peer-to-peer, trust-guaranteed services. In addition to the general benefits of storing data in a decentralized environment (which is beyond the scope of this introduction), here are the benefits of using smart documents:
+Every website, application, or digital service runs on data. Data is core to all of our digital interactions on a daily basis, however information management infrastructure has not evolved to meet the emerging demands of next-generation applications.
+
+The Web3, or dWeb, movement aims to allow developers to build applications using data protocols and services that distribute responsibility, open access, improve collaboration, lower cost, guarantee trust, and give users control. However unlike the rapid innovation we've witnessed in decentralized finance infrastructure (i.e. DeFi), we have not seen the same level of development, maturity, or innovation in decentralized data infrastructure. As a result, the adoption of Web3 has lagged other applications of decentralized technology.
+
+Currently developers wanting to manage data for their application have a few choices: centrally hosted databases (traditional or p2p), decentralized file storage networks (i.e. Filecoin, Arweave, Sia), blockchains (i.e. Ethereum), or local storage (in-browser). Although each option may have merit for specific use cases, there exists an obvious capability gap. We're still missing a way to manage dynamic, mutable content in a purely decentralized context. We have decentralized static files and centralized dynamic databases, but nothing that marries the best of both worlds. Ceramic aims to fill this gap with *smart documents*.
+
+In addition to the general benefits of storing data in a decentralized environment (which is beyond the scope of this introduction), here are the benefits of building with smart documents:
 
 ### Worldwide Content Network
 Ceramic aims to provide the permissionless content management infrastructure upon which a trusted, worldwide content network can be built. By liberating content management from centralized servers, the Ceramic network can act as the decentralized discovery and state management layer that adds trust to our collective content online. Because participants can create and resolve documents for any type of information without any centralized service, Ceramic unlocks interoperability between *all platforms and services across the web*. Ceramic is ideal for storing information that requires guaranteed trust, cross-platform interoperability, and multi-party consumption. Ceramic is the trusted foundation upon which a more connected, transparent, and user-centric internet is built.
