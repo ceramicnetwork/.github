@@ -78,7 +78,13 @@ Smart documents can exist as independent objects or can be linked together to fo
 </br>
 </br>
 </br>
+</br>
+</br>
+</br>
 • INSERT VISUAL OF A DOCUMENT •
+</br>
+</br>
+</br>
 </br>
 </br>
 </br>
@@ -91,34 +97,34 @@ Smart documents can exist as independent objects or can be linked together to fo
 ### Document Structure
 A smart document is an append-only log of sequential records that are anchored in a blockchain. Every smart document adheres to the same general structure, which is outlined below.
 
-- **DocId**: A unique, immutable document identifier similar to a permalink. DocIds never change, even if the document is updated thousands of times. DocIds are the canonical reference to a document and are used to query the current version of the document from nodes.
+**DocId**: A unique, immutable document identifier similar to a permalink. DocIds never change, even if the document is updated thousands of times. DocIds are the canonical reference to a document and are used to query the current version of the document from nodes.
 
-- **Document Log**: An append-only log of linked records that makes up a document. The document log can be thought of as a "doc-chain."
+**Document Log**: An append-only log of linked records that makes up a document. The document log can be thought of as a "doc-chain."
 
-- **Records**: Individual records (genesis, signed, anchor) that make up the document log.
+**Records**: Individual records (genesis, signed, anchor) that make up the document log.
 
-- **Versions**: New document versions are created every time an anchor record (signifying a blockchain transaction) is added to the document log. Historical versions of a document can be referenced or queried by appending the versionID to the docID.
+**Versions**: New document versions are created every time an anchor record (signifying a blockchain transaction) is added to the document log. Historical versions of a document can be referenced or queried by appending the versionID to the docID.
 
 
 ### Document Configurations
 Smart documents can be uniquely configured and implemented. The currently-available configurations are described below.
 
 #### Required
-- **Owners**: Documents can be owned by one or more DID. Depending on the doctype, all or some of the owners must sign document updates in order to be valid.
+**Owners**: Documents can be owned by one or more DID. Depending on the doctype, all or some of the owners must sign document updates in order to be valid.
 
-- **Doctype**: The document's smart engine. Doctypes describe the content rules and state transition logic that governs the document. Rules specified by doctypes are enforced by the protocol every time an update is made to a document.
+**Doctype**: The document's smart engine. Doctypes describe the content rules and state transition logic that governs the document. Rules specified by doctypes are enforced by the protocol every time an update is made to a document.
 
-- **Blockchain**: Documents need to specify a blockchain for anchoring document updates. Blockchains provide strict ordering to records and trust to document state.
+**Blockchain**: Documents need to specify a blockchain for anchoring document updates. Blockchains provide strict ordering to records and trust to document state.
 
 #### Optional
 
-- **Schema**: A schema defines the format of content in a document. If a schema is included, the protocol validates that every update conforms to the schema and will discard malformed updates.
+**Schema**: A schema defines the format of content in a document. If a schema is included, the protocol validates that every update conforms to the schema and will discard malformed updates.
 
-- **Tags**: Tags are a set of keywords that allow documents to be categorized and contextualized within the network. They are especially useful when indexing or searching for documents.
+**Tags**: Tags are a set of keywords that allow documents to be categorized and contextualized within the network. They are especially useful when indexing or searching for documents.
 
-- **Backup**: Documents may specify one or more backup services for persisting content beyond the node. Document content will always be pinned locally on the node using IPFS, but oftentimes additional storge guarantees are useful.
+**Backup**: Documents may specify one or more backup services for persisting content beyond the node. Document content will always be pinned locally on the node using IPFS, but oftentimes additional storge guarantees are useful.
 
-- **Hooks**: Hooks are micro-programs that run on the node to perform various utility functions for documents. Documents can specify which hooks they wnt to use, and if the node has installed those hooks they will be executed when appropriate.
+**Hooks**: Hooks are micro-programs that run on the node to perform various utility functions for documents. Documents can specify which hooks they wnt to use, and if the node has installed those hooks they will be executed when appropriate.
 
 
 ### Document Storage
