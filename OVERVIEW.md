@@ -160,50 +160,56 @@ Identity-centric web, provide context, capability, and meaning for a DID. Resour
 Store claims content in the network, or alternatively to use the network as a state management system for claims where documents are used to verify the current state of claims and handle revocation.
 
 #### 3.1.4 Portable Social Graphs
-
+DIDs are globally-unique identifiers that can sign/encrypt information, authorize access to resources, and interact various services and data online. DIDs may be used to represent users, organizations, applications, services, devices, etc. *See [3ID (CIP-6)]() for an example of how Ceramic documents can be used to create DIDs.*
 
 #### 3.1.5 Portable Profiles
+DIDs are globally-unique identifiers that can sign/encrypt information, authorize access to resources, and interact various services and data online. DIDs may be used to represent users, organizations, applications, services, devices, etc. *See [3ID (CIP-6)]() for an example of how Ceramic documents can be used to create DIDs.*
 
 #### 3.1.6 Linked Accounts
 Decentralized keybase. domains, social accounts, *See [Accounts Index (CIP-N)]() for an example of how Ceramic documents can be used as a directory of linked accounts.* Account links are verifiable public mappings that allow a DID to prove that it owns a different public cryptographic identity that is also capable of signing, such as a public key, smart contract, or other DID.
 
 #### 3.1.7 Key Management
-*See [Auth Keychain (CIP-N)]() for an example of how Ceramic documents can be used as a DID keychain.*
+DIDs are globally-unique identifiers that can sign/encrypt information, authorize access to resources, and interact various services and data online. DIDs may be used to represent users, organizations, applications, services, devices, etc. *See [3ID (CIP-6)]() for an example of how Ceramic documents can be used to create DIDs.* *See [Auth Keychain (CIP-N)]() for an example of how Ceramic documents can be used as a DID keychain.*
 
 #### 3.1.8 Data Collections
-Routing, very related to the identity index described above.
+Collections Indes, Collection Definitions, Collection References, --Routing, very related to the identity index described above. DIDs are globally-unique identifiers that can sign/encrypt information, authorize access to resources, and interact various services and data online. DIDs may be used to represent users, organizations, applications, services, devices, etc. *See [3ID (CIP-6)]() for an example of how Ceramic documents can be used to create DIDs.*
 
 ### 3.2. Discoverable and Shareable Schemas
 Ceramic documents are great for managing schemas in the public context where they can easily be discovered and reused by others. Because documents have referencable versions, you can choose to utilize a specific version of a schema without worrying about the schema changing while using it.
 
 ### 3.3. User-Managed Access Control Systems
-There are many ways that Ceramic documents can be used as access controllers for other resources; a few examples: 
-1. Store user-managed access control lists for a given resource, which can be checked by a service provider prior to permitting access.
-2. Store various access control keys (write, read, follow, etc) to other resources encrypted inside documents, which allows the user to share those keys with others upon request.
+There are many ways that Ceramic documents can be used as access controllers for other resources; a few examples: Store user-managed access control lists for a given resource, which can be checked by a service provider prior to permitting access.; Store various access control keys (write, read, follow, etc) to other resources encrypted inside documents, which allows the user to share those keys with others upon request.
 
 ### 3.4. Application User Registries
 Applications can create documents which store their user table and can also do things like permit users to register a new username. To do this, your application would need to create a DID and operate a microservice which manages your app's key. 
 
 ### 3.5 Public Content Publishing
+DIDs are globally-unique identifiers that can sign/encrypt information, authorize access to resources, and interact various services and data online. DIDs may be used to represent users, organizations, applications, services, devices, etc. *See [3ID (CIP-6)]() for an example of how Ceramic documents can be used to create DIDs.*
 
 ### 3.6 Websites & Content Management Systems (CMS)
+DIDs are globally-unique identifiers that can sign/encrypt information, authorize access to resources, and interact various services and data online. DIDs may be used to represent users, organizations, applications, services, devices, etc. *See [3ID (CIP-6)]() for an example of how Ceramic documents can be used to create DIDs.*
 
 ### 3.7 Social Media Content Storage
-Store social media content such as 1, 2, 3, 4, 5, and more in the public domain instead of your applications server. A few benefits of storing this content on Ceramic:
-1. Users can update/edit their content at anytime.
-2. Content can be shared across platforms.
-3. Content can be added to their Identity Index, to enable identity-centric cross-platform discoverability.
+Store social media content such as 1, 2, 3, 4, 5, and more in the public domain instead of your applications server. A few benefits of storing this content on Ceramic: Users can update/edit their content at anytime, Content can be shared across platforms, Content can be added to their Identity Index, to enable identity-centric cross-platform discoverability.
 
 ### 3.8 User and Application Data Storage
-User data, application data. Public or private.
+User data, application data. Public or private. DIDs are globally-unique identifiers that can sign/encrypt information, authorize access to resources, and interact various services and data online. DIDs may be used to represent users, organizations, applications, services, devices, etc. *See [3ID (CIP-6)]() for an example of how Ceramic documents can be used to create DIDs.*
 
-### 3.9 Service Interoperability
-Publish public API and service definitions.
+### 3.9 Discoverable Service Definitions
+Publish public API and service definitions. DIDs are globally-unique identifiers that can sign/encrypt information, authorize access to resources, and interact various services and data online. DIDs may be used to represent users, organizations, applications, services, devices, etc. *See [3ID (CIP-6)]() for an example of how Ceramic documents can be used to create DIDs.*
 
 
 ## 4. Building
+You can start building today on the Clay devnet. Fire mainnet should be released mid-Q4 of this year (2020).
+The Ceramic monorepo is available at [ceramicnetwork/js-ceramic]().
+Ceramic is available in two. JavaScript node ceramic-core which can be run in-browser or on node.js. If it is run remotely in node.js, users can communicate with thix remote node using an HTTP API. Also available as a CLI, which is useful when developing with Ceramic or creating documents for your application.
+Tutorial
 
 ## 5. Contributing
+Issues: Bugs and issues with code. Create new issues directly in the affected repository.
+CIPs: Propose Improvements, standards, and use cases - such as new doctypes, etc.
+CEA: Working groups - join the CEA
+Community: Call Calendar - Community Calls, Core Devs Calls; Discord - Community and Developer Chat; Twitter - Social; 
 
 ## 6. Continue Reading
 
