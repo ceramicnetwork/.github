@@ -38,6 +38,11 @@ Smart documents are the most powerful way to manage information on the open web.
 - Set metadata such as owners and tags
 - Create separate documents for JSON schemas and reference the schema inside your document. Schemas are automatically enforced by the protocol.
 
+**Strong security and verifiability**
+- Documents are immutable, append-only logs of linked IPFS records that are signed by the owner’s DID for verifiability and anchored in a blockchain for strict ordering.
+- Documents are identified by a `DocID`, which never changes. DocIDs are deterministically generated from the hash of the genesis record.
+- Record content can be backed up to any type of data warehouse, such as decentralized storage (i.e. Filecoin) or cloud databases (i.e. SQL server).
+
 **Programmable smart logic**
 - Define custom rules for state transitions to enforce who, how, and when your document is updated without centralized servers. Rules can react to direct events such as a signature from the owner, or indirect events such as an update in another document.
 - Hooks can invoke external code or business logic
@@ -46,11 +51,6 @@ Smart documents are the most powerful way to manage information on the open web.
 - Access a worldwide graph of linked information
 - Build relationships between Ceramic documents by referencing the `DocID` of other documents
 - Use Ceramic documents as a metadata, discovery, and routing layer for off-network data by publishing schemas, definitions, and endpoints
-
-**Strong security and verifiability**
-- Documents are immutable, append-only logs of linked IPFS records that are signed by the owner’s DID for verifiability and anchored in a blockchain for strict ordering.
-- Documents are identified by a `DocID`, which never changes. DocIDs are deterministically generated from the hash of the genesis record.
-- Record content can be backed up to any type of data warehouse, such as decentralized storage (i.e. Filecoin) or cloud databases (i.e. SQL server).
 
 **Flexible deployment options**
 - Run Ceramic on the cloud or locally in-browser
