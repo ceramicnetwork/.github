@@ -1,11 +1,40 @@
-![ceramic opengraph](https://uploads-ssl.webflow.com/5e4b58d7f08158ece0209bbd/5e62a54c0e45bd7b2ef53d25_OpenGraphCeramic.png)
+![ceramic banner](https://uploads-ssl.webflow.com/5e4b58d7f08158ece0209bbd/5f84620b52384d9ec5011a03_ceramicghheader.png)
+
+# Ceramic: The dataweb for open applications
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 [![](https://img.shields.io/badge/Chat%20on-Discord-orange.svg?style=flat)](https://discord.gg/6VRZpGP)
 [![Twitter](https://img.shields.io/twitter/follow/ceramicnetwork?label=Follow&style=social)](https://twitter.com/ceramicnetwork) 
 
+[**Ceramic**](http://ceramic.network) is a global, general purpose, document-based data storage network for securely publishing, linking, and querying verifiable information on the public internet.
 
-# Ceramic Protocol
-> [**Ceramic**](http://ceramic.network) is a permissionless protocol for creating unstoppable documents that serve as the foundation for a connected, interoperable web without silos. 
+## Moving the world's data beyond the cloud. 
+
+The internet wasn’t built with a native data layer. HTTP database servers have centralized information and power amongst a few Big Tech institutions and resulted in a web of silos rather than a web of data.
+
+From decentralized identity to censorship-resistant social media and cross-platform collaboration, many new use cases require a solution for managing dynamic data on the open internet, beyond the control of any single DB server.
+
+By combining DIDs, IPFS, blockchain, and p2p networking, Ceramic provides a secure, collaborative, global network for managing user and app data beyond the cloud.
+
+> Learn more by reading the full overview.
+
+## The most powerful way to manage information on the open web.
+
+Ceramic stores data in a graph of JSON-like documents on a public, permissionless network. Smart documents are the most general-purpose way to model and consume data, and also enable information to become programmable.
+
+### Rich JSON documents
+
+### Programmable smart logic
+
+### Linked content graph
+
+### Strong security and verifiability
+
+### Flexible deployment options
+
+
+
+----
+
 
 Ceramic's public infrastructure allows participants to create signed, append-only, tamper-proof documents that act as a censorship-resistant and universally available source of truth for important information. Ceramic documents are stored in [IPFS](https://github.com/ipfs/ipfs), encoded using [IPLD](https://github.com/ipld/ipld), and anchored in one or more blockchains. Because Ceramic's Universal Document Graph is public, permissionless, and verifiable, it unlocks information access and interoperability between *all platforms and services across the web*.
 
@@ -13,33 +42,26 @@ Although Ceramic can be used to store any kind of signed information, it is well
 
 Together, Ceramic documents give users more control and interoperability over their identity, information, and resources, and allow developers to build composable apps with unprecedented modulariity, trust, and scale.
 
-## Resources
+## Learn
 
-### Learn more
+- [Cermamic Website](https://ceramic.network): A high-level overview of the network and use cases.
+- [Ceramic Introduction](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md): A detailed description of the network.
+- [Ceramic Specification](https://github.com/ceramicnetwork/specs): A complete technical specification of the protocol.
 
-- [Ceramic Introduction](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md): Learn more about the Ceramic network.
-- [Ceramic Specification](https://github.com/ceramicnetwork/specs): Learn more about the current technical protocol specification.
-
-### Join the community
+## Join
 
 - **Chat**: Join the [Ceramic Discord](https://discord.gg/6VRZpGP) server for discussions related to the Ceramic network.
 - **Calendar of Events**: Add the [Ceramic calendar](https://calendar.google.com/calendar/b/3?cid=Y2VyYW1pYy5uZXR3b3JrX3JsNzFrcXZtNzE4ZGY4aWk2cDZzanNmbDdjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20) to attend Ceramic Community Calls and Core Devs Calls.
 - **Twitter**: Follow [@ceramicnetwork](http://twitter.com/ceramicnetwork) on twitter for official updates.
 - **Newsletter**: Subscribe to the [Ceramic Neweletter](http://ceramic.network) to receive recaps of activity.
 
-## Start building
+## Build
 
-Ceramic is currently live with the Slip testnet that anchors document updates on the Ethereum Ropsten testnet. You can view the current Ceramic roadmap [here](https://github.com/ceramicnetwork/ceramic/issues/19).
-
-### Implementatons
-
-| Package | JavaScript | Description |
-| ------- | ---------- | ----------- |
-| Ceramic | [ceramicnetwork/js-ceramic](https://github.com/ceramicnetwork/js-ceramic) | Typescript implementation of the Ceramic protocol |
+The Ceramic Clay devnet is now live for experimentation. To get started, visit [ceramicnetwork/js-ceramic](https://github.com/ceramicnetwork/js-ceramic). This monorepo contains everything you need to build with the TypeScript/JavaScript implementation of Ceramic either directly in-browser using a full node or with Node.js over an HTTP API. 
 
 > Want to work on an implementation in another language? [Open an issue](https://github.com/ceramicnetwork/ceramic/issues) in this repository to discuss it with others, find help, and coordinate efforts.
 
-## Contributing
+## Contribute
 
 ### Report bugs and/or issues
 
