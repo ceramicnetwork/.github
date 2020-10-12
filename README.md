@@ -15,11 +15,11 @@
 
 ### Join the community
 
-- **Chat**: Join the [Ceramic Discord](https://discord.gg/6VRZpGP) for questions and discussions.
-- **Calendar**: Add the [Ceramic calendar](https://calendar.google.com/calendar/b/3?cid=Y2VyYW1pYy5uZXR3b3JrX3JsNzFrcXZtNzE4ZGY4aWk2cDZzanNmbDdjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20) to attend Community Calls and Core Devs Calls.
-- **Twitter**: Follow [@ceramicnetwork](http://twitter.com/ceramicnetwork) for official updates.
-- **Newsletter**: Subscribe to the [Ceramic Neweletter](http://ceramic.network) to receive recaps of activity.
-- **Youtube**: Watch official videos and developer content from the core team on our [Youtube channel](https://www.youtube.com/channel/UCgCLq5dx7sX-yUrrEbtYqVw).
+- **Chat**: [Join the Discord](https://discord.gg/6VRZpGP) for questions and discussions.
+- **Calendar**: [Add the calendar](https://calendar.google.com/calendar/b/3?cid=Y2VyYW1pYy5uZXR3b3JrX3JsNzFrcXZtNzE4ZGY4aWk2cDZzanNmbDdjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20) to attend Community Calls and Core Devs Calls.
+- **Twitter**: [Follow @ceramicnetwork](http://twitter.com/ceramicnetwork) for official updates.
+- **Newsletter**: [Subscribe to the Neweletter](http://ceramic.network) to receive recaps of activity.
+- **Youtube**: [Watch videos](https://www.youtube.com/channel/UCgCLq5dx7sX-yUrrEbtYqVw) about Ceramic on our Youtube channel.
 
 
 ## Moving the world's data beyond the cloud. 
