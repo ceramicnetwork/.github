@@ -14,7 +14,7 @@ Clay devnet is now live for experimentation. Fire livenet will launch late 2020.
 
 - **Development:** [`js-ceramic`](https://github.com/ceramicnetwork/js-ceramic) is a monorepo that contains everything you need to build with the Ceramic TypeScript/JavaScript client either directly in-browser or server-side over an HTTP daemon.
 
-- **Infrastructure:** Clayground (*coming soon*) allows you to easily spin-up the entire suite of Ceramic infrastructure for development.
+- **Infrastructure:** Clayground (*coming soon*) allows you to easily spin-up the entire suite of Ceramic infrastructure for development and testing purposes.
 
 - **Tools:** [Ceramic Studio](https://github.com/ceramicstudio) is a collection of community-built projects that simplify Ceramic development and use, such as decentralized identity (DID) providers for wallets ([IdentityWallet](https://github.com/3box/identity-wallet-js)), in-browser user authentication systems ([3ID Connect](https://github.com/3box/3id-connect)), identity management libraries ([IDX](https://github.com/ceramicstudio/js-idx)), identity management GUIs (*coming soon*), and more.
 
