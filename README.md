@@ -24,7 +24,7 @@
 
 ## Moving the world's data beyond the cloud. 
 
-The internet wasn’t built with a native data layer. HTTP database servers have centralized information and power amongst a few Big Tech institutions and resulted in a web of silos rather than a web of data.From decentralized identity to censorship-resistant social media and cross-platform collaboration, many new use cases require a solution for managing dynamic data on the open internet, beyond the control of any single DB server. By combining DIDs, IPFS, blockchains, and p2p networking, Ceramic provides a secure, collaborative, global network for managing user and app data beyond the cloud.
+The internet wasn’t built with a native data layer. HTTP database servers have centralized information and power amongst a few Big Tech institutions and resulted in a web of silos rather than a web of data. From decentralized identity to censorship-resistant social media and cross-platform collaboration, many new use cases require a solution for managing dynamic data on the open internet, beyond the control of any single DB server. By combining DIDs, IPFS, blockchains, and p2p networking, Ceramic provides a secure, collaborative, global network for managing user and app data beyond the cloud.
 
 > Learn more by reading the full [Ceramic Introduction](https://github.com/ceramicnetwork/ceramic/blob/master/OVERVIEW.md).
 
