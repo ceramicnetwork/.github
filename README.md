@@ -10,14 +10,20 @@
 
 ### Build with Ceramic
 
-*The Clay devnet is now live for experimentation.* To get started, visit [`ceramicnetwork/js-ceramic`](https://github.com/ceramicnetwork/js-ceramic). This monorepo contains everything you need to build with the TypeScript/JavaScript client either directly in-browser or server-side over an HTTP API.
+Clay devnet is now live for experimentation. Fire livenet will launch late 2020.
+
+- **Development:** [`js-ceramic`](https://github.com/ceramicnetwork/js-ceramic) is a monorepo that contains everything you need to build with the Ceramic TypeScript/JavaScript client either directly in-browser or server-side over an HTTP daemon.
+
+- **Infrastructure:** Clayground (*coming soon*) allows you to easily spin-up the entire suite of Ceramic infrastructure for development.
+
+- **Tools:** [Ceramic Studio](https://github.com/ceramicstudio) is a collection of community-built projects that simplify Ceramic development and use, such as decentralized identity (DID) providers for wallets ([IdentityWallet](https://github.com/3box/identity-wallet-js)), in-browser user authentication systems ([3ID Connect](https://github.com/3box/3id-connect)), identity management libraries ([IDX](https://github.com/ceramicstudio/js-idx)), identity management GUIs (*coming soon*), and more.
 
 
 ### Join the community
 
 - **Chat**: [Join the Discord](https://discord.gg/6VRZpGP) for questions and discussions.
 - **Calendar**: [Add the calendar](https://calendar.google.com/calendar/b/3?cid=Y2VyYW1pYy5uZXR3b3JrX3JsNzFrcXZtNzE4ZGY4aWk2cDZzanNmbDdjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20) to attend Community Calls and Core Devs Calls.
-- **Twitter**: [Follow @ceramicnetwork](http://twitter.com/ceramicnetwork) for official updates.
+- **Twitter**: [Follow @CeramicNetwork](http://twitter.com/ceramicnetwork) for official updates.
 - **Newsletter**: [Subscribe to the Neweletter](http://ceramic.network) to receive recaps of activity.
 - **Youtube**: [Watch videos](https://www.youtube.com/channel/UCgCLq5dx7sX-yUrrEbtYqVw) about Ceramic on our Youtube channel.
 
