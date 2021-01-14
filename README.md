@@ -44,7 +44,7 @@ Here are a few useful links to help you get started with the Ceramic network.
 - Content, guides, and tutorials: Check out the [Ceramic blog](https://blog.ceramic.network)
 - Videos: Watch the [Cermic Youtube channel](https://www.youtube.com/channel/UCgCLq5dx7sX-yUrrEbtYqVw)
 
-### Contributing
+## Contributing
 We are happy to accept small and large contributions, feel free to submit a pull request.
 
 ## License
