@@ -1,4 +1,4 @@
-![ceramic banner](https://uploads-ssl.webflow.com/5e4b58d7f08158ece0209bbd/5f84620b52384d9ec5011a03_ceramicghheader.png)
+![ceramic banner](images/image-ceramic-opengraph.png)
 
 # Ceramic: A decentralized network for mutable information
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
