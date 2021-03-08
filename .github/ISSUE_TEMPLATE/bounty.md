@@ -2,7 +2,7 @@
 name: Bounty
 about: For issues funded with bounties to be completed by community
 title: __ [Bounty]
-labels: good first issue, bounty
+labels: bounty, good first issue
 assignees: ''
 
 ---
