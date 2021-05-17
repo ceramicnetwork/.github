@@ -296,11 +296,10 @@ When a node requests an anchor from an anchor service it will recieve metadata a
 
 The main reason for having one pubsub topic that all streams are shared within is to more easily create a well connected network. The benefit of this is that you can get updates from nodes interested in the same stream, even if not directly connected to them. The main drawback of this approach is scalability. Once the network grows the amount of streams and messages in the pubsub topic will be too large for many nodes. In order to deal with this the streams can be split into multiple different rooms using some form of namespace-ing. Exactly how this looks like is not yet determined.
 
-A potential problem with the pubsub approach is some form of DoS. When a node makes a request for a specific stream a malicious actor could send a lot of tips that do not correspond to the requested stream. This would result in the requesting node having to do a lot of computation to make sure all of the received tipss are in fact not correct. There are a few different way to solve this. One is to use a tit-for-tat system where nodes disconnect from nodes that send many incorrect responses. If many users do this it should effectively block malicious nodes as they start performing an attack. A different approach is to include a zero-knowledge proof in the response that proves that the CID in the message indeed does correspond to the correct stream.
+A potential problem with the pubsub approach is some form of DoS. When a node makes a request for a specific stream a malicious actor could send a lot of tips that do not correspond to the requested stream. This would result in the requesting node having to do a lot of computation to make sure all of the received tips are in fact not correct. There are a few different way to solve this. One is to use a tit-for-tat system where nodes disconnect from nodes that send many incorrect responses. If many users do this it should effectively block malicious nodes as they start performing an attack. A different approach is to include a zero-knowledge proof in the response that proves that the CID in the message indeed does correspond to the correct stream.
 
 ## Implementations
 
 Currently there is a Typescript ([js-ceramic](https://github.com/ceramicnetwork/js-ceramic)) implementation available. If you're interested in contributing an implementation in another language [please reach out](mailto:core@ceramic.network) and we'll help you get started!
 
 ### [Ceramic JavaScript Client](https://github.com/ceramicnetwork/js-ceramic)
-
