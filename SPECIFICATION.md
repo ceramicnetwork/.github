@@ -253,7 +253,7 @@ Given a *StreamID*, the full log can be retrieved by communicating with other no
 
 ### Queries
 
-A node can query other nodes for the latest tip of a particular stream. To do this they send a `QUERY` message to the pubsub topic. Other peers that see this message will respond with a `RESPONSE` message.
+A node can query other nodes for the latest tip of a particular stream. To do this they send a `QUERY` message to the pubsub topic. Other peers that see this message will respond with a `RESPONSE` message. More details are available in the [MultiQueries CIP](https://github.com/ceramicnetwork/CIP/blob/main/CIPs/CIP-71/CIP-71.md)
 
 **Request message format:**
 
