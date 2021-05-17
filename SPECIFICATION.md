@@ -13,7 +13,7 @@ This document contains the technical specification for the Ceramic protocol. For
   - [Updating a stream](#updating-a-stream)
   - [Looking up a stream](#looking-up-a-stream)
 - [Stream Identifiers](#stream-identifiers)
-- [Stream log](#stream-log)
+- [Commit log](#commit-log)
   - [Blockchain anchoring](#blockchain-anchoring)
   - [Conflict resolution](#conflict-resolution)
   - [Stream commits](#stream-commits)
@@ -44,11 +44,11 @@ When creating a stream an IPLD object that contains the initial content of the s
 
 ### Updating a stream
 
-In order to update a stream two commits need to be added. These updates are added to the [stream log](#stream-log), which is a linked list of commits. First a [signed commit](#signed-commits) that contains an update to the content is created and added to the log. After the signed commit has been created the [CID](https://github.com/multiformats/cid) of this commit is sent to an anchoring service that batches a set of stream updates into a merkle tree and submits the root hash to a blockchain for finalization. The anchoring service then returns an [anchor commit](#anchor-commits) for the given CID which is added to the stream log. A complete update to the stream has now been made. After each new commit is added to the stream's log the node publishes an update message containing the *StreamID* and the CID of the new commit to the [ceramic pubsub topic](#stream-update-propagation).
+In order to update a stream two commits need to be added. These updates are added to the [commit log](#commit-log), which is a linked list of commits. First a [signed commit](#signed-commits) that contains an update to the content is created and added to the log. After the signed commit has been created the [CID](https://github.com/multiformats/cid) of this commit is sent to an anchoring service that batches a set of stream updates into a merkle tree and submits the root hash to a blockchain for finalization. The anchoring service then returns an [anchor commit](#anchor-commits) for the given CID which is added to the commit log. A complete update to the stream has now been made. After each new commit is added to the stream's commit log the node publishes an update message containing the *StreamID* and the CID of the new commit to the [ceramic pubsub topic](#stream-update-propagation).
 
 ### Looking up a stream
 
-To look up a stream, the *StreamID* is needed. Once a *StreamID* is known a node can look up a stream by sending a lookup request to the [ceramic pubsub topic](#stream-update-propagation). Other nodes that have the state of this stream will respond with the latest commit CID that they know of. The node making the lookup now resolves the stream log of all of the CIDs that it receives (in most cases this will only be one CID). If there are any conflicts they will be resolved by the [conflict resolution mechanism](#conflict-resolution). Once any conflicts are resolved all the updates from the signed commits are applied to the genesis commit and the latest state of the stream is found.
+To look up a stream, the *StreamID* is needed. Once a *StreamID* is known a node can look up a stream by sending a lookup request to the [ceramic pubsub topic](#stream-update-propagation). Other nodes that have the state of this stream will respond with the latest commit CID that they know of. The node making the lookup now resolves the commit log of all of the CIDs that it receives (in most cases this will only be one CID). If there are any conflicts they will be resolved by the [conflict resolution mechanism](#conflict-resolution). Once any conflicts are resolved all the updates from the signed commits are applied to the genesis commit and the latest state of the stream is found.
 
 ## Stream Identifiers
 
@@ -66,12 +66,12 @@ ceramic://kjzl6fddub9hxf2q312a5qjt9ra3oyzb7lthsrtwhne0wu54iuvj852bw9wxfvs
 
 ### Stream versions
 
-Each commit to a stream's log represents a unique version of that stream. Each commit in a stream's history can be referred to directly by it's CommitID. CommitIDs use the format defined in [**CIP-59**](https://github.com/ceramicnetwork/CIP/blob/main/CIPs/CIP-59/CIP-59.md#commitid).
+Each commit to a stream's commit log represents a unique version of that stream. Each commit in a stream's history can be referred to directly by it's CommitID. CommitIDs use the format defined in [**CIP-59**](https://github.com/ceramicnetwork/CIP/blob/main/CIPs/CIP-59/CIP-59.md#commitid).
 
 
-## Stream log
+## Commit log
 
-A Ceramic stream is made up of an append-only log that can be reduced to a single data structure based on the rules of the specified StreamType. Each commit in the log is an [IPLD](https://ipld.io) object that can be referenced by its [CID](https://github.com/multiformats/cid). Since CIDs are unique identifiers, based on the contents of the object we can create a linked list where each commit contains a `prev` pointer to the previous entry in the log. This makes the log an immutable history of commits. There might however be different branches of a log. To deal with this, a [conflict resolution](#conflict-resolution) strategy that uses blockchain anchoring is used. Each commit in the log is of a certain type: genesis, signed, or anchor. The genesis commit is the first commit of a stream. Signed commits contain an update to the stream. Anchor commits anchor a stream update to a blockchain. The structure of these commits is described in the [Stream commits](#stream-commits) section below.
+A Ceramic stream is made up of an append-only log of commits that can be reduced to a single data structure based on the rules of the specified StreamType. Each commit in the log is an [IPLD](https://ipld.io) object that can be referenced by its [CID](https://github.com/multiformats/cid). Since CIDs are unique identifiers, based on the contents of the object we can create a linked list where each commit contains a `prev` pointer to the previous entry in the log. This makes the log an immutable history of commits. There might however be different branches of a log. To deal with this, a [conflict resolution](#conflict-resolution) strategy that uses blockchain anchoring is used. Each commit in the log is of a certain type: genesis, signed, or anchor. The genesis commit is the first commit of a stream. Signed commits contain an update to the stream. Anchor commits anchor a stream update to a blockchain. The structure of these commits is described in the [Stream commits](#stream-commits) section below.
 
 ### Blockchain anchoring
 
@@ -81,7 +81,7 @@ In many cases individual users are likely to update a small number of streams. I
 
 ### Conflict resolution
 
-If there are two different branches for a specific stream log, the canonical branch is determined by looking at the conflicting anchor commits to determine which update happened first. When both anchors are on the same blockchain, the blockheight of the anchor is used; if the anchors are on different blockchains, the block timestamp is used.
+If there are two different branches for a specific stream's commit log, the canonical branch is determined by looking at the conflicting anchor commits to determine which update happened first. When both anchors are on the same blockchain, the blockheight of the anchor is used; if the anchors are on different blockchains, the block timestamp is used.
 
 It is important to note that an update might have an earlier anchor commit but not follow the [update rules](#update-rules) for the given streamtype. Therefore conflict resolution is applied after the update rules have been correctly applied. Since most streamtypes requires signed updates, a malicious actor would need to get access to the private key(s) of the stream creator in order to even create a valid conflicting branch.
 
@@ -239,7 +239,7 @@ Each streamtype needs to specify rules for what constitutes valid updates/state 
 
 ## Stream update propagation
 
-Given a *StreamID*, the full log can be retrieved by communicating with other nodes in the ceramic network. This is achieved using [libp2p pubsub](https://github.com/libp2p/specs/tree/master/pubsub) to share the updates to a stream log among peers. All nodes in the Ceramic network join the `/ceramic` pubsub topic. When a node makes a change to a stream, the new tip (most recent commit CID) is shared over the pubsub topic along with the StreamID. Peers that are interested in this stream see this message, fetch the new commits using IPFS and apply the log to the stream. If a node gets two or more conflicting tips the [conflict resolution mechanism](#conflict-resolution) is used.
+Given a *StreamID*, the full log can be retrieved by communicating with other nodes in the ceramic network. This is achieved using [libp2p pubsub](https://github.com/libp2p/specs/tree/master/pubsub) to share the updates to a stream's commit log among peers. All nodes in the Ceramic network join the `/ceramic` pubsub topic. When a node makes a change to a stream, the new tip (most recent commit CID) is shared over the pubsub topic along with the StreamID. Peers that are interested in this stream see this message, fetch the new commits using IPFS and apply the log to the stream. If a node gets two or more conflicting tips the [conflict resolution mechanism](#conflict-resolution) is used.
 
 **Update message format:**
 
