@@ -40,7 +40,7 @@ Every stream in the Ceramic network is self-contained and the lifecycle of all s
 
 ### Creating a stream
 
-When creating a stream an IPLD object that contains the initial content of the stream is created. This is called the [genesis commit](#genesis-commit), and its [CID](https://github.com/multiformats/cid) is used as the stream identifier (StreamID). Depending on the stream type there might be constraints about what is considered valid content for the genesis commit.
+When creating a stream an IPLD object that contains the initial content of the stream is created. This is called the [genesis commit](#genesis-commit), and its [CID](https://github.com/multiformats/cid) is used (along with the streamtype) to generate the stream identifier (StreamID). Depending on the stream type there might be constraints about what is considered valid content for the genesis commit.
 
 ### Updating a stream
 
