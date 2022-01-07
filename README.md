@@ -42,7 +42,7 @@ Here are a few useful links to help you get started with the Ceramic network.
 ### Content
 
 - News and updates: [Follow Ceramic on Twitter](http://twitter.com/ceramicnetwork)
-- Content, guides, and tutorials: Check out the [Ceramic blog](https://blog.ceramic.network)
+- Content, guides, and tutorials: Check out the [Ceramic Blog](https://blog.ceramic.network)
 - Videos: Watch the [Ceramic Youtube channel](https://www.youtube.com/channel/UCgCLq5dx7sX-yUrrEbtYqVw)
 
 ## Contributing
