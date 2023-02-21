@@ -1,3 +1,5 @@
+> ⚠️ **OUT OF DATE** - Current protocol description and specification has moved to the [Ceramic docs portal](https://developers.ceramic.network/protocol/)
+
 # Ceramic Protocol Specification
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 [![](https://img.shields.io/badge/Chat%20on-Discord-orange.svg?style=flat)](https://discord.gg/6VRZpGP)
