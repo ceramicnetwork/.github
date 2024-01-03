@@ -1,4 +1,4 @@
-> ⚠️ **OUT OF DATE** - Current protocol description and specification has moved to the [Ceramic docs portal](https://developers.ceramic.network/protocol/)
+> ⚠️ **OUT OF DATE** - Current protocol description and specification has moved to the [Ceramic docs portal](https://developers.ceramic.network/docs/introduction/intro)
 
 # Ceramic Protocol Specification
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
