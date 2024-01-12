@@ -1,28 +1,24 @@
-## Build
+## Welcome to Ceramic
 
-[Visit our website](https://ceramic.network)
+[Website](https://ceramic.network)
 
-[Read our documentation](https://developers.ceramic.network)
+[Discord](https://discord.gg/BrW4zdz3hk)
 
-[Discuss on our forum](https://forum.ceramic.network)
+[Twitter](https://twitter.com/ceramicnetwork)
 
-## Contribute
+## Build with Ceramic
 
-[Specification](https://developers.ceramic.network/protocol/)
+[Docs](https://developers.ceramic.network)
 
-[Ceramic Improvment Proposals](https://cips.ceramic.network)
+[Forum](https://forum.ceramic.network)
 
-#### Core-dev calls
+## Ceramic Protocol
 
-The core developers of Ceramic meet every second Thursday to discuss CIPs, implementations, and other improvements to the protocol. These calls are mainly meant for implementers of the protocol.
+[Ceramic Protocol](https://developers.ceramic.network/protocol/)
 
-[📅 Meetings calendar](https://calendar.google.com/calendar/u/0/embed?src=c_4dae4b001a353ace604a8f3fd1a41ec718b0e18f1d12c64fb7fd4b61b22283ab@group.calendar.google.com&ctz=Europe/Lisbon)
+[Improvment Proposals](https://cips.ceramic.network)
 
-[📝 Meeting notes](https://hackmd.io/jT55qn9ESeWxhZQkMephAQ?view)
+Core Developers: [📅 Calendar](https://calendar.google.com/calendar/u/0/embed?src=c_4dae4b001a353ace604a8f3fd1a41ec718b0e18f1d12c64fb7fd4b61b22283ab@group.calendar.google.com&ctz=Europe/Lisbon) | [📝 Notes](https://hackmd.io/jT55qn9ESeWxhZQkMephAQ?view)
 
-## Connect
 
-[Join the Discord](https://discord.gg/BrW4zdz3hk)
-
-[Ceramic on Twitter](https://twitter.com/ceramicnetwork)
 
