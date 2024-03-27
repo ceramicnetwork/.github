@@ -18,7 +18,7 @@
 
 [Improvment Proposals](https://cips.ceramic.network)
 
-Core Developers: [Calendar](https://calendar.google.com/calendar/u/0/embed?src=c_4dae4b001a353ace604a8f3fd1a41ec718b0e18f1d12c64fb7fd4b61b22283ab@group.calendar.google.com&ctz=Europe/Lisbon) | [Notes](https://hackmd.io/jT55qn9ESeWxhZQkMephAQ?view)
+[Bi-Weekly Ecosystem Developers Call](https://discord.com/events/682786569857662976/1222561878077735035) | [Notes](https://hackmd.io/jT55qn9ESeWxhZQkMephAQ?view)
 
 
 
